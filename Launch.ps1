@@ -4,7 +4,9 @@ $gameUrl = 'http://127.0.0.1:4173/#/presenter'
 $nodeCommand = Get-Command node.exe -ErrorAction SilentlyContinue
 $gameNode = if ($nodeCommand) { $nodeCommand.Source } else { Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' }
 if (-not (Test-Path -LiteralPath $gameNode)) { throw 'Node.js is required. Install Node.js 22 or newer, then reopen Start Game.cmd.' }
-if (-not (Test-Path -LiteralPath (Join-Path $gameRoot 'dist\index.html'))) { throw 'Build missing. Open a terminal in this folder and run npm install, then npm run build.' }
+$gameBuild = Join-Path $gameRoot 'dist\index.html'
+$gameSourceNewest = Get-ChildItem -LiteralPath (Join-Path $gameRoot 'src') -File -Recurse | Sort-Object LastWriteTimeUtc -Descending | Select-Object -First 1
+if (-not (Test-Path -LiteralPath $gameBuild) -or $gameSourceNewest.LastWriteTimeUtc -gt (Get-Item -LiteralPath $gameBuild -ErrorAction SilentlyContinue).LastWriteTimeUtc) { & (Join-Path $gameRoot 'Build Game.ps1') }
 $gameReady = $false
 try { $gameResponse = Invoke-WebRequest -Uri 'http://127.0.0.1:4173/' -UseBasicParsing -TimeoutSec 2; $gameReady = $gameResponse.Content -match 'Family Feud Game Night' } catch { }
 if (-not $gameReady) {

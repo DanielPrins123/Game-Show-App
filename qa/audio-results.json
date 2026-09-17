@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": [
+    "Audience intro has no form controls.",
+    "Native Web Audio produced three-note answer and extension chimes, one-note warning and three-note expiry buzzer.",
+    "Mute suppressed sound.",
+    "Expired written question extends and removes TIME’S UP without advancing."
+  ]
+}

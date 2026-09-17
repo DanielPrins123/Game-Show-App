@@ -1,12 +1,12 @@
 {
   "passed": true,
   "checks": [
-    "Nonsequential reveals 5/1/3, hidden answer privacy, auto-score and no duplicate scoring passed.",
-    "Timestamp timer start/pause/resume/reset, five-second warning and expiration passed.",
-    "Presenter and audience refresh/resume passed.",
-    "Scorebook date/venue save and reload, halfway subtotal 7, pre-final subtotal 9, totals, live leaderboard, and tied ranks passed.",
-    "Full paste preview/import, JSON export/import and shortcut suppression in editor passed.",
-    "localStorage-event synchronization fallback passed.",
-    "No browser console errors; 1280×720 and 1920×1080 board geometry passed."
+    "Welcome logo → brief instructions → written board synchronizes in the same audience window. Normal TV has no team scores or strikes.",
+    "Nonsequential reveals, privacy, timestamp pause, +30 notification, undo and audience refresh passed.",
+    "Ten-team scorebook, dated save, same-window bottom-to-top reveal, frozen scores, 720p/1080p fit and exact board/timer restoration passed.",
+    "Finale readiness privacy, four-point awards, three-strike stop, undo, refresh, separate team turns, all-six completion, idempotent scorebook totals, pre-finale/final reveals and result JSON round-trip passed.",
+    "Timestamp finale expiry locks late answers and produces the TIME’S UP visual.",
+    "Full original game paste-to-preview-to-import passed: 16 questions and 82 answers.",
+    "localStorage synchronization fallback works without BroadcastChannel."
   ]
 }

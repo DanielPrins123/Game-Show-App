@@ -142,3 +142,5 @@ Written play supports any number of teams (at least two); the finale has **at mo
 Core controls fit a 1366×768 host screen. Audience preview and sound settings expand on demand. Existing live 16-question score drafts are archived under Saved results before conversion to 15 written columns; saved historical results remain unchanged.
 
 The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
+
+During the finale, the wrong-answer X stays pinned at the bottom of the presenter screen while scrolling; keyboard X also works. At each round’s first question, the audience transition prominently displays the round name. Other questions have numbered title cards. Opening the question starts the timer.

@@ -106,3 +106,7 @@
 @media(min-width:1101px){.sequence-scores .score-show-board{max-width:420px}.sequence-scores .finalist-picker .micro{font-size:11px}}
 .integrated-finale>.finalist-picker{grid-column:1/-1;margin:0;padding:6px;grid-row:auto}.integrated-finale>label{grid-row:2}.integrated-finale>button.primary{grid-row:2}.integrated-finale>.button-row{grid-row:3}.integrated-finale>button:last-child{grid-row:3}.integrated-finale>.finale-reference{grid-row:4}
 @media(min-width:1101px){.presenter .question-panel h2{font-size:20px;line-height:1.25}.presenter .host-answer>button:first-child{min-height:44px}.presenter .finale-status{padding:6px}.integrated-finale{padding:6px 0}}
+/* Keep the live wrong-answer control reachable even while the host scrolls. */
+.finale-strike-controls{position:fixed;right:24px;bottom:18px;z-index:35;display:flex;align-items:center;gap:14px;padding:12px 16px;border:1px solid #a76572;border-radius:12px;background:#152238;box-shadow:0 5px 24px #0008}
+.finale-strike-controls button{min-height:48px;padding:10px 20px;font-size:17px}.finale-strike-controls small{font-size:12px;color:#bdcde3}.presenter.has-finale-controls{padding-bottom:110px}
+@media(max-width:720px){.finale-strike-controls{left:12px;right:12px;bottom:12px;justify-content:space-between;gap:10px;padding:10px}.finale-strike-controls small{display:none}.finale-strike-controls button{flex:1}.finale-strike-controls .host-strikes{white-space:nowrap}}

@@ -75,3 +75,5 @@ The opening format screen and enlarged audience board were visually inspected. S
 `scripts/show-flow-test.mjs` verifies title-card privacy, automatic timer start on Show question, halfway progression after Q8, pre-finale progression after Q15, selected team turns and automatic final standings. Main written and finale controls fit 1366×768. The original Q16 becomes a six-answer finale option. Old 16-question score drafts retain a backup with their original scores. A twenty-team event is limited to five selected finalists; the host controls tie decisions. Unit tests enforce the five-team selection cap and cover persisted lineup undo.
 
 The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
+
+Finale X reachability verified at 1366×768, 1024×768 and 390×844, both at the top and bottom of the page; clicking records a strike. The show-flow check verifies named round transitions and automatic timer start.

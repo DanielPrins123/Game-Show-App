@@ -66,19 +66,16 @@ Leaderboard is a separate private running ranking. The audience reveal is contro
 
 ## Optional timed finale
 
-Set up the complete team roster in Scorebook first. In Presenter, expand **Optional timed finale**. Each team sends one representative and receives a fresh six-answer board. There are ten sourced options. Review privately and assign or draw questions before the show; equal maximum scores do not guarantee equal difficulty.
+Set up the team roster in Scorebook, then expand **Optional timed finale** in Presenter. Ten sourced six-answer boards are available; each turn starts at 60 seconds. Four points per answer is the suggested grading rule, up to 24. You enter the grade yourself.
 
-1. Select team/question and **Prepare next team**. The TV shows the team name; the question stays hidden.
-2. Click **Start 60-second turn** as you read the question. It appears with the timer.
-3. Reveal each correct answer to award **4 points automatically**. Maximum **24 points**; repeat clicks cannot score twice.
-4. **Wrong answer** adds an X. Three strikes, six correct, or zero time ends and locks the turn. Awards are blocked before start, while paused, and after completion.
-5. **Undo** corrects a mistaken strike/reveal, including an action that ended the turn. **Show remaining · no points** is a recap afterward.
-6. **Prepare next team** resets timer/strikes and requires an unused board. Each team has one turn per score sheet.
-7. Return to Scorebook for automatically included bonus totals and the final reveal. Save the result.
+1. Select any team and question, then **Open selected team & question**. The question stays hidden until **Start 60-second turn**.
+2. Reveal answers as you judge them. Reveals never change the score. Three strikes, all six reveals or time running out stops the turn.
+3. Enter **Finale points** in Presenter or the **Timed bonus** column in Scorebook. The number replaces that team’s grade, so retries cannot double-count points.
+4. Use **Previous bonus / Next bonus**, or select any team and board. Revisiting an attempt restores its answers and strikes with the timer paused.
+5. **Reset this turn · 60 seconds** clears answers and strikes for another chance. The entered grade remains until you edit it. Undo also works.
+6. **Return to written rounds** works at any time. Show final standings and save the dated result when ready.
 
-Finale warning is at five seconds. **End turn** allows a host stop. Team additions/removals lock once finale assignments exist; names remain editable. Start a new score sheet for another event.
-
-Sources are **fan transcripts of aired Family Feud boards**, not official datasets independently checked against video. Counts/order are retained as listed. Each host preview links its source; see `BONUS-SOURCES.md`. Some boards contain mild adult humor. No questions/counts were fabricated. The original sixteen-question game remains separate.
+The board bank contains scenario questions without Steve Harvey references. Source counts and answer rankings are preserved; prompts are shortened. Similar response distributions help selection but cannot guarantee identical difficulty. See BONUS-SOURCES.md.
 
 ## Keyboard and sound
 
@@ -95,7 +92,7 @@ Sources are **fan transcripts of aired Family Feud boards**, not official datase
 | Space during score show | Next team reveal |
 | Escape during score show | Return to game; browser may also exit fullscreen |
 
-Shortcuts do not fire in text fields. Opening sequence controls are private host buttons. Mute/volume synchronize. Original local Web Audio sounds: rising answer/score chime, low strike buzz, warning ping, descending expiry buzzer and time-extension chime. There are no downloaded show recordings or external assets. Click the audience window once to enable sound. Gameplay works when audio is muted/blocked.
+Shortcuts do not fire in text fields. Opening sequence controls are private host buttons. Mute/volume synchronize. Original local Web Audio sounds: short soft answer/score bing, rounded wrong-answer tone, warning ping, gentle expiry tone and extension tone. There are no downloaded show recordings or external assets. Click the audience window once to enable sound. Gameplay works when audio is muted/blocked.
 
 ## Editor and importing games
 
@@ -127,3 +124,11 @@ npm run test:browser
 ```
 
 Browser tests require port 4173 and installed Microsoft Edge. Vite’s runner config loader avoids an esbuild parent-folder access issue in Windows sandboxes. Dependencies and `dist` are not committed; the launcher builds cloned updates. See `TEST-REPORT.md` and `qa/` for validation.
+
+## Audience readability update
+
+The audience board now uses a much larger timer and larger question, answer and standings text. The opening format screen summarizes four rounds of four questions, regular/bonus points and the optional timed finale. It adapts to edited game contents. The presenter alone controls the sequence.
+
+Answer and team score reveals share a short, soft bing. Under presenter sound settings, **Answer & score reveal sound** can be set to **Silent** without muting timer alerts. Quiet ticks during the final 10 seconds can be switched off separately.
+
+Live progress and score entry save automatically. Closing and reopening the same browser/profile at the same address restores them; a running timer continues against the clock. Save result stores a separate dated result, and Export JSON backs up scores for transfer. If an update retires an active finale question, its earned points are retained and that turn is closed; written play resumes paused.

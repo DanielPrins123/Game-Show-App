@@ -17,3 +17,56 @@
 @media(prefers-reduced-motion:reduce){.answer-tile.revealed,.score-show-row.shown,.extension-toast{animation:none}.strike-flash{animation:strike .85s forwards}}
 .opening-controls{margin-bottom:20px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}.opening-controls h2{margin:6px 0}.opening-screen{container-type:inline-size;position:relative;aspect-ratio:16/9;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 50% 30%,#225a9c,#0d2d5d 45%,#040e25 90%);border:1px solid #5277a3;padding:3% 7%}.display-page>.opening-screen{width:min(100vw,177.7778dvh)}.opening-lights{position:absolute;inset:2%;border:5px dotted #ffcb61;border-radius:4cqw;opacity:.8;pointer-events:none}.feud-logo{width:48cqw;height:22cqw;display:flex;flex-direction:column;justify-content:center;align-items:center;border:.6cqw solid #ffcb61;border-radius:50%;box-shadow:0 0 0 .6cqw #9b601d,0 0 0 1.1cqw #ffe5a1,0 1cqw 4cqw #010918;background:radial-gradient(ellipse,#1a4f94,#082653);font-weight:950;line-height:.93;transform:rotate(-3deg);font-style:italic;color:#ffdb82;text-shadow:.2cqw .3cqw 0 #6c4213;flex-shrink:0}.feud-logo span{font-size:7cqw;letter-spacing:.4cqw}.feud-logo strong{font-size:9cqw;letter-spacing:.6cqw}.opening-welcome{text-align:center;margin-top:4cqw}.opening-welcome p,.opening-kicker{font-size:1.15cqw;letter-spacing:.5cqw;color:#ffd480}.opening-welcome h1{font-size:3cqw;margin:1cqw 0;line-height:1.2}.opening-welcome>span{font-size:1.25cqw;color:#bcd5f6}.opening-screen>footer{font-size:.9cqw;letter-spacing:.4cqw;color:#94b7df;position:absolute;bottom:3cqw}.opening-screen.instructions{flex-direction:row;gap:5cqw}.instructions .feud-logo{width:23cqw;height:13cqw}.instructions .feud-logo span{font-size:3.5cqw}.instructions .feud-logo strong{font-size:4.6cqw}.opening-instructions{max-width:50cqw}.opening-instructions h1{font-size:3.3cqw;margin:1cqw 0 2cqw}.opening-instructions ol{margin:0;padding-left:2cqw;display:grid;gap:1.4cqw}.opening-instructions li{font-size:1.4cqw;line-height:1.55;padding-left:.5cqw;color:#d1e1f8}.opening-instructions li::marker{color:#ffd480;font-weight:900}.opening-instructions b{color:#fff}.opening-good-luck{display:block;color:#ffd480;font-size:1.1cqw;margin-top:2cqw}
 .opening-welcome .host-credit{font-size:1.65cqw;letter-spacing:.06cqw;color:#edf4ff;margin:1.2cqw 0 1.6cqw}.host-credit strong{color:#ffdb82}
+/* Distance-readable audience layout: spend space on the game, not small captions. */
+.board,.preview-panel .board{padding:1.6% 3% 1.4%;gap:0}
+.board-top{min-height:4cqw;flex-shrink:0;gap:2cqw}
+.brand{font-size:2.4cqw}.brand small{display:none}
+.round-tag{font-size:1.9cqw;letter-spacing:0;padding:.5cqw 1cqw;font-weight:750;white-space:nowrap}
+.question{width:100%;height:12cqw;flex-shrink:0;margin:.5cqw auto 1cqw}
+.question p{font-size:2cqw;margin-bottom:.6cqw;color:#e4efff;letter-spacing:0}
+.question h1{font-size:3.2cqw;line-height:1.15;letter-spacing:0}
+.answer-grid{height:23cqw;flex-shrink:0;gap:.65cqw 1cqw;padding:0}
+.answer-tile{padding:.35cqw .8cqw;gap:.8cqw}
+.answer-tile strong{font-size:2.45cqw;line-height:1.12}
+.rank{font-size:1.9cqw;width:3cqw;height:3cqw}
+.count{font-size:2.6cqw;width:4cqw;height:4cqw}
+.board-bottom{min-height:11cqw;padding:1cqw 0 0;margin-top:auto;flex-shrink:0;gap:2cqw}
+.written-footer .round-instructions{max-width:50%;gap:.6cqw}
+.round-instructions strong{font-size:2.8cqw;line-height:1.15}
+.round-instructions span{font-size:2cqw;line-height:1.2;color:#eef5ff}
+.written-footer .countdown{font-size:8.5cqw;min-width:25cqw;line-height:1;font-weight:900;letter-spacing:-.25cqw}
+.countdown small{font-size:1.5cqw;line-height:1.15;letter-spacing:0;margin-top:.15cqw;color:inherit}
+.strikes{font-size:4cqw;gap:.3cqw}.center-status{gap:1cqw}
+.time-up{top:auto;bottom:13cqw;right:3cqw;font-size:2.5cqw;padding:.5cqw 1cqw}
+.extension-toast small{font-size:2cqw}
+.round-card>span{font-size:2.7cqw;color:#eef5ff}.round-card p{font-size:2.1cqw;letter-spacing:0}
+.opening-screen.logo{padding:3%;gap:2.4cqw}
+.logo .feud-logo{width:43cqw;height:20cqw}
+.opening-welcome{margin-top:0}.opening-welcome h1{font-size:3.4cqw;margin:1cqw 0}
+.opening-welcome .host-credit{font-size:2.8cqw;margin:1.4cqw 0;letter-spacing:0}
+.opening-welcome>span{font-size:2.4cqw;color:#edf4ff}
+.opening-screen.instructions{display:flex;padding:4%;justify-content:center}
+.format-overview{width:100%;text-align:center}
+.format-overview h1{font-size:4.1cqw;letter-spacing:0;line-height:1.1;margin-bottom:1.2cqw}
+.format-numbers{display:flex;justify-content:center;gap:9cqw;margin:1cqw 0}
+.format-numbers p{display:flex;align-items:center;gap:1.3cqw}
+.format-numbers strong{font-size:8cqw;line-height:1;color:#ffda80}
+.format-numbers span{font-size:2.6cqw;font-weight:800;max-width:17cqw;line-height:1.15;text-align:left}
+.format-rounds{font-size:2.6cqw;color:#fff;margin:1.8cqw 0}
+.format-scoring{display:flex;justify-content:center;gap:2cqw;margin:1.6cqw 0}
+.format-scoring p{display:flex;flex-direction:column;gap:.4cqw;border:2px solid #8cace0;border-radius:1cqw;background:#12335d;padding:1.2cqw 3cqw;min-width:34cqw}
+.format-scoring span{font-size:2.4cqw;color:white;line-height:1.2}
+.format-scoring strong{font-size:3.6cqw;color:#ffda80;line-height:1.15}
+.format-checkpoints{font-size:2.6cqw;margin-top:2cqw;color:#fff}
+.format-finale{font-size:2.15cqw;margin-top:1.2cqw;color:#ffda80}
+.score-show-board header p{font-size:1.8cqw;letter-spacing:.1cqw}
+.score-show-board header>span{font-size:1.6cqw;color:#e1eeff}
+.score-show-board header{height:10cqw}.score-show-board h1{font-size:3cqw;line-height:1.1;margin:.5cqw 0}
+.score-show-row strong{font-size:3.2cqw}.score-show-row b{font-size:3.8cqw}
+.score-show-row b small{display:none}.show-rank{font-size:2.8cqw}
+.score-show-board.many-teams .score-show-row strong{font-size:2.45cqw}
+.score-show-board.many-teams .score-show-row b{font-size:2.7cqw}
+.score-show-board.many-teams .show-rank,.score-show-board.many-teams .hidden-place{font-size:2.25cqw}
+.score-show-board footer{font-size:1.35cqw;letter-spacing:.1cqw;padding-top:.6cqw}
+.question h1,.answer-tile strong{line-height:1.3}
+.countdown small{line-height:1.3}.board-bottom{padding-bottom:.3cqw}

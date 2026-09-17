@@ -1,9 +1,20 @@
-export function OpeningScreen({screen,title}:{screen:'logo'|'instructions';title:string}){
+import type { Game } from './model';
+export function OpeningScreen({screen,game}:{screen:'logo'|'instructions';game:Game}){
+  const questions=game.rounds.flatMap(round=>round.questions);
+  const perRound=game.rounds[0].questions.length;
+  const equalRounds=game.rounds.every(round=>round.questions.length===perRound);
+  const bonuses=game.rounds[0].questions.filter(question=>question.bonus).length;
+  const equalBonuses=equalRounds&&game.rounds.every(round=>round.questions.filter(question=>question.bonus).length===bonuses);
+  const points=(bonus:boolean)=>[...new Set(questions.filter(question=>question.bonus===bonus).map(question=>question.points))].join(' / ');
   return <section className={`opening-screen ${screen}`} data-testid={`opening-${screen}`}>
     <div className="opening-lights" aria-hidden="true"/>
-    <header className="feud-logo" aria-label="Family Feud"><span>FAMILY</span><strong>FEUD</strong></header>
-    {screen==='logo'?<div className="opening-welcome"><p>WELCOME TO GAME NIGHT</p><h1>{title}</h1><p className="host-credit">With your host, <strong>Daniel Prins</strong></p><span>Find your team. Get comfortable. We’ll begin shortly.</span></div>:<div className="opening-instructions"><p className="opening-kicker">HOW TO PLAY</p><h1>Think like the survey.</h1><ol><li><b>Discuss & write.</b> Each question shows how many answers you need. Write one guess for each answer.</li><li><b>Hand it in.</b> Bring your team’s sheet to the host when you’re ready. Watch the timer for the deadline.</li><li><b>See what scored.</b> The host grades all teams, then reveals the board. Earn the points shown per correct answer.</li><li><b>Watch the standings.</b> Scores are revealed at the checkpoints. Survey counts aren’t your points!</li></ol><span className="opening-good-luck">Same question. Every team. Good luck!</span></div>}
-    <footer>{screen==='logo'?'THE TOP ANSWERS ARE WAITING…':'PENS READY · TEAMWORK ON'}</footer>
+    {screen==='logo'?<><header className="feud-logo" aria-label="Family Feud"><span>FAMILY</span><strong>FEUD</strong></header><div className="opening-welcome"><h1>{game.title}</h1><p className="host-credit">With your host, <strong>Daniel Prins</strong></p><span>We’ll begin shortly.</span></div></>:<div className="format-overview">
+      <h1>Tonight’s game</h1>
+      <div className="format-numbers"><p><strong>{game.rounds.length}</strong><span>ROUNDS</span></p><p><strong>{equalRounds?perRound:questions.length}</strong><span>{equalRounds?'QUESTIONS EACH':'QUESTIONS TOTAL'}</span></p></div>
+      <p className="format-rounds">{equalBonuses?`${perRound-bonuses} regular ${perRound-bonuses===1?'question':'questions'} + ${bonuses} bonus ${bonuses===1?'question':'questions'} per round`:`${questions.length} questions across ${game.rounds.length} rounds`}</p>
+      <div className="format-scoring">{points(false)&&<p><span>Regular answers</span><strong>{points(false)} {points(false)==='1'?'point':'points'}</strong></p>}{points(true)&&<p><span>Bonus answers</span><strong>{points(true)} {points(true)==='1'?'point':'points'}</strong></p>}</div>
+      <p className="format-checkpoints">Halfway standings · Final results</p>
+      <p className="format-finale">Optional timed finale: 60 seconds · 4 points per answer</p>
+    </div>}
   </section>;
 }
-

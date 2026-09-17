@@ -1,20 +1,22 @@
 # Timed finale sources
 
-Ten selected six-answer boards from Scott’s Family Feud survey archive. The archive says questions are transcribed as read at the face-off and answers as shown on the board. These are **fan transcripts**, not official survey datasets or independently video-verified records. Reviewed September 17, 2026.
+Ten six-answer boards from Scott’s Family Feud survey archive. These are fan transcripts of aired boards, not official survey datasets or independently video-verified records. Reviewed September 17, 2026.
 
-Wording, counts and ranking are retained in `src/data/finale.ts`. Read the archive’s left column (ranks 1–4), then right column (5–6), including ties. The game awards four points per correct answer; the original counts are only for display. Equal six-answer length provides equal maximum points, not identical difficulty. Nothing was fabricated.
+Prompts are shortened for readability. Answer categories, survey counts and ranking are retained in `src/data/finale.ts`, including ties. Read the archive’s left column first, then right. Four game points are awarded per correct answer; survey counts are for display only.
+
+The selection favors scenarios over trivia and does not depend on Steve Harvey. Each board has six answers, a 60-second turn and 24 possible points. Top-answer counts range from 34 to 55, with a mix of obvious and less common answers. This is a rough balance check, not proof of identical difficulty. Popularity of individual boards has not been measured.
 
 | Board | Source | Counts in rank order |
 | --- | --- | --- |
 | Dentist’s toolbox | [Season 27](https://mstiescott.neocities.org/feud27_6.html) | 46,17,10,10,7,4 |
-| Rhymes with curdle | [Season 26](https://mstiescott.neocities.org/feud26_6.html) | 49,26,12,5,4,3 |
-| Vampire neighbors | [Season 25](https://mstiescott.neocities.org/feud25_6.html) | 57,13,13,10,3,3 |
-| Pirate strip poker | [Season 24](https://mstiescott.neocities.org/feud24_6.html) | 54,28,6,4,4,2 |
-| Fun to pop | [Season 22](https://mstiescott.neocities.org/feud22_6.html) | 31,29,18,13,4,2 |
-| Seven Dwarfs | [Season 21](https://mstiescott.neocities.org/feud21_6.html) | 32,18,17,14,12,7 |
-| Steve Harvey’s hair | [Season 20](https://mstiescott.neocities.org/feud20_6.html) | 59,20,8,5,3,3 |
-| Cracking things open | [Season 19](https://mstiescott.neocities.org/feud19_6.html) | 70,15,5,4,2,2 |
-| Batman goes broke | [Season 18](https://mstiescott.neocities.org/feud18_6.html) | 81,9,3,2,2,2 |
-| Things described as sharp | [Season 17](https://mstiescott.neocities.org/feud17_6.html) | 69,8,7,5,5,3 |
+| Cheapskate party guest | [Season 26](https://mstiescott.neocities.org/feud26_6.html) | 39,37,8,8,4,2 |
+| Bigfoot and campers | [Season 25](https://mstiescott.neocities.org/feud25_6.html) | 36,29,11,9,8,5 |
+| Haunted new home | [Season 24](https://mstiescott.neocities.org/feud24_6.html) | 49,22,11,8,3,3 |
+| Life as a chicken | [Season 22](https://mstiescott.neocities.org/feud22_6.html) | 34,22,15,13,6,6 |
+| Naked juggler | [Season 21](https://mstiescott.neocities.org/feud21_6.html) | 54,22,9,5,3,3 |
+| Cat at a dinner party | [Season 20](https://mstiescott.neocities.org/feud20_6.html) | 40,18,16,14,5,3 |
+| First parachute jump | [Season 19](https://mstiescott.neocities.org/feud19_6.html) | 55,20,9,5,4,3 |
+| Headless horseman | [Season 18](https://mstiescott.neocities.org/feud18_6.html) | 52,25,12,6,2,2 |
+| Flirting coworker | [Season 17](https://mstiescott.neocities.org/feud17_6.html) | 36,29,15,11,4,2 |
 
-[Archive methodology](https://mstiescott.neocities.org/feud27.html). Only these selected boards are included, with private host source links. The original sixteen supplied questions are unchanged and stored separately.
+[Archive methodology](https://mstiescott.neocities.org/feud27.html). Source links are available to the host. The original sixteen supplied questions remain unchanged and separate from this bank.

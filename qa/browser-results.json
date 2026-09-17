@@ -4,7 +4,7 @@
     "Welcome logo → brief instructions → written board synchronizes in the same audience window. Normal TV has no team scores or strikes.",
     "Nonsequential reveals, privacy, timestamp pause, +30 notification, undo and audience refresh passed.",
     "Ten-team scorebook, dated save, same-window bottom-to-top reveal, frozen scores, 720p/1080p fit and exact board/timer restoration passed.",
-    "Finale readiness privacy, four-point awards, three-strike stop, undo, refresh, separate team turns, all-six completion, idempotent scorebook totals, pre-finale/final reveals and result JSON round-trip passed.",
+    "Finale readiness privacy, manual grades without automatic awards, three-strike stop, undo, refresh, separate team turns, all-six completion, idempotent scorebook totals, pre-finale/final reveals and result JSON round-trip passed.",
     "Timestamp finale expiry locks late answers and produces the TIME’S UP visual.",
     "Full original game paste-to-preview-to-import passed: 16 questions and 82 answers.",
     "localStorage synchronization fallback works without BroadcastChannel."

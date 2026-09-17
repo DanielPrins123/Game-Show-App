@@ -5,13 +5,13 @@ Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, us
 ## Passed
 
 - Strict TypeScript typecheck and ESLint.
-- Vite production build through the actual Windows **Build Game.ps1** launcher.
-- **25 unit tests in five files**.
+- Vite production build (Windows launcher also verified in the preceding build).
+- **26 unit tests in five files**.
 - Full original paste-parser fidelity: **4 rounds, 16 questions, 82 answers**, all wording/ranks/counts and original point values. Original JSON, TXT and REQUIREMENTS.txt have no changes.
 - Parser cases include Markdown, Unicode, CRLF, numbered answers, spacing, two columns, quoted CSV, malformed input and unknown-line warnings.
 - Timestamp timers, adaptive defaults, exact extensions, pause/resume, undo, and a regression test for missing optional fields after JSON persistence.
 - Ten sourced finale boards, six answers each, descending survey counts, distinct source links and 4-point/60-second rules.
-- Finale readiness/pause locks, duplicate scoring prevention, 3-strike end, all-six end, late-answer rejection, unique question/team turns, and undo of termination.
+- Finale readiness/pause locks, manual grading, 3-strike end, all-six end, late-answer rejection, same-team retries, per-team/per-question attempt recovery and undo of termination.
 - Score arithmetic, tied ranks, halfway/before-finale/final snapshots and idempotent finale point merging.
 - Opening sequence pauses/restores a running question timer.
 
@@ -25,8 +25,8 @@ Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, us
 - Ten-team scorebook, date/venue record saving, no extra window on Score entry.
 - One-at-a-time bottom-to-top reveal, frozen snapshot during grading edits, 720p/1080p ten-row geometry.
 - Return to exactly the same revealed board and paused timer; same two browser windows throughout.
-- Finale question hidden before start, selected team displayed, automatic 4 points, three strikes and undo, refresh/recovery.
-- Separate next team/board, six correct = 24 points; scorebook reload does not duplicate points.
+- Finale question hidden before start, selected team displayed, manual grades with no automatic awards, three strikes and undo, refresh/recovery.
+- Separate next team/board, all-six reveals followed by a manual 24-point grade; scorebook reload does not duplicate points.
 - Before-finale excludes timed points; final includes them and ranks the resulting totals.
 - Result JSON export/import preserves bonus points as a snapshot.
 - Timestamp expiry recovery locks late answers and shows TIME’S UP. The test shortens the stored deadline to exercise expiry quickly; the actual turn duration remains 60 seconds.
@@ -44,9 +44,9 @@ Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, us
 `scripts/audio-test.mjs` and `qa/audio-results.json`:
 
 - Audience opening screen has no form controls.
-- Native Web Audio oscillators are scheduled for the answer/extension chimes, warning ping and expiry buzzer after an audience click.
-- Mute suppresses playback.
-- Extending an expired written timer removes TIME’S UP and does not advance the question.
+- Native Web Audio uses identical short sine bings for answer/team reveals, a brief sine wrong-answer tone, quiet final-ten-second ticks and an expiry tone. Tests inspect frequency, waveform and duration.
+- Mute suppresses playback; Silent suppresses both answer and team reveal tones.
+- Countdown ticks and TIME’S UP appear at expiry; extension restores time without changing questions.
 
 Screenshots include the intro with Daniel Prins, instructions, ten-team standings at two resolutions, finale timeout, final results, original long boards, and desktop/mobile presenter layouts. Selected screenshots were visually inspected.
 
@@ -63,3 +63,9 @@ Screenshots include the intro with Daniel Prins, instructions, ten-team standing
 ## Practical limits
 
 No physical TV/projector or room speaker system was available. Web Audio scheduling was verified, not venue acoustics. Click the audience window once to enable sound and enter fullscreen there. Browser saves belong to the exact origin/profile, not the Git repository; export backups to transfer them. Finale sources are fan transcripts, not independently checked against episode video, and equal maximum points do not guarantee equal difficulty.
+
+## Readability and flexible finale regression checks
+
+`scripts/readability-test.mjs` checks all ten fully revealed finale boards at 720p/1080p, including long answers and the enlarged footer. A small footer text overflow was found and fixed. It also verifies manual grades, switching questions for the same team, returning to an earlier paused attempt, resetting to 60 seconds, leaving an unfinished finale and editing bonus points in Scorebook. Grades and reset state survive reload. Migration from a retired board preserves earned points. Original 16-question data is unchanged.
+
+The opening format screen and enlarged audience board were visually inspected. Sounds were checked through Web Audio instrumentation; room loudness remains adjustable with the volume control.

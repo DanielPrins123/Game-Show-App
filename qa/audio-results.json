@@ -1,9 +1,10 @@
 {
   "passed": true,
   "checks": [
-    "Audience intro has no form controls.",
-    "Native Web Audio produced three-note answer and extension chimes, one-note warning and three-note expiry buzzer.",
-    "Mute suppressed sound.",
-    "Expired written question extends and removes TIME’S UP without advancing."
+    "One short sine bing for answer and team reveals; identical pitch.",
+    "Silent suppresses both reveal types; global mute suppresses extension.",
+    "Quiet countdown ticks run near expiry; timer ends with visual indicator.",
+    "Wrong-answer sound is a brief sine tone, without harsh sawtooth harmonics.",
+    "Audience intro contains no controls."
   ]
 }

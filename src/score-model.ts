@@ -16,7 +16,7 @@ export const checkpointName=(stage:Checkpoint)=>stage==='halfway'?'HALFTIME STAN
 export interface ScoreReveal {id:string;title:string;venue:string;date:string;stage:Checkpoint;revealed:number;teams:{id:string;name:string;total:number;rank:number}[]}
 export function withFinale(sheet:ScoreSheet,session:Session):ScoreSheet{
   if(!sheet.liveFinale)return sheet;
-  return {...sheet,teams:sheet.teams.map(t=>({...t,bonus:session.finaleResults?.[`${sheet.id}:${t.id}`]?.points??0}))};
+  return {...sheet,teams:sheet.teams.map(t=>({...t,bonus:session.finaleResults?.[`${sheet.id}:${t.id}`]?.points??t.bonus??0}))};
 }
 export function prepareReveal(sheet:ScoreSheet,stage:Checkpoint):ScoreReveal{
   const end=stage==='halfway'?Math.floor(sheet.questions.length/2):stage==='beforeFinale'?sheet.questions.length:undefined;

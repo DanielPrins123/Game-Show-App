@@ -1,14 +1,14 @@
 import { useSyncExternalStore } from 'react';
 import raw from './data/original.json';
 import { finaleQuestions } from './data/finale';
-import { validateGame, type Game } from './model';
-import { reduce, startSession, type Action, type Session } from './engine';
-export const original=validateGame({...raw,timer:240});
+import { liveGame, validateGame, type Game } from './model';
+import { reduce, secondsLeft, startSession, type Action, type Session } from './engine';
+export const original=liveGame(validateGame({...raw,timer:240}));
 export const SESSION_KEY='feud.session.v1';
 export const LIBRARY_KEY='feud.library.v1';
 export function readJSON<T>(key:string,fallback:T):T{try{return JSON.parse(localStorage.getItem(key)??'null')??fallback;}catch{return fallback;}}
 export function saveJSON(key:string,value:unknown){try{localStorage.setItem(key,JSON.stringify(value));return true;}catch{window.dispatchEvent(new Event('storage-failed'));return false;}}
-function loadSession():Session{try{const s=readJSON<Session|null>(SESSION_KEY,null);if(s){validateGame(s.game);if(Number.isInteger(s.index)&&s.index>=0&&s.index<s.game.rounds.flatMap(r=>r.questions).length&&Array.isArray(s.scores)&&s.scores.length===s.game.teams.length&&s.timer&&s.progress&&Array.isArray(s.history)){if(!s.upgraded){s.upgraded=true;s.finaleResults={};if(s.game.timer===20)s.game.timer=240;if(!s.timer.started && s.timer.duration===20)s.timer={...s.timer,duration:240,remaining:240};}if(s.finale&&!finaleQuestions.some(q=>q.id===s.finale!.questionId)){const r=s.finaleResults?.[`${s.finale.sheetId}:${s.finale.teamId}`];if(r)r.finished=true;s.finale=undefined;s.scoreShow=undefined;s.opening=undefined;s.timer={...(s.regularTimer??s.timer),end:null};s.regularTimer=undefined;s.history=[];}return s;}}}catch{/* Keep the included game usable when stored content is damaged. */}return startSession(original);}
+function loadSession():Session{try{const s=readJSON<Session|null>(SESSION_KEY,null);if(s){validateGame(s.game);if(Number.isInteger(s.index)&&s.index>=0&&s.index<s.game.rounds.flatMap(r=>r.questions).length&&Array.isArray(s.scores)&&s.scores.length===s.game.teams.length&&s.timer&&s.progress&&Array.isArray(s.history)){if(!s.upgraded){s.upgraded=true;s.finaleResults={};if(s.game.timer===20)s.game.timer=240;if(!s.timer.started && s.timer.duration===20)s.timer={...s.timer,duration:240,remaining:240};}if(s.finale&&!finaleQuestions.some(q=>q.id===s.finale!.questionId)){const r=s.finaleResults?.[`${s.finale.sheetId}:${s.finale.teamId}`];if(r)r.finished=true;s.finale=undefined;s.scoreShow=undefined;s.opening=undefined;s.timer={...(s.regularTimer??s.timer),end:null};s.regularTimer=undefined;s.history=[];}const before=s.game.rounds.flatMap(r=>r.questions).length;s.game=liveGame(s.game);const after=s.game.rounds.flatMap(r=>r.questions).length;if(before!==after){s.index=Math.min(s.index,after-1);s.history=[];if(!s.finale){s.roundCard=true;s.timer={...s.timer,remaining:secondsLeft(s.timer),end:null};}}return s;}}}catch{/* Keep the included game usable when stored content is damaged. */}return startSession(original);}
 let session=loadSession();const listeners=new Set<()=>void>();
 let channel:BroadcastChannel|undefined;try{channel=new BroadcastChannel('feud.live.v1');}catch{/* Storage events are the fallback. */}
 function refresh(){session=loadSession();listeners.forEach(l=>l());}

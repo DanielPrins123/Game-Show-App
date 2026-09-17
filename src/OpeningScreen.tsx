@@ -1,5 +1,6 @@
-import type { Game } from './model';
+import { liveGame, type Game } from './model';
 export function OpeningScreen({screen,game}:{screen:'logo'|'instructions';game:Game}){
+  game=liveGame(game);
   const questions=game.rounds.flatMap(round=>round.questions);
   const perRound=game.rounds[0].questions.length;
   const equalRounds=game.rounds.every(round=>round.questions.length===perRound);
@@ -10,11 +11,11 @@ export function OpeningScreen({screen,game}:{screen:'logo'|'instructions';game:G
     <div className="opening-lights" aria-hidden="true"/>
     {screen==='logo'?<><header className="feud-logo" aria-label="Family Feud"><span>FAMILY</span><strong>FEUD</strong></header><div className="opening-welcome"><h1>{game.title}</h1><p className="host-credit">With your host, <strong>Daniel Prins</strong></p><span>We’ll begin shortly.</span></div></>:<div className="format-overview">
       <h1>Tonight’s game</h1>
-      <div className="format-numbers"><p><strong>{game.rounds.length}</strong><span>ROUNDS</span></p><p><strong>{equalRounds?perRound:questions.length}</strong><span>{equalRounds?'QUESTIONS EACH':'QUESTIONS TOTAL'}</span></p></div>
+      <div className="format-numbers"><p><strong>{game.rounds.length}</strong><span>ROUNDS</span></p><p><strong>{equalRounds?perRound:questions.length}</strong><span>{equalRounds?'QUESTIONS EACH':'WRITTEN QUESTIONS'}</span></p></div>
       <p className="format-rounds">{equalBonuses?`${perRound-bonuses} regular ${perRound-bonuses===1?'question':'questions'} + ${bonuses} bonus ${bonuses===1?'question':'questions'} per round`:`${questions.length} questions across ${game.rounds.length} rounds`}</p>
       <div className="format-scoring">{points(false)&&<p><span>Regular answers</span><strong>{points(false)} {points(false)==='1'?'point':'points'}</strong></p>}{points(true)&&<p><span>Bonus answers</span><strong>{points(true)} {points(true)==='1'?'point':'points'}</strong></p>}</div>
       <p className="format-checkpoints">Halfway standings · Final results</p>
-      <p className="format-finale">Optional timed finale: 60 seconds · 4 points per answer</p>
+      <p className="format-finale">Then the timed finale: 60 seconds · 4 points per answer</p>
     </div>}
   </section>;
 }

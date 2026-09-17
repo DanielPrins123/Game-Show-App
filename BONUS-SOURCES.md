@@ -20,3 +20,5 @@ The selection favors scenarios over trivia and does not depend on Steve Harvey. 
 | Flirting coworker | [Season 17](https://mstiescott.neocities.org/feud17_6.html) | 36,29,15,11,4,2 |
 
 [Archive methodology](https://mstiescott.neocities.org/feud27.html). Source links are available to the host. The original sixteen supplied questions remain unchanged and separate from this bank.
+
+An eleventh option adapts supplied Q16: “too tired to do.” Its top six answers retain counts 23, 21, 19, 10, 6, 6. Only the lowest-ranked “Go to church” (4) is omitted in the finale copy. Original source files retain all seven answers. This board replaces Q16 in live play and uses the finale’s manual 4-point-per-answer grading convention.

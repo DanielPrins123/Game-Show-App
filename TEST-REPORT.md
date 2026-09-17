@@ -6,11 +6,11 @@ Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, us
 
 - Strict TypeScript typecheck and ESLint.
 - Vite production build (Windows launcher also verified in the preceding build).
-- **26 unit tests in five files**.
+- **30 unit tests in five files**.
 - Full original paste-parser fidelity: **4 rounds, 16 questions, 82 answers**, all wording/ranks/counts and original point values. Original JSON, TXT and REQUIREMENTS.txt have no changes.
 - Parser cases include Markdown, Unicode, CRLF, numbered answers, spacing, two columns, quoted CSV, malformed input and unknown-line warnings.
 - Timestamp timers, adaptive defaults, exact extensions, pause/resume, undo, and a regression test for missing optional fields after JSON persistence.
-- Ten sourced finale boards, six answers each, descending survey counts, distinct source links and 4-point/60-second rules.
+- Ten sourced finale boards plus the supplied Q16 adaptation, six answers each, descending survey counts, distinct source links and 4-point/60-second rules.
 - Finale readiness/pause locks, manual grading, 3-strike end, all-six end, late-answer rejection, same-team retries, per-team/per-question attempt recovery and undo of termination.
 - Score arithmetic, tied ranks, halfway/before-finale/final snapshots and idempotent finale point merging.
 - Opening sequence pauses/restores a running question timer.
@@ -36,7 +36,7 @@ Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, us
 
 `scripts/layout-test.mjs` and `qa/layout-results.json`:
 
-- All 16 original questions, fully revealed, fit at 1280×720 and 1920×1080.
+- All 15 live written questions, fully revealed, fit at 1280×720 and 1920×1080.
 - No original question/tile overflow or off-screen footer.
 - Presenter fits horizontally at 1366×768 and 390×844.
 - Twelve-answer imported board paginates, and revealing answer 12 selects its page.
@@ -66,6 +66,12 @@ No physical TV/projector or room speaker system was available. Web Audio schedul
 
 ## Readability and flexible finale regression checks
 
-`scripts/readability-test.mjs` checks all ten fully revealed finale boards at 720p/1080p, including long answers and the enlarged footer. A small footer text overflow was found and fixed. It also verifies manual grades, switching questions for the same team, returning to an earlier paused attempt, resetting to 60 seconds, leaving an unfinished finale and editing bonus points in Scorebook. Grades and reset state survive reload. Migration from a retired board preserves earned points. Original 16-question data is unchanged.
+`scripts/readability-test.mjs` checks all eleven fully revealed finale boards at 720p/1080p, including long answers and the enlarged footer. A small footer text overflow was found and fixed. It also verifies manual grades, switching questions for the same team, returning to an earlier paused attempt, resetting to 60 seconds, leaving an unfinished finale and editing bonus points in Scorebook. Grades and reset state survive reload. Migration from a retired board preserves earned points. Original 16-question data is unchanged.
 
 The opening format screen and enlarged audience board were visually inspected. Sounds were checked through Web Audio instrumentation; room loudness remains adjustable with the volume control.
+
+## Show sequence and finalist limit
+
+`scripts/show-flow-test.mjs` verifies title-card privacy, automatic timer start on Show question, halfway progression after Q8, pre-finale progression after Q15, selected team turns and automatic final standings. Main written and finale controls fit 1366×768. The original Q16 becomes a six-answer finale option. Old 16-question score drafts retain a backup with their original scores. A twenty-team event is limited to five selected finalists; the host controls tie decisions. Unit tests enforce the five-team selection cap and cover persisted lineup undo.
+
+The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.

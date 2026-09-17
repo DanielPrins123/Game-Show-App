@@ -11,7 +11,7 @@ export function validateGame(value: unknown): Game {
   const g = value as Game;
   if(g.version !== 1 || typeof g.title !== 'string' || !g.title.trim() || !Array.isArray(g.rounds) || !g.rounds.length) throw new Error('Expected version 1, a title, and at least one round.');
   const integer = (v: number, min: number, max: number) => Number.isInteger(v) && v >= min && v <= max;
-  if(!integer(g.timer,1,3600) || !Array.isArray(g.teams) || (g.teams.length < 2 || g.teams.length > 10) || g.teams.some(t=>typeof t.name !== 'string'||!t.name.trim()||!/^#[0-9a-f]{6}$/i.test(t.color))) throw new Error('Use 2–10 named teams with hex colors and a timer from 1–3600 seconds.');
+  if(!integer(g.timer,1,3600) || !Array.isArray(g.teams) || g.teams.length < 2 || g.teams.some(t=>typeof t.name !== 'string'||!t.name.trim()||!/^#[0-9a-f]{6}$/i.test(t.color))) throw new Error('Use at least two named teams with hex colors and a timer from 1–3600 seconds.');
   const ids = new Set<string>();
   const id = (v: string) => {if(typeof v !== 'string'||!v||ids.has(v)) throw new Error('Every game item needs a unique ID.'); ids.add(v);};
   id(g.id);
@@ -23,3 +23,6 @@ export function validateGame(value: unknown): Game {
   return structuredClone(g);
 }
 export const flatten = (g: Game) => g.rounds.flatMap(r=>r.questions.map(q=>({round:r,question:q})));
+
+// Preserve the source game; the live night replaces its final written board with the finale.
+export function liveGame(game:Game):Game{const g=structuredClone(game);if(g.id==='original-1')for(const round of g.rounds)round.questions=round.questions.filter(q=>q.id!=='original-96');return g;}

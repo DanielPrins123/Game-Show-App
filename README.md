@@ -1,8 +1,8 @@
 # Family Feud Game Night
 
-A local React + TypeScript + Vite browser app for Daniel Prins’s written-answer game nights, supporting **2–10 teams**, private hosting, an audience screen, an editor, saved results and an optional timed finale.
+A local React + TypeScript + Vite browser app for Daniel Prins’s written-answer game nights, supporting **any number of teams (at least two)**, private hosting, an audience screen, an editor, saved results and an optional timed finale.
 
-The supplied game remains unchanged: **4 rounds, 16 questions, 82 answers**, with the original wording, ranking, survey counts and points. Original regular answers earn **1 point**, original bonus answers **2 points**. The separate timed finale earns **4 points** per correct answer. Survey counts never determine team points.
+The source files preserve all **4 rounds, 16 questions and 82 answers**, including wording, rankings, counts and original points. Live play uses **15 written questions**, followed by the timed finale. Original Q16 is now a finale option with its lowest-ranked answer omitted (six remain). Original regular answers earn **1 point**, original bonus answers **2 points**. The separate timed finale earns **4 points** per correct answer. Survey counts never determine team points.
 
 ## Start or update on Windows
 
@@ -20,7 +20,7 @@ Only the **presenter** has buttons. A new session starts on an audience welcome 
 
 - **Start show / opening logo:** show the welcome screen while setting up teams, venue and sound.
 - **2 · Show brief instructions:** explain the written-answer format.
-- **3 · Begin questions:** show the board. Start the timer when ready.
+- **3 · Begin questions:** show the first round/question title card. **Show question** opens the board and starts its timer automatically.
 
 Revisiting this sequence preserves the current question/reveals and pauses its running timer until you return.
 
@@ -44,15 +44,15 @@ Default time is **3 minutes for 1–3 answers, 4 minutes for 4–6, 5 minutes fo
 
 The timestamp-based clock shows minutes:seconds, warns at **30 seconds**, and buzzes with a **TIME’S UP** visual at zero. Background tabs do not slow the timer. **Reveal all** is a recap; written scores are entered manually using the question’s indicated points. Navigation preserves reveals; Undo restores gameplay actions.
 
-Four minutes × 16 questions is 64 minutes before grading, reveals and breaks. End early when everyone submits to aim for 7:30–7:45 from a 6:00 start; the app does not impose a schedule.
+Four minutes × 15 questions is 60 minutes before grading, reveals and breaks. End early when everyone submits to aim for 7:30–7:45 from a 6:00 start; the app does not impose a schedule.
 
 ## Scorebook, records and reveals
 
 **Score entry / teams** uses the current host tab. **Back to presenter** returns without changing the TV.
 
-Enter the event title/date/venue and 2–10 team names. Enter points per written question: blank means ungraded, zero means no points. Team names retain a running total and position while scrolling. Ties rank **1, 1, 3**.
+Enter the event title/date/venue and all team names. Enter points per written question: blank means ungraded, zero means no points. Team names retain a running total and position while scrolling. Ties rank **1, 1, 3**.
 
-The original sheet has subtotals after question 8 and before question 16. **Written total** includes all 16 questions. **Timed bonus** is separate; the final running total includes both. **Save result** keeps a dated record; save again at the end. JSON export/import transfers a complete result. CSV export works in spreadsheets. Saved records/imports are snapshots, while the active sheet’s linked finale points update automatically without being repeatedly added.
+The live sheet has a halfway subtotal after question 8. **Written total** includes all 15 questions. **Timed bonus** is separate; the final running total includes both. **Save result** keeps a dated record; save again at the end. JSON export/import transfers a complete result. CSV export works in spreadsheets. Saved records/imports are snapshots, while the active sheet’s linked finale points update automatically without being repeatedly added.
 
 For the audience reveal choose:
 
@@ -66,7 +66,7 @@ Leaderboard is a separate private running ranking. The audience reveal is contro
 
 ## Optional timed finale
 
-Set up the team roster in Scorebook, then expand **Optional timed finale** in Presenter. Ten sourced six-answer boards are available; each turn starts at 60 seconds. Four points per answer is the suggested grading rule, up to 24. You enter the grade yourself.
+Set up the team roster in Scorebook. The finale controls are integrated into the main Presenter question panel. Eleven six-answer boards are available (ten sourced boards and the adapted original Q16); each turn starts at 60 seconds. Four points per answer is the suggested grading rule, up to 24. You enter the grade yourself.
 
 1. Select any team and question, then **Open selected team & question**. The question stays hidden until **Start 60-second turn**.
 2. Reveal answers as you judge them. Reveals never change the score. Three strikes, all six reveals or time running out stops the turn.
@@ -96,11 +96,11 @@ Shortcuts do not fire in text fields. Opening sequence controls are private host
 
 ## Editor and importing games
 
-Editor autosaves separately from live play. Add/reorder rounds/questions/answers, edit points/timers and 2–10 team defaults, or duplicate games. Start a new session to apply a saved game; save event results first because live progress/finale resets.
+Editor autosaves separately from live play. Add/reorder rounds/questions/answers, edit points/timers and team defaults, or duplicate games. Start a new session to apply a saved game; save event results first because live progress/finale resets.
 
 **Paste Questions** parses locally and deterministically. Supported: round headings, questions, count-ending answer lines, Markdown emphasis, numbered answers, divider lines and two columns separated by tabs or multiple spaces. Review errors/preview before confirming. Full original text: `src/data/original.txt`.
 
-**JSON game import/export:** version-1 game content with 2–10 team defaults. Imports receive fresh IDs. **TXT:** loads into paste preview. **CSV:** one answer per row, required columns `round,question,answer,count`; optional `bonus,points,timer,rank`. Quote cells containing commas/quotes.
+**JSON game import/export:** version-1 game content with team defaults. Imports receive fresh IDs. **TXT:** loads into paste preview. **CSV:** one answer per row, required columns `round,question,answer,count`; optional `bonus,points,timer,rank`. Quote cells containing commas/quotes.
 
 ```csv
 round,question,answer,count,points,rank
@@ -127,8 +127,18 @@ Browser tests require port 4173 and installed Microsoft Edge. Vite’s runner co
 
 ## Audience readability update
 
-The audience board now uses a much larger timer and larger question, answer and standings text. The opening format screen summarizes four rounds of four questions, regular/bonus points and the optional timed finale. It adapts to edited game contents. The presenter alone controls the sequence.
+The audience board now uses a much larger timer and larger question, answer and standings text. The opening format screen summarizes four rounds, fifteen written questions, regular/bonus points and the timed finale. It adapts to edited game contents. The presenter alone controls the sequence.
 
 Answer and team score reveals share a short, soft bing. Under presenter sound settings, **Answer & score reveal sound** can be set to **Silent** without muting timer alerts. Quiet ticks during the final 10 seconds can be switched off separately.
 
 Live progress and score entry save automatically. Closing and reopening the same browser/profile at the same address restores them; a running timer continues against the clock. Save result stores a separate dated result, and Export JSON backs up scores for transfer. If an update retires an active finale question, its earned points are retained and that turn is closed; written play resumes paused.
+
+## Follow the show with Next
+
+**Next** progresses through the current title card and question, then the next title card. Opening the question starts its timer automatically. After Q8, Next opens halfway standings in the same presenter panel and audience window. Continue leads to Q9. After Q15, Next opens written standings, then the finalist selection and timed turns. Next team finishes the current turn and prepares the next selected finalist; after the last finalist it opens final results. Reveals remain one at a time from bottom to top. Manual navigation and retry controls remain available.
+
+Written play supports any number of teams (at least two); the finale has **at most five finalists**. Select all teams when there are five or fewer, use Top 3, or choose individual teams. Resolve any ties by adjusting the selected teams yourself. The lineup is saved with the session. Other teams remain in final standings.
+
+Core controls fit a 1366×768 host screen. Audience preview and sound settings expand on demand. Existing live 16-question score drafts are archived under Saved results before conversion to 15 written columns; saved historical results remain unchanged.
+
+The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.

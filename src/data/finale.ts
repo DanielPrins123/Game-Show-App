@@ -14,4 +14,5 @@ export const finaleQuestions:FinaleQuestion[]=[
   board(19,'On their first parachute jump, what might someone do during the descent?',[['SCREAM/CUSS',55],['PRAY',20],['PEE/FLOAT A DOODY',9],['FAINT',5],['CRY',4],['HURL',3]]),
   board(18,'Which body part might a headless horseman speak through?',[['NECK',52],['BUTT/CHOCOLATE STAR',25],['CHEST/LEFT NIPPLE',12],['HANDS',6],['BELLY BUTTON',2],['ARMPIT',2]]),
   board(17,'A coworker keeps flirting with you. How might you react?',[['FLIRT BACK',36],['TELL THEM TO STOP',29],['IGNORE/DISTANCE',15],['REPORT THEM',11],['ASK OUT ON DATE',4],['KICK/SLAP THEM',2]]),
+  {id:'finale-original-16',text:'Name something people are always saying they are too tired to do.',bonus:true,points:4,timer:60,season:0,source:'./REQUIREMENTS.txt',answers:[['Make love',23],['Housework / dishes',21],['Mow the lawn / yard work',19],['Go to work',10],['Exercise / walk',6],['Go out',6]].map(([text,count],i)=>({id:`finale-original-16-${i+1}`,text:String(text),count:Number(count)}))},
 ];

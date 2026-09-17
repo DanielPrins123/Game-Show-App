@@ -70,3 +70,39 @@
 .score-show-board footer{font-size:1.35cqw;letter-spacing:.1cqw;padding-top:.6cqw}
 .question h1,.answer-tile strong{line-height:1.3}
 .countdown small{line-height:1.3}.board-bottom{padding-bottom:.3cqw}
+/* Compact host desk: primary controls remain together; previews/settings expand on demand. */
+.presenter .preview-panel>summary,.presenter .settings-panel>summary{cursor:pointer;font-weight:750;color:var(--gold);font-size:15px}
+.presenter .preview-panel[open]>summary,.presenter .settings-panel[open]>summary{margin-bottom:14px}
+.question-stage{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:10px 0}
+.question-stage>span{font-size:13px;color:#bfd0e8}
+@media(min-width:1101px){
+ .app-nav{height:48px;padding:0 22px}.presenter{padding:12px 22px;max-width:1800px}
+ .presenter .page-heading{margin-bottom:12px;gap:12px}.presenter .page-heading h1{font-size:24px;margin:0}.presenter .page-heading p{font-size:13px}.presenter .heading-actions{gap:6px;max-width:none}
+ .presenter .host-grid{grid-template-columns:minmax(0,1.35fr) minmax(360px,1fr);gap:10px;align-items:start}
+ .presenter .panel{padding:12px}.presenter .section-top{margin-bottom:7px}
+ .presenter .question-panel h2{font-size:22px;min-height:0;margin:8px 0;line-height:1.3}
+ .presenter .question-panel>.subtle{font-size:13px;margin-bottom:8px}
+ .presenter .host-answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:10px}
+ .presenter .host-answer{min-width:0}.presenter .host-answer>button:first-child{padding:8px;min-height:58px;gap:7px}.presenter .host-answer strong{font-size:14px}.presenter .host-answer small{display:none}
+ .presenter .host-side{gap:8px}.presenter .host-clock{font-size:46px;margin:5px 0}.presenter .host-clock>span{font-size:10px}
+ .presenter .timer-panel .micro{display:none}.presenter .duration-row{margin-top:8px;gap:5px}.presenter .duration-row button{padding:6px 9px}.presenter .duration-row input{width:65px}
+ .presenter .button-row{gap:6px}.presenter .question-nav{padding-top:10px;margin-top:10px}.presenter .question-panel>.micro{font-size:12px;margin-top:8px}
+ .presenter .finale-setup label{margin:7px 0;gap:3px}.presenter .finale-setup select{padding:7px;margin-top:2px}.presenter .finale-setup p{margin:5px 0;font-size:12px}
+ .presenter .finale-setup .button-row{margin-top:6px}.presenter .finale-setup details details{margin:7px 0}.presenter .finale-status{padding:8px;font-size:13px;margin-top:8px}
+ .presenter .opening-controls{margin-bottom:10px;padding:12px}.presenter .opening-controls h2{font-size:18px}.presenter .opening-controls p{font-size:13px}
+ .presenter .preview-panel,.presenter .settings-panel{grid-column:auto}
+}
+@media(max-width:1100px){.presenter .host-answers{grid-template-columns:1fr}.question-stage>span{display:none}}
+.integrated-finale{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 0;margin:8px 0;display:grid;grid-template-columns:1fr 2fr;gap:6px 10px}
+.integrated-finale>p{grid-column:1/-1}.integrated-finale label{margin:0!important}.integrated-finale>.finale-reference{grid-column:1/-1;order:8}.integrated-finale>button,.integrated-finale>.button-row{align-self:end}.integrated-finale .button-row button{flex:1}.integrated-finale select{width:100%;min-width:0}.integrated-finale .finale-reference{font-size:12px}
+@media(max-width:720px){.integrated-finale{grid-template-columns:1fr}.integrated-finale>p,.integrated-finale>.finale-reference{grid-column:auto}}
+@media(min-width:1101px){
+ .integrated-finale{grid-template-columns:1fr 1.5fr auto;gap:5px 8px}.integrated-finale>p{display:none}.integrated-finale>.finale-reference{grid-column:auto;order:0;font-size:12px}.integrated-finale>.button-row{grid-column:1/3;grid-row:2;margin:0!important}.integrated-finale>button.primary{grid-column:3;grid-row:1;font-size:12px;max-width:145px}.integrated-finale>.finale-reference{grid-column:1/3;grid-row:3;margin:0!important}.integrated-finale>button:last-child{grid-column:3;grid-row:2;font-size:12px;max-width:145px}.integrated-finale label{font-size:12px}
+ .presenter .host-answer>button:first-child{min-height:48px}.presenter .question-panel>.micro{display:none}.presenter .question-panel>.button-row>label{flex-direction:row;align-items:center;gap:8px}.presenter .question-panel>.button-row{margin-top:7px}.presenter .question-panel>.subtle{font-size:12px;line-height:1.35}
+}
+.sequence-hidden{display:none!important}.sequence-scores .score-show-board{max-width:620px;margin:12px auto}.sequence-scores>p{margin:8px 0}.sequence-scores>.button-row{margin-top:10px}
+.question-stage button:not(.primary){background:#1b2c46;color:#e9f1ff}.question-stage button.primary{color:#18213a}
+.finalist-picker{margin:8px 0;padding:10px;border:1px solid var(--line);border-radius:8px}.finalist-picker summary{cursor:pointer;font-weight:700;color:var(--gold)}.finalist-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.finalist-picker .button-row{margin-top:10px}
+@media(min-width:1101px){.sequence-scores .score-show-board{max-width:420px}.sequence-scores .finalist-picker .micro{font-size:11px}}
+.integrated-finale>.finalist-picker{grid-column:1/-1;margin:0;padding:6px;grid-row:auto}.integrated-finale>label{grid-row:2}.integrated-finale>button.primary{grid-row:2}.integrated-finale>.button-row{grid-row:3}.integrated-finale>button:last-child{grid-row:3}.integrated-finale>.finale-reference{grid-row:4}
+@media(min-width:1101px){.presenter .question-panel h2{font-size:20px;line-height:1.25}.presenter .host-answer>button:first-child{min-height:44px}.presenter .finale-status{padding:6px}.integrated-finale{padding:6px 0}}

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "result": {
-    "id": "76727fb6-c952-4352-b790-0da17433c2f4",
+    "id": "27f859f9-33b2-4aac-9c97-5e1f16ae7256",
     "title": "Family Feud Game Night",
     "date": "2026-09-17",
     "venue": "Community Hall",
@@ -21,16 +21,14 @@
       "Round 3: Name a signer of the Declaration of Independence.",
       "Round 4: Name something specific that leaves you breathless.",
       "Round 4: Name something that a woman might hide in her bra.",
-      "Round 4: Name something specific that divorcing couples fight over.",
-      "Round 4: Name something people are always saying they are too tired to do."
+      "Round 4: Name something specific that divorcing couples fight over."
     ],
     "teams": [
       {
-        "id": "15777119-a665-4d13-8ddc-c4797c172533",
+        "id": "df9a3726-c05f-4f2e-9d03-37e952cfc081",
         "name": "Team 1",
         "scores": [
           20,
-          null,
           null,
           null,
           null,
@@ -49,11 +47,10 @@
         "bonus": 4
       },
       {
-        "id": "f5e15ba8-fb8b-4ff5-82c4-d8fe50334e13",
+        "id": "4b636d33-ed35-493f-96c7-92c0032faf16",
         "name": "Team 2",
         "scores": [
           9,
-          null,
           null,
           null,
           null,
@@ -72,7 +69,7 @@
         "bonus": 24
       },
       {
-        "id": "663bd87a-184a-415b-ac2c-aa9da78418b9",
+        "id": "ea4604e5-c192-48ce-8509-54a35a056c78",
         "name": "Team 3",
         "scores": [
           8,
@@ -89,13 +86,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "e6d4cae7-6e11-473a-953e-c46012c5dc9e",
+        "id": "67844b34-29a0-4132-8385-d0d1a983e3a4",
         "name": "Team 4",
         "scores": [
           7,
@@ -112,13 +108,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "39cd4851-cad4-485c-bc6b-a4c490405da2",
+        "id": "95c70051-8e7e-4e47-a56a-f545947fa643",
         "name": "Team 5",
         "scores": [
           6,
@@ -135,13 +130,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "c2b81351-0bf4-4d6a-8d2d-128df83dbfa9",
+        "id": "a82636d3-02ea-48ec-87ef-f47bb96a7b07",
         "name": "Team 6",
         "scores": [
           5,
@@ -158,13 +152,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "83ce79dc-9b6b-4265-91c7-3613b096e602",
+        "id": "c54e3495-994e-4d41-ad20-d4283f3ad0d0",
         "name": "Team 7",
         "scores": [
           4,
@@ -181,13 +174,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "ae08deef-3d7d-407a-8f32-37c52eed9cea",
+        "id": "ac92e7db-26c2-4a5b-ae90-c850f43ef21c",
         "name": "Team 8",
         "scores": [
           3,
@@ -204,13 +196,12 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "8e8cade0-a3c8-42a5-82ef-c1f45b29567b",
+        "id": "87865f55-b1f9-485f-8f5d-e4f0a17d1c56",
         "name": "Team 9",
         "scores": [
           2,
@@ -227,17 +218,15 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "bonus": 0
       },
       {
-        "id": "9fe03fc3-fe5e-4f39-87ba-6b4e8df7c442",
+        "id": "600c3819-91d7-4360-91a7-e5ff2a9d242d",
         "name": "Team 10",
         "scores": [
           1,
-          null,
           null,
           null,
           null,
@@ -256,6 +245,6 @@
         "bonus": 0
       }
     ],
-    "savedAt": "2026-09-17T19:17:44.976Z"
+    "savedAt": "2026-09-17T19:42:13.760Z"
   }
 }

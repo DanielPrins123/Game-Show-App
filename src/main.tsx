@@ -1,0 +1,23 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Board } from './Board';
+import { Editor } from './Editor';
+import { Presenter, fullscreen } from './Presenter';
+import { Scores } from './Scores';
+import { ScoreRevealDisplay } from './ScoreReveal';
+import { current, secondsLeft } from './engine';
+import { audienceConnected, dispatch, heartbeat, useSession } from './store';
+import { sound, unlockAudio } from './audio';
+import './styles.css';
+function App(){const session=useSession();const [route,setRoute]=useState(location.hash||'#/presenter');const [now,setNow]=useState(Date.now());const [storageError,setStorageError]=useState(false);const played=useRef('');const warned=useRef('');const expired=useRef('');
+  const display=route==='#/display';const gameplay=display||route==='#/presenter';
+  useEffect(()=>{const interval=setInterval(()=>setNow(Date.now()),100);const hash=()=>setRoute(location.hash||'#/presenter');const storage=()=>setStorageError(true);window.addEventListener('hashchange',hash);window.addEventListener('storage-failed',storage);window.addEventListener('pointerdown',unlockAudio);return()=>{clearInterval(interval);window.removeEventListener('hashchange',hash);window.removeEventListener('storage-failed',storage);window.removeEventListener('pointerdown',unlockAudio);};},[]);
+  useEffect(()=>{if(!display)return;heartbeat();const i=setInterval(heartbeat,1500);return()=>clearInterval(i);},[display]);
+  useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape'){document.querySelector<HTMLButtonElement>('.overlay .close')?.click();return;}const target=e.target as HTMLElement;if(target.closest('input,textarea,select,[contenteditable="true"]')||document.querySelector('.overlay')||!gameplay||e.ctrlKey||e.metaKey||e.altKey||e.repeat)return;unlockAudio();const k=e.key.toLowerCase();const a=current(session).question.answers[Number(k)-1];if(/^[1-8]$/.test(k)&&a)dispatch({type:'reveal',id:a.id});else if(k==='t')dispatch({type:'toggleTimer'});else if(k==='r')dispatch({type:'resetTimer'});else if(k==='x')dispatch({type:'strike',delta:1});else if(k==='z')dispatch({type:'strike',delta:-1});else if(k==='u')dispatch({type:'undo'});else if(k==='n'||k==='arrowright')dispatch({type:'navigate',delta:1});else if(k==='p'||k==='arrowleft')dispatch({type:'navigate',delta:-1});else if(k==='f')fullscreen();else return;e.preventDefault();};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key);},[session,gameplay]);
+  useEffect(()=>{if(!gameplay)return;const canPlay=display||!audienceConnected();if(session.event&&played.current!==session.event.id){played.current=session.event.id;if(canPlay)sound(session.event.type,session.volume,session.muted);}const left=secondsLeft(session.timer,now);const cycle=`${session.timer.cycle}:${session.timer.end}`;if(session.timer.end!==null){if(left>0&&left<=5&&warned.current!==cycle){warned.current=cycle;if(canPlay)sound('warning',session.volume,session.muted);}if(left===0&&expired.current!==cycle){expired.current=cycle;if(canPlay)sound('expired',session.volume,session.muted);}}},[session,now,gameplay,display]);
+  if(display)return <div className="display-page" onDoubleClick={fullscreen}><Board session={session} now={now}/></div>;
+  if(route==='#/score-show')return <ScoreRevealDisplay volume={session.volume} muted={session.muted}/>;
+  return <><nav className="app-nav"><a href="#/presenter" className="nav-brand">FF<span>GAME NIGHT</span></a><div>{[['presenter','Presenter'],['editor','Game editor'],['scores','Scorebook'],['leaderboard','Leaderboard']].map(([path,label])=><a className={route===`#/${path}`?'active':''} key={path} href={`#/${path}`}>{label}</a>)}</div><span className="local-label">LOCAL · OFFLINE READY</span></nav>{storageError&&<div role="alert" className="storage-error">Browser storage is full or unavailable. Changes may not survive refresh. Export your game and results now.</div>}{route==='#/editor'?<Editor/>:route==='#/scores'?<Scores session={session}/>:route==='#/leaderboard'?<Scores session={session} leaderboard/>:<Presenter session={session} now={now}/>}</>;
+}
+class ErrorBoundary extends React.Component<{children:React.ReactNode},{error:boolean}>{state={error:false};static getDerivedStateFromError(){return {error:true};}render(){return this.state.error?<main><h1>Something went wrong.</h1><p>Your saved data is still in this browser. Reload to try again.</p><button onClick={()=>location.reload()}>Reload</button></main>:this.props.children;}}
+createRoot(document.getElementById('root')!).render(<ErrorBoundary><App/></ErrorBoundary>);

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "Nonsequential reveals 5/1/3, hidden answer privacy, auto-score and no duplicate scoring passed.",
+    "Timestamp timer start/pause/resume/reset, five-second warning and expiration passed.",
+    "Presenter and audience refresh/resume passed.",
+    "Scorebook date/venue save and reload, halfway subtotal 7, pre-final subtotal 9, totals, live leaderboard, and tied ranks passed.",
+    "Full paste preview/import, JSON export/import and shortcut suppression in editor passed.",
+    "localStorage-event synchronization fallback passed.",
+    "No browser console errors; 1280×720 and 1920×1080 board geometry passed."
+  ]
+}

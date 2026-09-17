@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "All 16 fully revealed questions fit at 1280×720.",
+    "All 16 fully revealed questions fit at 1920×1080.",
+    "Presenter has no horizontal overflow at 1366×768.",
+    "Presenter has no horizontal overflow at 390×844.",
+    "Questions over eight answers paginate; revealing answer 12 switches to its board page."
+  ]
+}

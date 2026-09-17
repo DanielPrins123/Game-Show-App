@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "id": "original-1",
+  "title": "Family Feud Game Night",
+  "timer": 20,
+  "teams": [
+    {
+      "name": "Team Blue",
+      "color": "#48baff"
+    },
+    {
+      "name": "Team Gold",
+      "color": "#ffce65"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "original-2",
+      "name": "Round 1",
+      "questions": [
+        {
+          "id": "original-3",
+          "text": "Name something that you take to a hotel.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-4",
+              "text": "Luggage",
+              "count": 69
+            },
+            {
+              "id": "original-5",
+              "text": "Clothing / sleepwear",
+              "count": 8
+            },
+            {
+              "id": "original-6",
+              "text": "Toothbrush",
+              "count": 6
+            },
+            {
+              "id": "original-7",
+              "text": "A lover",
+              "count": 3
+            },
+            {
+              "id": "original-8",
+              "text": "Comb / brush",
+              "count": 2
+            },
+            {
+              "id": "original-9",
+              "text": "Hair dryer",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "original-10",
+          "text": "Name one of the sounds of summer.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-11",
+              "text": "Birds",
+              "count": 36
+            },
+            {
+              "id": "original-12",
+              "text": "Crickets",
+              "count": 16
+            },
+            {
+              "id": "original-13",
+              "text": "Children playing",
+              "count": 12
+            },
+            {
+              "id": "original-14",
+              "text": "Lawn mower",
+              "count": 9
+            },
+            {
+              "id": "original-15",
+              "text": "Water splashing",
+              "count": 9
+            },
+            {
+              "id": "original-16",
+              "text": "Crack of a baseball bat",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "original-17",
+          "text": "Name a sport that uses a small ball.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-18",
+              "text": "Golf",
+              "count": 53
+            },
+            {
+              "id": "original-19",
+              "text": "Baseball",
+              "count": 15
+            },
+            {
+              "id": "original-20",
+              "text": "Ping-pong",
+              "count": 12
+            },
+            {
+              "id": "original-21",
+              "text": "Tennis",
+              "count": 9
+            },
+            {
+              "id": "original-22",
+              "text": "Racquetball",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "id": "original-23",
+          "text": "Name a kind of place where people sunbathe.",
+          "bonus": true,
+          "points": 2,
+          "answers": [
+            {
+              "id": "original-24",
+              "text": "Beach",
+              "count": 75
+            },
+            {
+              "id": "original-25",
+              "text": "Backyard",
+              "count": 11
+            },
+            {
+              "id": "original-26",
+              "text": "Swimming pool",
+              "count": 6
+            },
+            {
+              "id": "original-27",
+              "text": "Roof",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original-28",
+      "name": "Round 2",
+      "questions": [
+        {
+          "id": "original-29",
+          "text": "Name a place where young lovers kiss for the first time.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-30",
+              "text": "Car",
+              "count": 41
+            },
+            {
+              "id": "original-31",
+              "text": "Movies",
+              "count": 29
+            },
+            {
+              "id": "original-32",
+              "text": "Front door / porch",
+              "count": 17
+            },
+            {
+              "id": "original-33",
+              "text": "Dance",
+              "count": 5
+            },
+            {
+              "id": "original-34",
+              "text": "Park",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "id": "original-35",
+          "text": "Name something kids suffer from at summer camp.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-36",
+              "text": "Homesickness",
+              "count": 65
+            },
+            {
+              "id": "original-37",
+              "text": "Poison ivy",
+              "count": 28
+            },
+            {
+              "id": "original-38",
+              "text": "Bug bites",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "id": "original-39",
+          "text": "Name something in your house today that probably won’t last another five years.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-40",
+              "text": "TV",
+              "count": 27
+            },
+            {
+              "id": "original-41",
+              "text": "Couch",
+              "count": 13
+            },
+            {
+              "id": "original-42",
+              "text": "Refrigerator",
+              "count": 12
+            },
+            {
+              "id": "original-43",
+              "text": "Washing machine",
+              "count": 10
+            },
+            {
+              "id": "original-44",
+              "text": "Carpet",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "original-45",
+          "text": "Name something you might enjoy about a stay in the hospital.",
+          "bonus": true,
+          "points": 2,
+          "answers": [
+            {
+              "id": "original-46",
+              "text": "Rest",
+              "count": 30
+            },
+            {
+              "id": "original-47",
+              "text": "Being waited on",
+              "count": 27
+            },
+            {
+              "id": "original-48",
+              "text": "Food / eating in bed",
+              "count": 9
+            },
+            {
+              "id": "original-49",
+              "text": "No cooking",
+              "count": 6
+            },
+            {
+              "id": "original-50",
+              "text": "Nurses",
+              "count": 6
+            },
+            {
+              "id": "original-51",
+              "text": "Peace and quiet",
+              "count": 5
+            },
+            {
+              "id": "original-52",
+              "text": "Receiving flowers",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original-53",
+      "name": "Round 3",
+      "questions": [
+        {
+          "id": "original-54",
+          "text": "When you were a naughty kid, where did you go to hide from your parents?",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-55",
+              "text": "Bedroom",
+              "count": 39
+            },
+            {
+              "id": "original-56",
+              "text": "Closet",
+              "count": 24
+            },
+            {
+              "id": "original-57",
+              "text": "Bathroom",
+              "count": 8
+            },
+            {
+              "id": "original-58",
+              "text": "Friend’s house",
+              "count": 6
+            },
+            {
+              "id": "original-59",
+              "text": "Basement",
+              "count": 4
+            },
+            {
+              "id": "original-60",
+              "text": "Garage",
+              "count": 3
+            },
+            {
+              "id": "original-61",
+              "text": "Woods",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "original-62",
+          "text": "Name a question people ask their dogs.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-63",
+              "text": "Want to go for a walk / go out?",
+              "count": 58
+            },
+            {
+              "id": "original-64",
+              "text": "Want food / a bone?",
+              "count": 26
+            },
+            {
+              "id": "original-65",
+              "text": "Have you been good?",
+              "count": 4
+            },
+            {
+              "id": "original-66",
+              "text": "How are you doing?",
+              "count": 3
+            },
+            {
+              "id": "original-67",
+              "text": "Can you speak?",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "original-68",
+          "text": "Name something Switzerland is famous for.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-69",
+              "text": "The Alps",
+              "count": 29
+            },
+            {
+              "id": "original-70",
+              "text": "Chocolate",
+              "count": 23
+            },
+            {
+              "id": "original-71",
+              "text": "Watches / clocks",
+              "count": 20
+            },
+            {
+              "id": "original-72",
+              "text": "Cheese",
+              "count": 10
+            },
+            {
+              "id": "original-73",
+              "text": "Skiing",
+              "count": 10
+            },
+            {
+              "id": "original-74",
+              "text": "Banks",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "id": "original-75",
+          "text": "Name a signer of the Declaration of Independence.",
+          "bonus": true,
+          "points": 2,
+          "answers": [
+            {
+              "id": "original-76",
+              "text": "John Hancock",
+              "count": 48
+            },
+            {
+              "id": "original-77",
+              "text": "Thomas Jefferson",
+              "count": 35
+            },
+            {
+              "id": "original-78",
+              "text": "Benjamin Franklin",
+              "count": 10
+            },
+            {
+              "id": "original-79",
+              "text": "John Adams",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original-80",
+      "name": "Round 4",
+      "questions": [
+        {
+          "id": "original-81",
+          "text": "Name something specific that leaves you breathless.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-82",
+              "text": "Running / jogging",
+              "count": 42
+            },
+            {
+              "id": "original-83",
+              "text": "Making love",
+              "count": 12
+            },
+            {
+              "id": "original-84",
+              "text": "Climbing stairs",
+              "count": 8
+            },
+            {
+              "id": "original-85",
+              "text": "Roller coaster",
+              "count": 6
+            },
+            {
+              "id": "original-86",
+              "text": "Fear",
+              "count": 4
+            },
+            {
+              "id": "original-87",
+              "text": "Kissing",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "id": "original-88",
+          "text": "Name something that a woman might hide in her bra.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-89",
+              "text": "Money",
+              "count": 91
+            },
+            {
+              "id": "original-90",
+              "text": "Key",
+              "count": 4
+            },
+            {
+              "id": "original-91",
+              "text": "Tissue",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "original-92",
+          "text": "Name something specific that divorcing couples fight over.",
+          "bonus": false,
+          "points": 1,
+          "answers": [
+            {
+              "id": "original-93",
+              "text": "Custody of the kids",
+              "count": 62
+            },
+            {
+              "id": "original-94",
+              "text": "Money",
+              "count": 28
+            },
+            {
+              "id": "original-95",
+              "text": "House",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "id": "original-96",
+          "text": "Name something people are always saying they are too tired to do.",
+          "bonus": true,
+          "points": 2,
+          "answers": [
+            {
+              "id": "original-97",
+              "text": "Make love",
+              "count": 23
+            },
+            {
+              "id": "original-98",
+              "text": "Housework / dishes",
+              "count": 21
+            },
+            {
+              "id": "original-99",
+              "text": "Mow the lawn / yard work",
+              "count": 19
+            },
+            {
+              "id": "original-100",
+              "text": "Go to work",
+              "count": 10
+            },
+            {
+              "id": "original-101",
+              "text": "Exercise / walk",
+              "count": 6
+            },
+            {
+              "id": "original-102",
+              "text": "Go out",
+              "count": 6
+            },
+            {
+              "id": "original-103",
+              "text": "Go to church",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

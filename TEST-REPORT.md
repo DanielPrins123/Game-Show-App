@@ -77,3 +77,13 @@ The opening format screen and enlarged audience board were visually inspected. S
 The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
 
 Finale X reachability verified at 1366×768, 1024×768 and 390×844, both at the top and bottom of the page; clicking records a strike. The show-flow check verifies named round transitions and automatic timer start.
+
+## Trivia and keyboard score entry — September 18, 2026
+
+Typecheck, ESLint, production build and 38 unit tests pass, including the locally supplied PowerPoint integration case. The 28-slide sample converts into 24 screens: four round cards and 20 questions with 37 answers. Its four bonus maximums are 10, 10, 10 and 30. Source paragraphs and slide provenance are retained; unspecified regular points remain for the host to decide. The original Family Feud parser still preserves all 16 supplied questions and 82 answers.
+
+The new Edge browser test uploads the actual file through the production worker, requires review, checks answer privacy before reveal, timestamp timer start/pause, BroadcastChannel and storage-event synchronization, audience reload, manual grades, keyboard entry, saved date/venue, result JSON restoration and Family Feud's Enter-down score navigation. All 20 question layouts were checked at 1280×720 and 1920×1080. A quick follow-up run verified rapid text entry and restoration over modified scores after fixing an asynchronous controlled-input rollback. The final answer display and compact presenter were visually inspected. Pictures remain private until assigned; extracted decorative images are not automatically displayed.
+
+The existing Family Feud browser regression passes: opening/instructions, reveals, timer extension/undo, ten-team scoring, same-window ranked score shows, finale manual grading/strikes, persistence, original-game paste import and storage fallback. Browser tests use isolated profiles and do not change the host's saved event.
+
+PowerPoint conversion is heuristic and deliberately requires review. It does not reproduce animations, master artwork or embedded media, and does not OCR image-only text. No physical projector or room audio system was available. The private source PowerPoint is not included in the repository.

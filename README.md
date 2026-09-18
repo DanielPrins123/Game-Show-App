@@ -110,7 +110,27 @@ Round 1,Name something you take to a hotel.,Clothing / sleepwear,8,1,2
 
 Game JSON is content, result JSON is scores/date/venue/bonus totals, browser session is live progress. Browser saves are not synced by GitHub. Keep the same browser/profile/address during an event and export backups. Storage failures display an alert.
 
-## Development
+## Trivia PowerPoint mode
+
+Choose **Trivia** in the top navigation, then upload a **.pptx** or **.ppsx**. For old `.ppt` files, use PowerPoint's **Save As → PowerPoint Presentation (.pptx)** first. Conversion runs locally in a browser worker; nothing is uploaded to a service.
+
+Review every converted screen before checking the review box and starting. You can edit the public prompt, private answers (one per line), round, scoring instructions, maximum points and timer. The supplied 09.15.2026 deck converts its 28 slides into four round transitions and 20 questions, including the four bonus questions. Its 37 answers and bonus point rules are preserved. Regular-question points are not stated in that deck, so they remain **host decides** rather than being invented.
+
+This is content conversion, not an exact PowerPoint player. Text, speaker notes and embedded PNG/JPEG/GIF/WebP pictures are supported. Animation order and shape position help identify answers, but require review. Separate answer slides are paired with the preceding unanswered question. Unclassified slides remain editable information screens. Master backgrounds, animation effects, charts, audio/video and external links are not reproduced. Image-only questions need manual transcription. Extracted images stay private until you assign them to the question or answer. Keep the original PowerPoint for comparison. Maximum input size: 40 MB / 500 slides.
+
+**Presenter:** Next shows the round transition, question title, then the question and automatically starts its timer. Reveal answers individually after grading. Back/undo, jump, pause, reset and +30 seconds let you recover or revisit a question. Halfway standings appear before the second half of the rounds; final standings follow the last question. Reveal teams from bottom to top, up to ten on TV. Manual **Show scores on TV** replaces the current audience screen temporarily; **Close scores / return** restores the question and paused timer state. Open audience display uses the same named window as Family Feud. Double-click the TV view for fullscreen; click it once to enable browser audio.
+
+**Score sheet:** One-question mode lists all teams in a single score column. Enter moves down to the next team, Shift+Enter moves up, and Tab moves across; arrow up/down also navigate. Full sheet mode includes all questions, halfway subtotal, total and rank. All grades are manual. Add as many teams as needed. Enter date and venue, then **Save dated result** to archive the night. Export CSV for a spreadsheet or results JSON for backup/transfer. Upload results JSON to review and restore a saved night with its scores; restored games start paused. Library **Reopen scores** also restores archived results. Starting another night automatically archives the current one first.
+
+Trivia state and scores autosave separately from Family Feud. Game content/pictures and archived results use IndexedDB; the active score sheet and show state use localStorage with BroadcastChannel/storage-event synchronization. Keep the same browser, profile and address. Closing a tab preserves the game; a running timer keeps counting against real time. Clearing browser data removes local saves. GitHub does not transfer event scores—export/import JSON for another laptop.
+
+Family Feud's existing score sheet now uses the same Enter-down / Tab-across keyboard navigation.
+
+### Trivia verification
+
+`npm test` covers deterministic PowerPoint conversion, validation, timers, score stops and undo alongside the full original Family Feud parser tests. To include the supplied PowerPoint in local tests, set `PPTX_SAMPLE_PATH` to its path. With a production build running on port 4173, run `node scripts/trivia-test.mjs` with that variable set to exercise upload, review, audience privacy, synchronization, keyboard scoring, persistence and JSON restoration. The PowerPoint itself is not committed to the repository.
+
+## Development commands
 
 ```text
 npm install

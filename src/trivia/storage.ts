@@ -17,8 +17,8 @@ export async function updateTrivia(fn:Change){
   const apply=()=>{const current=read();const next=fn(current);if(!next)return;next.revision=(current?.revision??0)+1;try{localStorage.setItem(KEY,JSON.stringify(next));}catch{window.dispatchEvent(new Event('storage-failed'));throw Error('Browser storage is unavailable. Export a backup before continuing.');}channel?.postMessage('state');};
   try{refresh();if(navigator.locks)await navigator.locks.request('trivia-state',apply);else apply();}finally{pending.splice(pending.indexOf(item),1);refresh();}
 }
-function database():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const request=indexedDB.open('game-night-trivia',1);request.onupgradeneeded=()=>{request.result.createObjectStore('decks',{keyPath:'id'});request.result.createObjectStore('results',{keyPath:'id'});};request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(Error('Local trivia storage could not be opened.'));});}
-async function transaction<T>(name:'decks'|'results',mode:IDBTransactionMode,run:(store:IDBObjectStore)=>IDBRequest):Promise<T>{
+function database():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const request=indexedDB.open('game-night-trivia',2);request.onupgradeneeded=()=>{for(const name of ['decks','results','drafts'])if(!request.result.objectStoreNames.contains(name))request.result.createObjectStore(name,{keyPath:'id'});};request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(Error('Local trivia storage could not be opened.'));});}
+async function transaction<T>(name:'decks'|'results'|'drafts',mode:IDBTransactionMode,run:(store:IDBObjectStore)=>IDBRequest):Promise<T>{
   const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction(name,mode),request=run(tx.objectStore(name));let result:T;request.onsuccess=()=>{result=request.result as T;};tx.oncomplete=()=>{db.close();resolve(result);};tx.onerror=tx.onabort=()=>{db.close();reject(Error('Could not save trivia data. Export a JSON backup and check browser storage.'));};});
 }
 export const saveTriviaDeck=(deck:TriviaDeck)=>transaction('decks','readwrite',s=>s.put(deck));
@@ -27,3 +27,6 @@ export const listTriviaDecks=()=>transaction<TriviaDeck[]>('decks','readonly',s=
 export interface TriviaResult { id:string; savedAt:string; session:TriviaSession; deck:TriviaDeck }
 export const saveTriviaResult=(session:TriviaSession,deck:TriviaDeck)=>transaction('results','readwrite',s=>s.put({id:crypto.randomUUID(),savedAt:new Date().toISOString(),session:structuredClone(session),deck}));
 export const listTriviaResults=()=>transaction<TriviaResult[]>('results','readonly',s=>s.getAll());
+let draftWrites:Promise<unknown>=Promise.resolve();
+export function saveTriviaDraft(deck:TriviaDeck){const snapshot=structuredClone(deck);const write=draftWrites.catch(()=>undefined).then(()=>transaction('drafts','readwrite',s=>s.put({id:'current',deck:snapshot})));draftWrites=write;return write;}
+export const getTriviaDraft=async()=>{const result=await transaction<{deck:TriviaDeck}|undefined>('drafts','readonly',s=>s.get('current'));return result?.deck;};

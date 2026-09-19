@@ -110,13 +110,36 @@ Round 1,Name something you take to a hotel.,Clothing / sleepwear,8,1,2
 
 Game JSON is content, result JSON is scores/date/venue/bonus totals, browser session is live progress. Browser saves are not synced by GitHub. Keep the same browser/profile/address during an event and export backups. Storage failures display an alert.
 
-## Trivia PowerPoint mode
+## Trivia editor and text import
 
-Choose **Trivia** in the top navigation, then upload a **.pptx** or **.ppsx**. For old `.ppt` files, use PowerPoint's **Save As → PowerPoint Presentation (.pptx)** first. Conversion runs locally in a browser worker; nothing is uploaded to a service.
+Choose **Trivia → Game editor & library**. Create a game in the editor, use **Paste Questions → Parse & preview → Confirm import as draft**, or import a TXT / trivia JSON file. PowerPoint import is no longer part of the hosting workflow. Previously saved trivia games, pictures and results remain compatible.
 
-Review every converted screen before checking the review box and starting. You can edit the public prompt, private answers (one per line), round, scoring instructions, maximum points and timer. The supplied 09.15.2026 deck converts its 28 slides into four round transitions and 20 questions, including the four bonus questions. Its 37 answers and bonus point rules are preserved. Regular-question points are not stated in that deck, so they remain **host decides** rather than being invented.
+The editor supports adding rounds and questions, editing public prompts/private answers, setting points and timers, reordering/duplicating/deleting screens, private notes, and a TV preview. Drafts save separately from the running show; wait for **Draft saved locally** before closing. Save a game to the library or export JSON for backup. Starting an edited game creates a separate live copy and archives the previous night's scores.
 
-This is content conversion, not an exact PowerPoint player. Text, speaker notes and embedded PNG/JPEG/GIF/WebP pictures are supported. Animation order and shape position help identify answers, but require review. Separate answer slides are paired with the preceding unanswered question. Unclassified slides remain editable information screens. Master backgrounds, animation effects, charts, audio/video and external links are not reproduced. Image-only questions need manual transcription. Extracted images stay private until you assign them to the question or answer. Keep the original PowerPoint for comparison. Maximum input size: 40 MB / 500 slides.
+Use this predictable text format (the Paste Questions panel includes an example):
+
+```text
+Title: Friday Trivia
+Round 1: General knowledge
+Categories: Geography, Food, Music
+
+Question 1
+Question: What is the **capital** of Canada?
+Answer: Ottawa
+Points: 1
+Timer: 240
+
+Bonus
+Question: Name the two planets closest to the Sun.
+Answer: Mercury
+Answer: Venus
+Points: 4
+Scoring: 2 points per correct answer
+```
+
+Repeat Answer: for multiple answers, or use Answers: followed by a bullet list. Points are the maximum for the question; scoring instructions describe partial credit. Omitted points remain for the host to decide. Timers default to 240 seconds. Notes: are private. Line breaks and **bold** emphasis are preserved on the audience screen. TXT export preserves the editable question/answer content; JSON also preserves pictures and source information.
+
+Trivia uses a white audience background, dark text, a restrained warm accent and the original Outspoken Entertainment branding supplied in the reference deck. Short questions and single answers use larger type; longer questions and multi-answer lists use more compact layouts. The presenter/editor also uses a light theme. Family Feud retains its own appearance.
 
 **Presenter:** Next shows the round transition, question title, then the question and automatically starts its timer. Reveal answers individually after grading. Back/undo, jump, pause, reset and +30 seconds let you recover or revisit a question. Halfway standings appear before the second half of the rounds; final standings follow the last question. Reveal teams from bottom to top, up to ten on TV. Manual **Show scores on TV** replaces the current audience screen temporarily; **Close scores / return** restores the question and paused timer state. Open audience display uses the same named window as Family Feud. Double-click the TV view for fullscreen; click it once to enable browser audio.
 
@@ -128,7 +151,7 @@ Family Feud's existing score sheet now uses the same Enter-down / Tab-across key
 
 ### Trivia verification
 
-`npm test` covers deterministic PowerPoint conversion, validation, timers, score stops and undo alongside the full original Family Feud parser tests. To include the supplied PowerPoint in local tests, set `PPTX_SAMPLE_PATH` to its path. With a production build running on port 4173, run `node scripts/trivia-test.mjs` with that variable set to exercise upload, review, audience privacy, synchronization, keyboard scoring, persistence and JSON restoration. The PowerPoint itself is not committed to the repository.
+Unit tests cover deterministic text parsing and round trips, legacy game compatibility, scoring, timers and undo, alongside the original Family Feud parser. For the supplied reference game, set `PPTX_SAMPLE_PATH` to the local original file and run tests; this writes an ignored compatibility fixture to `test-results/trivia-legacy.json`. With the production build running on port 4173, set `TRIVIA_GAME_PATH` to that JSON and run `node scripts/trivia-test.mjs` and `node scripts/trivia-layout-test.mjs`. These check paste/edit/draft persistence, legacy JSON, scoring/synchronization and all source questions at 720p/1080p. The source PowerPoint is not committed.
 
 ## Development commands
 

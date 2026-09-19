@@ -1,0 +1,7 @@
+import { describe,it,expect } from 'vitest';
+import { parseTriviaText,exportTriviaText,triviaTemplate } from './text';
+describe('Trivia text import',()=>{
+ it('keeps question and answer text separate, with explicit scoring and timers',()=>{const d=parseTriviaText(triviaTemplate);expect(d.cards).toHaveLength(3);expect(d.cards[1].prompt).toBe('What is the capital of Canada?');expect(d.cards[1].answers).toEqual(['Ottawa']);expect(d.cards[2].answers).toEqual(['Mercury','Venus']);expect(d.cards[2].maxPoints).toBe(4);expect(d.cards[2].scoring).toBe('2 points per correct answer');});
+ it('round-trips multiline content, emphasis, bonus values and categories',()=>{const d=parseTriviaText(triviaTemplate.replace('capital','**capital**'));d.cards[1].prompt+='\nDiscuss with your team.';d.cards[1].notes='Private\nSecond line';const roundtrip=parseTriviaText(exportTriviaText(d));const content=(x:typeof d)=>x.cards.map(({kind,title,round,prompt,answers,scoring,maxPoints,seconds,notes})=>({kind,title,round,prompt,answers,scoring,maxPoints,seconds,notes}));expect(content(roundtrip)).toEqual(content(d));});
+ it('supports bullet answer lists and rejects incomplete questions and bad timers',()=>{expect(parseTriviaText('Question 1\nQuestion: Name two colors.\nAnswers:\n- Red\n- Blue').cards[1].answers).toEqual(['Red','Blue']);expect(()=>parseTriviaText('Question 1\nAnswer: Missing prompt')).toThrow('missing');expect(()=>parseTriviaText(triviaTemplate.replace('Timer: 240','Timer: 2'))).toThrow('10–3600');});
+});

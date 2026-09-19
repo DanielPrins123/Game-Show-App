@@ -78,6 +78,14 @@ The scorebook, editor, result imports/exports and private leaderboard retain all
 
 Finale X reachability verified at 1366×768, 1024×768 and 390×844, both at the top and bottom of the page; clicking records a strike. The show-flow check verifies named round transitions and automatic timer start.
 
+## Trivia text editor and light display — September 19, 2026
+
+PowerPoint upload has been removed from the app workflow. The replacement supports text paste/preview/confirm, TXT and JSON, an autosaved editor draft, round/question creation and reordering, private answers, scoring/timer edits and a private display preview. Existing games/results remain compatible. A version-1 IndexedDB fixture successfully upgraded without losing its game.
+
+All 42 unit tests pass when the supplied local reference file is available. Typecheck, lint and production build pass. Browser checks cover paste import, draft persistence after the saved indicator, legacy JSON, private answers, manual keyboard scoring, synchronization, reload and backup restoration. The full sample's 20 question layouts pass at 720p and 1080p. Additional geometry checks cover every round/title/question/answer screen and top-ten rankings, including clearance for the original Outspoken Entertainment logo. White intro, question and answer screens and the light presenter were visually inspected. One ranking/footer overlap was found and fixed. Family Feud's score keyboard behavior is included in the browser regression.
+
+The September 18 notes below describe the former PowerPoint workflow; its source parser remains only for legacy compatibility tests.
+
 ## Trivia and keyboard score entry — September 18, 2026
 
 Typecheck, ESLint, production build and 38 unit tests pass, including the locally supplied PowerPoint integration case. The 28-slide sample converts into 24 screens: four round cards and 20 questions with 37 answers. Its four bonus maximums are 10, 10, 10 and 30. Source paragraphs and slide provenance are retained; unspecified regular points remain for the host to decide. The original Family Feud parser still preserves all 16 supplied questions and 82 answers.

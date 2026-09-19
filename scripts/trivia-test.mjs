@@ -1,21 +1,20 @@
 import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-const sample=process.env.PPTX_SAMPLE_PATH;
-if(!sample)throw Error('Set PPTX_SAMPLE_PATH to a local PowerPoint to exercise the upload.');
+const sample=process.env.TRIVIA_GAME_PATH;
+if(!sample)throw Error('Set TRIVIA_GAME_PATH to a saved trivia JSON game.');
 const browser=await chromium.launch({channel:'msedge',headless:true});
 try{
 const context=await browser.newContext({viewport:{width:1366,height:768}});const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(String(e))));
 const host=await context.newPage(),tv=await context.newPage();const base='http://127.0.0.1:4173/';
 await host.goto(base+'#/trivia');await tv.goto(base+'#/trivia/display');
-await host.getByLabel('Upload PowerPoint',{exact:true}).setInputFiles(sample);
-await host.getByText('28 source slides → 20 questions · 4 rounds').waitFor();
-assert.equal(await host.getByRole('button',{name:'Save & start new trivia night'}).isDisabled(),true);
-await host.getByLabel('I reviewed the public prompts, private answers, images and scoring.').check();
-await host.getByRole('button',{name:'Save & start new trivia night'}).click();
+await host.getByRole('button',{name:'Paste Questions',exact:true}).click();await host.getByRole('button',{name:'Load example format',exact:true}).click();await host.getByRole('button',{name:'Parse & preview',exact:true}).click();await host.getByText('1 rounds · 2 questions',{exact:true}).waitFor();await host.getByRole('button',{name:'Confirm import as draft',exact:true}).click();await host.getByLabel('Game title',{exact:true}).fill('Saved editor draft');await host.getByText('Draft saved locally. Live play stays unchanged.',{exact:true}).waitFor();await host.reload();await host.getByLabel('Game title',{exact:true}).waitFor();assert.equal(await host.getByLabel('Game title',{exact:true}).inputValue(),'Saved editor draft');
+await host.getByLabel('Import trivia file',{exact:true}).setInputFiles(sample);
+await host.getByLabel('Game title',{exact:true}).waitFor();
+await host.getByRole('button',{name:'Start this game',exact:true}).click();
 await tv.getByText('WITH YOUR HOST, DANIEL PRINS').waitFor();
 assert.equal(await tv.locator('button,input,select').count(),0);
-assert.equal(await tv.locator('nav').count(),0);
+assert.equal(await tv.locator('nav').count(),0);await tv.getByAltText('Outspoken Entertainment').waitFor();assert.equal(await tv.locator('.trivia-stage').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)');
 const state=()=>host.evaluate(()=>JSON.parse(localStorage.getItem('trivia.session.v1')));
 const click=name=>host.getByRole('button',{name,exact:true}).click();
 await click('Next →');await tv.getByText('Current Events',{exact:false}).waitFor();
@@ -44,8 +43,8 @@ for(let i=0;i<10;i++)await click(`Reveal next answer (${i}/10)`);await tv.getByT
 await tv.screenshot({path:'qa/trivia-final-answers.png'});await host.screenshot({path:'qa/trivia-presenter.png'});
 await click('Next →');await tv.getByText('FINAL STANDINGS',{exact:false}).waitFor();
 await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.locator('.trivia-app select').selectOption('slide-2');await host.getByLabel('Team 1 Question 1 points',{exact:true}).fill('9');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===9);
-await host.getByRole('link',{name:'Import & library',exact:true}).click();await host.getByLabel('Upload PowerPoint',{exact:true}).setInputFiles({name:'trivia-results.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});await host.getByLabel('I reviewed the public prompts, private answers, images and scoring.').check();await click('Restore saved trivia night');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===5);assert.equal((await state()).teams[0].scores['slide-2'],5);
+await host.getByRole('link',{name:'Game editor & library',exact:true}).click();await host.getByLabel('Import trivia file',{exact:true}).setInputFiles({name:'trivia-results.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});await host.getByText('Saved result loaded into the editor.',{exact:false}).waitFor();await click('Start this game');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===5);assert.equal((await state()).teams[0].scores['slide-2'],5);
 // Existing Feud score sheet uses the same keyboard conventions.
 await host.goto(base+'#/scores');const feud=host.getByLabel('Team Blue question 1',{exact:true});await feud.fill('7');await feud.press('Enter');assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team Gold question 1');await host.keyboard.type('4');await host.reload();assert.equal(await feud.inputValue(),'7');assert.equal(await host.getByLabel('Team Gold question 1',{exact:true}).inputValue(),'4');
-assert.deepEqual(errors,[]);console.log('PASS: actual PPTX worker upload, review, private answers, both sync channels, timer, manual scoring, Enter navigation, save/reload, result restore and Feud score navigation.'+(process.env.TRIVIA_SKIP_LAYOUT?'':' All 20 questions fit at 720p/1080p.'));
+assert.deepEqual(errors,[]);console.log('PASS: text paste/preview, editor draft reload, legacy JSON import, private answers, both sync channels, timer, manual scoring, Enter navigation, save/reload, result restore and Feud score navigation.'+(process.env.TRIVIA_SKIP_LAYOUT?'':' All 20 questions fit at 720p/1080p.'));
 }finally{await browser.close();}

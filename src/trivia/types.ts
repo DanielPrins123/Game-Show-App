@@ -19,7 +19,7 @@ export interface TriviaFrame {
 }
 export interface TriviaSession extends TriviaFrame {
   version:1; deckId:string; title:string; date:string; venue:string; teams:TriviaTeam[];
-  muted:boolean; revision:number; history:TriviaFrame[]; scoreReturn?:TriviaFrame;
+  muted:boolean; volume?:number; revision:number; history:TriviaFrame[]; scoreReturn?:TriviaFrame;
 }
 
 export function validateTriviaDeck(value:unknown):TriviaDeck {

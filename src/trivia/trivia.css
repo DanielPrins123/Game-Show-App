@@ -30,3 +30,4 @@
 .trivia-slide .trivia-ranks>div{min-height:0;padding:.2cqw 1.5cqw;line-height:1.1;font-size:2.5cqw}.trivia-slide .trivia-ranks{gap:.5cqw}
 .app-nav.trivia-nav{background:#f0ece4;border-color:#d4cbbd;color:#3e3527}
 .trivia-slide .trivia-stage:has(.trivia-ranks){padding-bottom:8cqw}
+.trivia-answer-key{margin-top:10px;border-top:1px solid #ddd3c2;padding-top:6px}.trivia-answer-key h3{font-size:14px}.trivia-answer-key ol{columns:2;max-height:130px;overflow:auto;margin:6px 0;font-size:13px}.trivia-answer-key pre{max-height:70px;overflow:auto;font-size:12px}.trivia-timer-controls>span{font-size:12px}

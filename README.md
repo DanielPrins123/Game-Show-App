@@ -8,7 +8,7 @@ The source files preserve all **4 rounds, 16 questions and 82 answers**, includi
 
 1. On the laptop, use GitHub Desktop → **Fetch origin**, then **Pull origin** if offered.
 2. Install Node.js 22 or newer once, including npm.
-3. Double-click **Start Game.cmd**. A missing or outdated build is rebuilt automatically. First setup installs dependencies and needs internet; subsequent play works offline.
+3. Double-click **Start Game.cmd**. The launcher rebuilds the app and refreshes dependencies when an update changes them. First setup and dependency updates need internet; subsequent play works offline.
 4. Open `http://127.0.0.1:4173/#/presenter`. Refresh older game tabs after updating.
 5. **Build Game.cmd** forces a rebuild. **Stop Game.cmd** stops the background server.
 
@@ -28,7 +28,7 @@ Revisiting this sequence preserves the current question/reveals and pauses its r
 
 1. Connect the TV; press **Windows + P → Extend**.
 2. Keep Presenter on the laptop. Click **Open Audience Display** once and drag that window onto the TV.
-3. Click the audience screen once for sound; double-click or press **F** for fullscreen.
+3. Use **Enable / test sound** on the presenter, then double-click the audience screen or press **F** for fullscreen.
 4. Keep both windows in the same browser profile and at the same address/port.
 5. Scores replace the board **inside the existing TV window**. Closing scores restores the board and fullscreen without dragging another window.
 
@@ -66,7 +66,7 @@ Leaderboard is a separate private running ranking. The audience reveal is contro
 
 ## Optional timed finale
 
-Set up the team roster in Scorebook. The finale controls are integrated into the main Presenter question panel. Eleven six-answer boards are available (ten sourced boards and the adapted original Q16); each turn starts at 60 seconds. Four points per answer is the suggested grading rule, up to 24. You enter the grade yourself.
+Set up the team roster in Scorebook. The finale controls are integrated into the main Presenter question panel. Eleven six-answer boards are available (ten sourced boards and the adapted original Q16); each turn starts at 60 seconds. Four points per answer is the suggested grading rule, 24 for one six-answer turn. You enter the grade yourself; scores have no upper cap, so enter the combined total when playing multiple cycles.
 
 1. Select any team and question, then **Open selected team & question**. The question stays hidden until **Start 60-second turn**.
 2. Reveal answers as you judge them. Reveals never change the score. Three strikes, all six reveals or time running out stops the turn.
@@ -92,7 +92,7 @@ The board bank contains scenario questions without Steve Harvey references. Sour
 | Space during score show | Next team reveal |
 | Escape during score show | Return to game; browser may also exit fullscreen |
 
-Shortcuts do not fire in text fields. Opening sequence controls are private host buttons. Mute/volume synchronize. Original local Web Audio sounds: short soft answer/score bing, rounded wrong-answer tone, warning ping, gentle expiry tone and extension tone. There are no downloaded show recordings or external assets. Click the audience window once to enable sound. Gameplay works when audio is muted/blocked.
+Shortcuts do not fire in text fields. Opening sequence controls are private host buttons. Mute/volume synchronize. Original local Web Audio sounds: short soft answer/score bing, rounded wrong-answer tone, warning ping, gentle expiry tone and extension tone. There are no downloaded show recordings or external assets. Sound plays from the host window. Use **Enable / test sound** there and select the intended speakers or HDMI output in Windows; no audience click is needed for audio. A browser still requires an initial host click or keypress to enable audio. Gameplay works when audio is muted/blocked.
 
 ## Editor and importing games
 
@@ -182,7 +182,7 @@ Live progress and score entry save automatically. Closing and reopening the same
 
 Written play supports any number of teams (at least two); the finale has **at most five finalists**. Select all teams when there are five or fewer, use Top 3, or choose individual teams. Resolve any ties by adjusting the selected teams yourself. The lineup is saved with the session. Other teams remain in final standings.
 
-Core controls fit a 1366×768 host screen. Audience preview and sound settings expand on demand. Existing live 16-question score drafts are archived under Saved results before conversion to 15 written columns; saved historical results remain unchanged.
+Core controls fit a 1366×768 host screen. Audience preview, sound settings and finale controls stay visible when moving between Presenter and Scorebook. Only Session & saved games is collapsed by default. Existing live 16-question score drafts are archived under Saved results before conversion to 15 written columns; saved historical results remain unchanged.
 
 The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
 

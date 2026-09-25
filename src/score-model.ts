@@ -5,7 +5,7 @@ export function validateResult(value:unknown):ScoreSheet{
   const wrapper=value as {version?:number;result?:ScoreSheet};const s=wrapper?.result;
   if(wrapper?.version!==1||!s||typeof s.id!=='string'||!s.id||typeof s.title!=='string'||typeof s.date!=='string'||typeof s.venue!=='string'||!Array.isArray(s.questions)||!s.questions.length||s.questions.some(q=>typeof q!=='string')||!Array.isArray(s.teams)||s.teams.length<2)throw new Error('Choose an exported game-night result with at least two teams.');
   const ids=new Set<string>();
-  for(const t of s.teams){if(typeof t.id!=='string'||!t.id||ids.has(t.id)||typeof t.name!=='string'||!t.name.trim()||!Array.isArray(t.scores)||t.scores.length!==s.questions.length||t.scores.some(n=>n!==null&&(!Number.isFinite(n)||!Number.isInteger(n)))||(t.bonus!==undefined&&(!Number.isInteger(t.bonus)||t.bonus<0||t.bonus>24)))throw new Error('Result contains invalid teams or scores.');ids.add(t.id);}
+  for(const t of s.teams){if(typeof t.id!=='string'||!t.id||ids.has(t.id)||typeof t.name!=='string'||!t.name.trim()||!Array.isArray(t.scores)||t.scores.length!==s.questions.length||t.scores.some(n=>n!==null&&(!Number.isFinite(n)||!Number.isInteger(n)))||(t.bonus!==undefined&&(!Number.isInteger(t.bonus)||t.bonus<0)))throw new Error('Result contains invalid teams or scores.');ids.add(t.id);}
   return {...structuredClone(s),liveFinale:false};
 }
 export const total=(team:ResultTeam,end?:number)=>team.scores.slice(0,end??team.scores.length).reduce<number>((a,b)=>a+(b??0),0)+(end===undefined?(team.bonus??0):0);

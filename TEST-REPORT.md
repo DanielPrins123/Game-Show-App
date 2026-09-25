@@ -1,4 +1,17 @@
-# Verification report — September 17, 2026
+# Verification report — September 25, 2026
+
+## September 25 update
+
+- TypeScript, ESLint, production build and all 44 unit tests passed.
+- Recorded laptop history reported missing Node typings after pulling. The old launcher skipped dependency installation whenever TypeScript already existed. A regression fixture now detects changed dependencies in that situation; the actual Windows Build Game launcher refreshed dependencies and built successfully. The exact laptop-local repair was not available in history or GitHub.
+- Finale grades have no upper cap: 48/96-point browser entry, navigation and reload passed; 1,000-point result import/export passed unit coverage.
+- Presenter opening, written question and finale fit 1366×768 with preview and sound visible. A 20-team event with five finalists passed the sequence checks.
+- Host audio passed with no audience interaction; mute, reveal, strike and countdown behavior passed. Sounds use increased gain and a host test button. Venue acoustics and music balance require a speaker test at the event.
+- Full browser regression passed, including original 16-question/82-answer parser fidelity, score snapshots, manual finale grading and localStorage synchronization fallback.
+
+The sections below retain earlier detailed verification. The host-only sound routing and permanently visible presenter panels above supersede earlier audience-click and collapsed-panel behavior.
+
+## September 17 baseline
 
 Tested on Windows with Node.js 24.19.0 and Microsoft Edge through Playwright, using isolated browser profiles against the production build on port 4173. User browser data was not used by the tests.
 

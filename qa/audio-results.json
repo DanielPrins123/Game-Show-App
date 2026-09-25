@@ -1,6 +1,7 @@
 {
   "passed": true,
   "checks": [
+    "Sound plays on the host without any audience interaction, with no duplicate audience tones.",
     "One short sine bing for answer and team reveals; identical pitch.",
     "Silent suppresses both reveal types; global mute suppresses extension.",
     "Quiet countdown ticks run near expiry; timer ends with visual indicator.",

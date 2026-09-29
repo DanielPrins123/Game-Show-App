@@ -153,3 +153,8 @@
 @media(min-width:1000px){.presenter .settings-panel .shortcuts p.micro{line-height:1.1}.presenter.has-finale-controls .host-side .preview-panel>.board{max-width:195px}}
 
 .score-show-row.medal-1{border-left:.8cqw solid #f0ce83;background:#79602e}.score-show-row.medal-2{border-left:.8cqw solid #d8e3f1;background:#4d5c70}.score-show-row.medal-3{border-left:.8cqw solid #e9ae84;background:#794e39}
+
+.score-show-board .score-show-list .score-show-row strong,.score-show-board .score-show-list .show-rank,.score-show-board .score-show-list .hidden-place,.score-show-board .score-show-list .score-suspense{font-size:inherit;line-height:1.12}
+.score-show-board .score-show-list .score-show-row strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.score-show-board .score-show-list .score-show-row b{font-size:1.08em;min-width:11cqw}
+.score-show-board .score-show-list .score-show-row{font-size:inherit}

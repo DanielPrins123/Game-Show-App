@@ -148,3 +148,7 @@ Removed the intro tagline. Trivia uses warm charcoal and ivory instead of purple
 ### Full-card time warnings
 
 60/30-second warnings now animate from the clock area over a dimmed card and retreat after a brief hold. The final countdown covers the card until expiration, pause or extension. TypeScript, lint, build and the timer browser regression verify synchronized notices, dismissal, full-width countdown, sounds and +30 removal. Reduced-motion mode fades the warning instead of moving it.
+
+### Standings scaling
+
+TypeScript, lint and build pass. Browser checks cover 1, 2, 3, 5 and 10 trivia teams at 720p/1080p, full-width rows, four-digit totals, font scaling and distinct medal backgrounds. Feud standings are checked with 3 and 10 teams. Ascending reveal sound regression also passes.

@@ -209,3 +209,12 @@
 .trivia-countdown{inset:0;width:auto;min-height:0;border:0;border-radius:0;background:#171b18b8;box-shadow:none;color:#ffaaa0;text-shadow:0 .2cqw .8cqw #000}
 .trivia-countdown b{font-size:15cqw}.trivia-countdown span{font-size:2cqw;letter-spacing:.12em;color:#f4e7dd}
 @media(prefers-reduced-motion:reduce){.trivia-time-notice>span{animation:trivia-warning-shade 2.8s ease both}}
+
+/* Use the available standings area; fewer teams get larger names and rows. */
+.trivia-slide .trivia-ranks{display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch;width:100%;flex:1;min-height:0;gap:.7cqw;align-content:stretch}
+.trivia-slide .trivia-ranks>div{min-height:0;font-size:inherit;grid-template-columns:8cqw minmax(0,1fr) 13cqw;line-height:1.12;padding:.5cqw 1.5cqw}
+.trivia-slide .trivia-ranks>div>b:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.trivia-slide .trivia-ranks .shown{border-left:.8cqw solid #a8b59a;color:#f7f3e9}
+.trivia-slide .trivia-ranks .medal-1{background:linear-gradient(110deg,#8c6b31,#624c28);border-left-color:#f0d491;color:#fff8e7}
+.trivia-slide .trivia-ranks .medal-2{background:linear-gradient(110deg,#6a7173,#464e50);border-left-color:#e0e4e3;color:#fff}
+.trivia-slide .trivia-ranks .medal-3{background:linear-gradient(110deg,#916447,#62432f);border-left-color:#eabc98;color:#fff4e9}

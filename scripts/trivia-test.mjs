@@ -14,7 +14,7 @@ await host.getByLabel('Game title',{exact:true}).waitFor();
 await host.getByRole('button',{name:'Start this game',exact:true}).click();
 await tv.getByText('WITH YOUR HOST, DANIEL PRINS').waitFor();
 assert.equal(await tv.locator('button,input,select').count(),0);
-assert.equal(await tv.locator('nav').count(),0);await tv.getByAltText('Outspoken Entertainment').waitFor();assert.equal(await tv.locator('.trivia-stage').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)');
+assert.equal(await tv.locator('nav').count(),0);await tv.getByAltText('Outspoken Entertainment').waitFor();assert.notEqual(await tv.locator('.trivia-slide').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)');
 const state=()=>host.evaluate(()=>JSON.parse(localStorage.getItem('trivia.session.v1')));
 const click=name=>host.getByRole('button',{name,exact:true}).click();
 await click('Next →');await tv.getByText('Current Events',{exact:false}).waitFor();
@@ -31,7 +31,7 @@ await host.reload();assert.equal(await first.inputValue(),'5');assert.equal(awai
 const downloadEvent=host.waitForEvent('download');await click('Export results JSON');const result=await downloadEvent;const path=await result.path();const backup=JSON.parse(fs.readFileSync(path,'utf8'));assert.equal(backup.session.teams[0].scores['slide-2'],5);
 await host.getByRole('link',{name:'Presenter',exact:true}).click();await click('Show scores on TV');await click('Reveal next team ↑');await tv.getByText('Team 2',{exact:true}).waitFor();assert.equal(await tv.getByText('Team 1',{exact:true}).count(),0);await click('Reveal next team ↑');await tv.getByText('Team 1',{exact:true}).waitFor();await click('Close scores / return');await tv.getByText('Hawai’i',{exact:true}).waitFor();
 // Both synchronization channels: disable BroadcastChannel in the audience before reload.
-await tv.addInitScript(()=>{Object.defineProperty(window,'BroadcastChannel',{value:undefined});});await tv.reload();await click('Hide answers');await tv.getByText(/On September 8th/).waitFor();assert.equal(await tv.getByText('Hawai’i',{exact:true}).count(),0);
+await tv.addInitScript(()=>{Object.defineProperty(window,'BroadcastChannel',{value:undefined});});await tv.reload();await click('Hide answers');await tv.locator('.trivia-answer-board').waitFor({state:'detached'});await tv.getByText(/On September 8th/).waitFor();assert.equal(await tv.getByText('Hawai’i',{exact:true}).count(),0);
 // Exercise every converted question at both common TV resolutions, including all ten final answers.
 const ids=await host.getByLabel('Jump to trivia screen').locator('option').evaluateAll(nodes=>nodes.map(n=>({value:n.value,text:n.textContent})).filter(n=>/Question|BONUS/i.test(n.text)));
 for(const size of process.env.TRIVIA_SKIP_LAYOUT?[]:[{width:1280,height:720},{width:1920,height:1080}]){

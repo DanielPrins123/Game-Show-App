@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import type { TriviaDeck, TriviaSession } from './types';
+import { validateTriviaDeck, type TriviaDeck, type TriviaSession } from './types';
 const KEY='trivia.session.v1';
 function read():TriviaSession|null{try{const s=JSON.parse(localStorage.getItem(KEY)??'null');return s?.version===1&&typeof s.deckId==='string'&&Array.isArray(s.teams)&&Array.isArray(s.history)?s:null;}catch{return null;}}
 let state=read();const listeners=new Set<()=>void>();
@@ -23,7 +23,7 @@ async function transaction<T>(name:'decks'|'results'|'drafts',mode:IDBTransactio
 }
 export const saveTriviaDeck=(deck:TriviaDeck)=>transaction('decks','readwrite',s=>s.put(deck));
 export const getTriviaDeck=(id:string)=>transaction<TriviaDeck|undefined>('decks','readonly',s=>s.get(id));
-export const listTriviaDecks=()=>transaction<TriviaDeck[]>('decks','readonly',s=>s.getAll());
+export async function listTriviaDecks(){const saved=await transaction<TriviaDeck[]>('decks','readonly',s=>s.getAll());if(!saved.some(d=>d.id==='trivia-2026-09-29')){const response=await fetch('./trivia/2026-09-29.json');if(!response.ok)throw Error('The included trivia set could not load. Restart the updated app.');const bundled=validateTriviaDeck(await response.json());await saveTriviaDeck(bundled);saved.push(bundled);}return saved.sort((a,b)=>Number(b.id==='trivia-2026-09-29')-Number(a.id==='trivia-2026-09-29'));}
 export interface TriviaResult { id:string; savedAt:string; session:TriviaSession; deck:TriviaDeck }
 export const saveTriviaResult=(session:TriviaSession,deck:TriviaDeck)=>transaction('results','readwrite',s=>s.put({id:crypto.randomUUID(),savedAt:new Date().toISOString(),session:structuredClone(session),deck}));
 export const listTriviaResults=()=>transaction<TriviaResult[]>('results','readonly',s=>s.getAll());

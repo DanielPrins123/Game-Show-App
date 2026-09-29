@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "type": "trivia",
+  "id": "trivia-2026-09-29",
+  "title": "09.29.2026 Trivia",
+  "fileName": "09.29.2026 Trivia.pptx",
+  "importedAt": "2026-09-29T19:29:21.799Z",
+  "cards": [
+    {
+      "id": "slide-1",
+      "kind": "round",
+      "title": "Round 1",
+      "round": "Round 1",
+      "prompt": "Continents\nMusic Theory\nHarry Potter\nCurrent Events",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        1
+      ],
+      "notes": "Round 1 Categories",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-2",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 1",
+      "prompt": "What is the only continent not to have a continental divide?",
+      "answers": [
+        "Antarctica"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        2
+      ],
+      "notes": "Round 1 Question 1",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-3",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 1",
+      "prompt": "Of the 15 Major musical key signatures, which is the only one to have zero sharps or flats?",
+      "answers": [
+        "C"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        3
+      ],
+      "notes": "Round 1 Question 2",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-4",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 1",
+      "prompt": "What was the name of the three-headed dog that guarded the Sorcerer's Stone?",
+      "answers": [
+        "Fluffy"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        4
+      ],
+      "notes": "Round 1 Question 3",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-5",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 1",
+      "prompt": "A recently reopened cold case in Idaho may have discovered a deceased suspect involved in a series of poison related deaths in the 1980s involving what over the counter medication?",
+      "answers": [
+        "Tylenol"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        5
+      ],
+      "notes": "Round 1 Question 4",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-6",
+      "kind": "question",
+      "title": "BONUS",
+      "round": "Round 1",
+      "prompt": "When one injuries a muscle or joint, they are told to follow the RICE method of recovery. What words are in the acronym RICE?",
+      "answers": [
+        "Rest",
+        "Ice",
+        "Compression",
+        "Elevation"
+      ],
+      "scoring": "4 answers, 2 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        6,
+        7
+      ],
+      "notes": "Round 1 Bonus Question\nRound 1 Bonus Question",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-8",
+      "kind": "round",
+      "title": "Round 2",
+      "round": "Round 2",
+      "prompt": "Current Events\nSoda\nAnimals\nLakes",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        8
+      ],
+      "notes": "Round 2 Categories",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-9",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 2",
+      "prompt": "On September 22nd, what song broke the record for most weeks at #1 on the Billboard Hot 100 for 23 weeks, breaking Mariah Carey's record for \"All I Want for Christmas is You”?",
+      "answers": [
+        "Choosin’ Texas"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        9
+      ],
+      "notes": "Round 2 Question 1",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-10",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 2",
+      "prompt": "What is the primary PepsiCo brand of root beer in the United States, sold with a bulldog depicted in its logo?",
+      "answers": [
+        "Mug"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        10
+      ],
+      "notes": "Round 2 Question 2",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-11",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 2",
+      "prompt": "Foldex, Kinkalow, and York Chocolate are all lesser known breeds of what animal?",
+      "answers": [
+        "Cats"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        11
+      ],
+      "notes": "Round 2 Question 4",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-12",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 2",
+      "prompt": "Reaching a maximum depth of 1,943 feet, lake is the deepest in the US?",
+      "answers": [
+        "Crater Lake"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        12
+      ],
+      "notes": "Round 2 Question 3",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-13",
+      "kind": "question",
+      "title": "BONUS",
+      "round": "Round 2",
+      "prompt": "What are the names of the three main bones of the human arm?",
+      "answers": [
+        "Humerus",
+        "Ulna",
+        "Radius"
+      ],
+      "scoring": "3 answers, 3 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        13,
+        14
+      ],
+      "notes": "Round 2 Bonus\nRound 2 Bonus",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-15",
+      "kind": "round",
+      "title": "Round 3",
+      "round": "Round 3",
+      "prompt": "Music\nFamous Couples\nScience!\nCivil Engineering",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        15
+      ],
+      "notes": "Round 3 Categories",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-16",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 3",
+      "prompt": "Usually played around 1:00AM, \"Waltz in A\" by Howard Shore is the closing credits song for what TV show?",
+      "answers": [
+        "Saturday Night Live"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        16
+      ],
+      "notes": "Round 3 Question 1",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-17",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 3",
+      "prompt": "What woman with the last name de Beauharnais, was Napoleon's first wife during part of his reign as Emperor of France?",
+      "answers": [
+        "Josephine"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        17
+      ],
+      "notes": "Round 3 Question 2",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-18",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 3",
+      "prompt": "What element emits a faint glow when exposed to oxygen, which leads to its name being taken from a phrase from Greek mythology meaning \"light-bearer?\"",
+      "answers": [
+        "Phosphorus"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        18
+      ],
+      "notes": "Round 3 Question 3",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-19",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 3",
+      "prompt": "Taking over fifteen years to complete, the \"Big Dig\" project took I-93 and moved it underground in what US state capital?",
+      "answers": [
+        "Boston"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        19
+      ],
+      "notes": "Round 3 Question 4",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-20",
+      "kind": "question",
+      "title": "BONUS",
+      "round": "Round 3",
+      "prompt": "Name five of the seven actors to appear on the official promotional picture of the 1983 movie “The Outsiders”, all of whom would go on to Holywood success.",
+      "answers": [
+        "Tom Cruise",
+        "Matt Dillon",
+        "Emilio Estevez",
+        "C. Thomas Howell",
+        "Rob Lowe",
+        "Ralph Macchio",
+        "Patrick Swayze"
+      ],
+      "scoring": "5 answers, 2 each",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        20,
+        21
+      ],
+      "notes": "Round 3 Bonus\nRound 3 Bonus",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-22",
+      "kind": "round",
+      "title": "Round 4",
+      "round": "Round 4",
+      "prompt": "NFL\nPresidents\nMovies\nAmusement Parks",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        22
+      ],
+      "notes": "Round 4 Categories",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-23",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 4",
+      "prompt": "Who was the first quarterback to defeat all 32 NFL teams?",
+      "answers": [
+        "Brett Favre"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        23
+      ],
+      "notes": "Round 4 Question 4",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-24",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 4",
+      "prompt": "Though many were quite close and some may have even used tricks to cover it up, who was the only US President that was completely bald?",
+      "answers": [
+        "Dwight Eisenhower"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        24
+      ],
+      "notes": "Round 4 Question 1",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-25",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 4",
+      "prompt": "What 1980 film, based on a 1976 Clive Cussler novel, lost so much money its producer once said “it would have been cheaper to lower the Atlantic?",
+      "answers": [
+        "Raise the Titanic"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        25
+      ],
+      "notes": "Round 4 Question 3\nSource marked this answer FACEBOOK.",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-26",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 4",
+      "prompt": "Tivoli Gardens, one of the world’s oldest amusement parks and the inspiration for Disneyland, is located in what European capital city?",
+      "answers": [
+        "Copenhagen"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        26
+      ],
+      "notes": "Round 4 Question 2",
+      "issues": [],
+      "images": []
+    },
+    {
+      "id": "slide-27",
+      "kind": "question",
+      "title": "Final Bonus",
+      "round": "Round 4",
+      "prompt": "Not including the Czech Republic, what are the 10 members of the European Union whose names begin AND end with a consonant?\nNote: If the country name ends in a Y (acting like a vowel), it is disqualified.",
+      "answers": [
+        "Belgium",
+        "Cyprus",
+        "Denmark",
+        "Finland",
+        "Luxembourg",
+        "Netherlands",
+        "Poland",
+        "Portugal",
+        "Spain",
+        "Sweden"
+      ],
+      "scoring": "10 answers, 3 each",
+      "maxPoints": 30,
+      "seconds": 240,
+      "sourceSlides": [
+        27,
+        28
+      ],
+      "notes": "Round 4 Bonus\nRound 4 Bonus",
+      "issues": [],
+      "images": []
+    }
+  ],
+  "source": [
+    {
+      "number": 1,
+      "paragraphs": [
+        "Continents",
+        "Music Theory",
+        "Harry Potter",
+        "Current Events",
+        "Round 1 Categories"
+      ],
+      "notes": "Round 1 Categories"
+    },
+    {
+      "number": 2,
+      "paragraphs": [
+        "Question 1",
+        "What is the only continent not to have a continental divide?",
+        "Antarctica"
+      ],
+      "notes": "Round 1 Question 1"
+    },
+    {
+      "number": 3,
+      "paragraphs": [
+        "Question 2",
+        "C",
+        "Of the 15 Major musical key signatures, which is the only one to have zero sharps or flats?"
+      ],
+      "notes": "Round 1 Question 2"
+    },
+    {
+      "number": 4,
+      "paragraphs": [
+        "Question 3",
+        "Fluffy",
+        "What was the name of the three-headed dog that guarded the Sorcerer's Stone?"
+      ],
+      "notes": "Round 1 Question 3"
+    },
+    {
+      "number": 5,
+      "paragraphs": [
+        "Question 4",
+        "Tylenol",
+        "A recently reopened cold case in Idaho may have discovered a deceased suspect involved in a series of poison related deaths in the 1980s involving what over the counter medication?"
+      ],
+      "notes": "Round 1 Question 4"
+    },
+    {
+      "number": 6,
+      "paragraphs": [
+        "BONUS (4 answers, 2 each, 10 for all)",
+        "When one injuries a muscle or joint, they are told to follow the RICE method of recovery. What words are in the acronym RICE?"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 7,
+      "paragraphs": [
+        "BONUS",
+        "Rest",
+        "Ice",
+        "Compression",
+        "Elevation"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 8,
+      "paragraphs": [
+        "Current Events",
+        "Soda",
+        "Animals",
+        "Lakes",
+        "Round 2 Categories"
+      ],
+      "notes": "Round 2 Categories"
+    },
+    {
+      "number": 9,
+      "paragraphs": [
+        "Question 1",
+        "On September 22nd, what song broke the record for most weeks at #1 on the Billboard Hot 100 for 23 weeks, breaking Mariah Carey's record for \"All I Want for Christmas is You”?",
+        "Choosin’ Texas"
+      ],
+      "notes": "Round 2 Question 1"
+    },
+    {
+      "number": 10,
+      "paragraphs": [
+        "Question 2",
+        "What is the primary PepsiCo brand of root beer in the United States, sold with a bulldog depicted in its logo?",
+        "Mug"
+      ],
+      "notes": "Round 2 Question 2"
+    },
+    {
+      "number": 11,
+      "paragraphs": [
+        "Question 3",
+        "Foldex, Kinkalow, and York Chocolate are all lesser known breeds of what animal?",
+        "Cats"
+      ],
+      "notes": "Round 2 Question 4"
+    },
+    {
+      "number": 12,
+      "paragraphs": [
+        "Question 4",
+        "Reaching a maximum depth of 1,943 feet, lake is the deepest in the US?",
+        "Crater Lake"
+      ],
+      "notes": "Round 2 Question 3"
+    },
+    {
+      "number": 13,
+      "paragraphs": [
+        "BONUS (3 answers, 3 each, 10 for all)",
+        "What are the names of the three main bones of the human arm?"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 14,
+      "paragraphs": [
+        "Humerus",
+        "Ulna",
+        "Radius"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 15,
+      "paragraphs": [
+        "Music",
+        "Famous Couples",
+        "Science!",
+        "Civil Engineering",
+        "Round 3 Categories"
+      ],
+      "notes": "Round 3 Categories"
+    },
+    {
+      "number": 16,
+      "paragraphs": [
+        "Question 1",
+        "Usually played around 1:00AM, \"Waltz in A\" by Howard Shore is the closing credits song for what TV show?",
+        "Saturday Night Live"
+      ],
+      "notes": "Round 3 Question 1"
+    },
+    {
+      "number": 17,
+      "paragraphs": [
+        "Question 2",
+        "What woman with the last name de Beauharnais, was Napoleon's first wife during part of his reign as Emperor of France?",
+        "Josephine"
+      ],
+      "notes": "Round 3 Question 2"
+    },
+    {
+      "number": 18,
+      "paragraphs": [
+        "Question 3",
+        "What element emits a faint glow when exposed to oxygen, which leads to its name being taken from a phrase from Greek mythology meaning \"light-bearer?\"",
+        "Phosphorus"
+      ],
+      "notes": "Round 3 Question 3"
+    },
+    {
+      "number": 19,
+      "paragraphs": [
+        "Question 4",
+        "Taking over fifteen years to complete, the \"Big Dig\" project took I-93 and moved it underground in what US state capital?",
+        "Boston"
+      ],
+      "notes": "Round 3 Question 4"
+    },
+    {
+      "number": 20,
+      "paragraphs": [
+        "BONUS (5 answers, 2 each)",
+        "Name five of the seven actors to appear on the official promotional picture of the 1983 movie “The Outsiders”, all of whom would go on to Holywood success."
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 21,
+      "paragraphs": [
+        "Bonus",
+        "Tom Cruise",
+        "Matt Dillon",
+        "Emilio Estevez",
+        "C. Thomas Howell",
+        "Rob Lowe",
+        "Ralph Macchio",
+        "Patrick Swayze"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 22,
+      "paragraphs": [
+        "NFL",
+        "Presidents",
+        "Movies",
+        "Amusement Parks",
+        "Round 4 Categories"
+      ],
+      "notes": "Round 4 Categories"
+    },
+    {
+      "number": 23,
+      "paragraphs": [
+        "Question 1",
+        "Who was the first quarterback to defeat all 32 NFL teams?",
+        "Brett Favre"
+      ],
+      "notes": "Round 4 Question 4"
+    },
+    {
+      "number": 24,
+      "paragraphs": [
+        "Question 2",
+        "Though many were quite close and some may have even used tricks to cover it up, who was the only US President that was completely bald?",
+        "Dwight Eisenhower"
+      ],
+      "notes": "Round 4 Question 1"
+    },
+    {
+      "number": 25,
+      "paragraphs": [
+        "Question 3",
+        "What 1980 film, based on a 1976 Clive Cussler novel, lost so much money its producer once said “it would have been cheaper to lower the Atlantic?",
+        "Raise the Titanic - FACEBOOK"
+      ],
+      "notes": "Round 4 Question 3"
+    },
+    {
+      "number": 26,
+      "paragraphs": [
+        "Question 4",
+        "Tivoli Gardens, one of the world’s oldest amusement parks and the inspiration for Disneyland, is located in what European capital city?",
+        "Copenhagen"
+      ],
+      "notes": "Round 4 Question 2"
+    },
+    {
+      "number": 27,
+      "paragraphs": [
+        "Final Bonus (10 answers, 3 each)",
+        "Not including the Czech Republic, what are the 10 members of the European Union whose names begin AND end with a consonant?",
+        "Note: If the country name ends in a Y (acting like a vowel), it is disqualified."
+      ],
+      "notes": "Round 4 Bonus"
+    },
+    {
+      "number": 28,
+      "paragraphs": [
+        "Belgium",
+        "Cyprus",
+        "Denmark",
+        "Finland",
+        "Luxembourg",
+        "Netherlands",
+        "Poland",
+        "Portugal",
+        "Spain",
+        "Sweden"
+      ],
+      "notes": "Round 4 Bonus"
+    }
+  ],
+  "warnings": [
+    "Regular question point values were not specified in the source deck. Grade these using your event rules."
+  ]
+}

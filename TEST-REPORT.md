@@ -1,4 +1,16 @@
-# Verification report — September 25, 2026
+# Verification report — September 29, 2026
+
+## September 29 trivia revision
+
+- TypeScript, ESLint, production build and 49 unit tests passed.
+- Included September 29 source: 28 original slides, four rounds, 20 questions, four bonus point rules (10/10/10/30). Decorative source art is omitted from question slides; original source paragraphs remain in JSON. The source's FACEBOOK tag is kept in private notes. Regular points remain host-defined because the deck did not specify them.
+- Dark charcoal/plum display and host design, separate game-mode selector, intro-only branding, no “Get ready” text. Feud preview is to the right.
+- All 24 cards in both September trivia sets were checked at 1280×720 and 1920×1080, including dense prompts and ten-answer finals. Legacy prompts are laid out separately and paired where appropriate.
+- Browser checks cover bundled library start, mode switching, private answer card during grading, drag reorder, apply-to-live edits, score preservation, arbitrary answer reveal/hide, reload and audience synchronization.
+- Current question identity survives reordering/deleting a different card. Deleting the displayed card opens a title card with answers hidden. Edited answers are hidden again. Audience rendering keeps the last consistent deck/session pair during asynchronous deck loading.
+- Unit coverage verifies the three score stops (before Round 3, before the last question and after it), frozen totals, manual scoring, individual-answer undo and text round-trip for explicit prompt items and paired answers.
+- Existing browser regression passed for text import/editing, saved draft reload, result restore, score keyboard navigation and both BroadcastChannel/localStorage synchronization paths.
+- Feud opening/written/finale controls still fit 1366×768 and 96-point finale persistence remains verified.
 
 ## September 25 update
 

@@ -112,7 +112,9 @@ Game JSON is content, result JSON is scores/date/venue/bonus totals, browser ses
 
 ## Trivia editor and text import
 
-Choose **Trivia → Game editor & library**. Create a game in the editor, use **Paste Questions → Parse & preview → Confirm import as draft**, or import a TXT / trivia JSON file. PowerPoint import is no longer part of the hosting workflow. Previously saved trivia games, pictures and results remain compatible.
+Choose **Game mode → Trivia night**, then **Game editor & library**. The included **09.29.2026 Trivia** set contains all 20 questions from the supplied deck; choose **Start this set** in the library. Create a game in the editor, use **Paste Questions → Parse & preview → Confirm import as draft**, or import a TXT / trivia JSON file. PowerPoint import is no longer part of the hosting workflow. Previously saved trivia games, pictures and results remain compatible.
+
+Drag the left-hand questions to reorder them, or use the Move buttons with a keyboard. **Edit current game → Apply edits to current show** preserves the current question by its ID and keeps scores. Applying changed answers hides them until you reveal them again. Deleting the displayed question moves to a hidden title card; deleting other questions leaves the TV on its current question. A saved result archives the pre-edit night.
 
 The editor supports adding rounds and questions, editing public prompts/private answers, setting points and timers, reordering/duplicating/deleting screens, private notes, and a TV preview. Drafts save separately from the running show; wait for **Draft saved locally** before closing. Save a game to the library or export JSON for backup. Starting an edited game creates a separate live copy and archives the previous night's scores.
 
@@ -136,6 +138,10 @@ Answer: Venus
 Points: 4
 Scoring: 2 points per correct answer
 ```
+
+Use **Prompt items / choices** for separate clues, and **Pair each prompt with its answer** for matching questions. In text imports, repeat `Prompt item:` and use `Answer layout: paired`. The private answer buttons reveal or hide individual answers in any order, while **Reveal next answer** walks through hidden answers. Clues and their revealed answers stay on the same screen. Score sheet shows a private answer card for the selected question.
+
+The dark charcoal/plum display uses amber accents, separate question and clue typography, and branding only on the intro. Score reveals occur before Round 3, before the last question, and after the last question. Each stop reveals up to ten teams from bottom to top; Next continues the show.
 
 Repeat Answer: for multiple answers, or use Answers: followed by a bullet list. Points are the maximum for the question; scoring instructions describe partial credit. Omitted points remain for the host to decide. Timers default to 240 seconds. Notes: are private. Line breaks and **bold** emphasis are preserved on the audience screen. TXT export preserves the editable question/answer content; JSON also preserves pictures and source information.
 

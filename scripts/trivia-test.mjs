@@ -12,7 +12,7 @@ await host.getByRole('button',{name:'Paste Questions',exact:true}).click();await
 await host.getByLabel('Import trivia file',{exact:true}).setInputFiles(sample);
 await host.getByLabel('Game title',{exact:true}).waitFor();
 await host.getByRole('button',{name:'Start this game',exact:true}).click();
-await tv.getByText('WITH YOUR HOST, DANIEL PRINS').waitFor();
+await tv.getByText('With your host, Daniel Prins').waitFor();
 assert.equal(await tv.locator('button,input,select').count(),0);
 assert.equal(await tv.locator('nav').count(),0);await tv.getByAltText('Outspoken Entertainment').waitFor();assert.notEqual(await tv.locator('.trivia-slide').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)');
 const state=()=>host.evaluate(()=>JSON.parse(localStorage.getItem('trivia.session.v1')));

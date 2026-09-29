@@ -1,5 +1,15 @@
 # Verification report — September 29, 2026
 
+## September 29 follow-up
+
+- 52 unit tests, strict typecheck, lint and production build passed.
+- Presenter preview enlarged after removing the individual trivia answer buttons. Sequential reveal/hide/undo remain; grading retains its private answer card.
+- Single-answer numbering and the audience answer counter are removed. Answer fills are neutral; intro host credits are smaller in both modes.
+- Generated a transparent ivory/lavender version of the supplied Outspoken artwork and integrated it into the intro. Source artwork remains available.
+- Automatic trivia timing: 180/240/300 seconds by answer count, 360 for the final. Presenter overrides survive navigation, timer reset and JSON result reload; explicit editor/import timing stays supported.
+- Browser checks cover 4.5-minute custom timing, six-minute final default, timer synchronization, preview fit at 1366×768 and private grading.
+- Team reveals now ascend in pitch, with muted medal accents by rank. Audience windows remain silent and undoing a trivia standings reveal makes no note.
+
 ## September 29 trivia revision
 
 - TypeScript, ESLint, production build and 49 unit tests passed.

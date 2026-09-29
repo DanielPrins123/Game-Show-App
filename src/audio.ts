@@ -2,9 +2,10 @@ let context:AudioContext|undefined;
 export function unlockAudio(){try{context??=new AudioContext();void context.resume().catch(()=>{});}catch{/* Audio must never prevent play. */}}
 export function audioReady(){return context?.state==='running';}
 export async function testSound(volume:number,muted:boolean){try{context??=new AudioContext();await context.resume();sound('reveal',volume,muted);}catch{/* The visible status remains not enabled. */}}
-export function sound(type:'reveal'|'strike'|'warning'|'expired'|'extension'|'tick',volume:number,muted:boolean){
+export const scorePitch=(revealed:number,total:number)=>440*2**(total<=1?1:Math.max(0,Math.min(total-1,revealed-1))/(total-1));
+export function sound(type:'reveal'|'strike'|'warning'|'expired'|'extension'|'tick',volume:number,muted:boolean,revealFrequency=880){
   if(muted||!context||context.state!=='running')return;
-  const frequency=type==='reveal'?880:type==='strike'?240:type==='tick'?660:type==='warning'?740:type==='extension'?784:330;
+  const frequency=type==='reveal'?revealFrequency:type==='strike'?240:type==='tick'?660:type==='warning'?740:type==='extension'?784:330;
   const duration=type==='tick'?.045:type==='reveal'?.16:type==='strike'?.14:.28;
   const level=type==='tick'?.08:type==='reveal'?.4:type==='strike'?.4:.45;
   const osc=context.createOscillator(),gain=context.createGain(),at=context.currentTime;

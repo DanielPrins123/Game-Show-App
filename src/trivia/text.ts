@@ -1,3 +1,4 @@
+import {cardSeconds} from './timing';
 import type { TriviaCard, TriviaDeck } from './types';
 export const triviaTemplate=`Title: Friday Trivia
 
@@ -17,7 +18,7 @@ Answer: Venus
 Points: 4
 Scoring: 2 points per correct answer
 Timer: 240`;
-export function blankCard(kind:TriviaCard['kind'],round='Round 1'):TriviaCard{return {id:crypto.randomUUID(),kind,title:kind==='round'?round:kind==='info'?'Information':'Question 1',round,prompt:'',answers:[],scoring:'',maxPoints:null,seconds:240,sourceSlides:[],notes:'',issues:[],images:[]};}
+export function blankCard(kind:TriviaCard['kind'],round='Round 1'):TriviaCard{return {id:crypto.randomUUID(),kind,title:kind==='round'?round:kind==='info'?'Information':'Question 1',round,prompt:'',answers:[],scoring:'',maxPoints:null,seconds:180,autoTime:true,sourceSlides:[],notes:'',issues:[],images:[]};}
 export function blankTrivia():TriviaDeck{return {version:1,type:'trivia',id:crypto.randomUUID(),title:'Trivia night',fileName:'',importedAt:new Date().toISOString(),cards:[blankCard('round'),blankCard('question')],source:[],warnings:[]};}
 export function parseTriviaText(input:string):TriviaDeck{
   const deck=blankTrivia();deck.cards=[];let round='Round 1',card:TriviaCard|undefined,mode='prompt';
@@ -34,7 +35,7 @@ export function parseTriviaText(input:string):TriviaDeck{
     if(label){const key=label[1].toLowerCase(),value=label[2];
       if(key==='prompt item'){card.prompts=[...(card.prompts??[]),value];mode='prompt';}
       else if(key==='answer layout'){if(!['list','paired'].includes(value))throw Error('Answer layout must be list or paired.');card.answerLayout=value as 'list'|'paired';mode='prompt';}
-      else if(key==='points'||key==='timer'){const n=Number(value);if(!value||!Number.isFinite(n)||n<0||key==='timer'&&(!Number.isInteger(n)||n<10||n>3600))throw Error(`Line ${i+1}: ${key==='timer'?'timer must be 10–3600 seconds':'points must be zero or more'}.`);if(key==='points')card.maxPoints=n;else card.seconds=n;mode='prompt';}
+      else if(key==='points'||key==='timer'){const n=Number(value);if(!value||!Number.isFinite(n)||n<0||key==='timer'&&(!Number.isInteger(n)||n<10||n>3600))throw Error(`Line ${i+1}: ${key==='timer'?'timer must be 10–3600 seconds':'points must be zero or more'}.`);if(key==='points')card.maxPoints=n;else {card.seconds=n;card.autoTime=false;};mode='prompt';}
       else if(['answer','answers','a'].includes(key)){mode='answers';if(value)card.answers.push(value);}
       else {mode=key==='notes'?'notes':key==='scoring'?'scoring':'prompt';const field=mode as 'notes'|'scoring'|'prompt';card[field]+=(card[field]?'\n':'')+value;}
     }else if(mode==='answers'){if(/^[-•*]\s+/.test(line)||!card.answers.length)card.answers.push(line.replace(/^[-•*]\s+/,''));else card.answers[card.answers.length-1]+='\n'+line;}
@@ -44,4 +45,4 @@ export function parseTriviaText(input:string):TriviaDeck{
   if(deck.cards.some(c=>c.kind==='question'&&!c.prompt.trim()))throw Error('A question is missing its prompt. Add a Question: line below its heading.');
   deck.source=[{number:1,paragraphs:input.split(/\r?\n/),notes:'Original pasted text'}];return deck;
 }
-export function exportTriviaText(deck:TriviaDeck){return [`Title: ${deck.title}`,...deck.cards.map(c=>c.kind==='round'?`Round: ${c.title}\nCategories: ${c.prompt}`:`${c.kind==='info'?'Info: ':'Question title: '}${c.title}\nQuestion: ${c.prompt}\n${(c.prompts??[]).map(p=>`Prompt item: ${p}`).join('\n')}\n${c.answerLayout?`Answer layout: ${c.answerLayout}`:''}\n${c.answers.map(a=>`Answer: ${a}`).join('\n')}\n${c.maxPoints===null?'':`Points: ${c.maxPoints}\n`}Timer: ${c.seconds}\nScoring: ${c.scoring}\nNotes: ${c.notes}`)].join('\n\n');}
+export function exportTriviaText(deck:TriviaDeck){return [`Title: ${deck.title}`,...deck.cards.map(c=>c.kind==='round'?`Round: ${c.title}\nCategories: ${c.prompt}`:`${c.kind==='info'?'Info: ':'Question title: '}${c.title}\nQuestion: ${c.prompt}\n${(c.prompts??[]).map(p=>`Prompt item: ${p}`).join('\n')}\n${c.answerLayout?`Answer layout: ${c.answerLayout}`:''}\n${c.answers.map(a=>`Answer: ${a}`).join('\n')}\n${c.maxPoints===null?'':`Points: ${c.maxPoints}\n`}Timer: ${cardSeconds(c)}\nScoring: ${c.scoring}\nNotes: ${c.notes}`)].join('\n\n');}

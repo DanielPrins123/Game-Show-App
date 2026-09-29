@@ -15,13 +15,14 @@
       "answers": [],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         1
       ],
       "notes": "Round 1 Categories",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-2",
@@ -34,13 +35,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         2
       ],
       "notes": "Round 1 Question 1",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-3",
@@ -53,13 +55,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         3
       ],
       "notes": "Round 1 Question 2",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-4",
@@ -72,13 +75,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         4
       ],
       "notes": "Round 1 Question 3",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-5",
@@ -91,13 +95,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         5
       ],
       "notes": "Round 1 Question 4",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-6",
@@ -120,7 +125,8 @@
       ],
       "notes": "Round 1 Bonus Question\nRound 1 Bonus Question",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-8",
@@ -131,13 +137,14 @@
       "answers": [],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         8
       ],
       "notes": "Round 2 Categories",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-9",
@@ -150,13 +157,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         9
       ],
       "notes": "Round 2 Question 1",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-10",
@@ -169,13 +177,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         10
       ],
       "notes": "Round 2 Question 2",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-11",
@@ -188,13 +197,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         11
       ],
       "notes": "Round 2 Question 4",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-12",
@@ -207,13 +217,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         12
       ],
       "notes": "Round 2 Question 3",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-13",
@@ -235,7 +246,8 @@
       ],
       "notes": "Round 2 Bonus\nRound 2 Bonus",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-15",
@@ -246,13 +258,14 @@
       "answers": [],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         15
       ],
       "notes": "Round 3 Categories",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-16",
@@ -265,13 +278,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         16
       ],
       "notes": "Round 3 Question 1",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-17",
@@ -284,13 +298,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         17
       ],
       "notes": "Round 3 Question 2",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-18",
@@ -303,13 +318,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         18
       ],
       "notes": "Round 3 Question 3",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-19",
@@ -322,13 +338,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         19
       ],
       "notes": "Round 3 Question 4",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-20",
@@ -347,14 +364,15 @@
       ],
       "scoring": "5 answers, 2 each",
       "maxPoints": 10,
-      "seconds": 240,
+      "seconds": 300,
       "sourceSlides": [
         20,
         21
       ],
       "notes": "Round 3 Bonus\nRound 3 Bonus",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-22",
@@ -365,13 +383,14 @@
       "answers": [],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         22
       ],
       "notes": "Round 4 Categories",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-23",
@@ -384,13 +403,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         23
       ],
       "notes": "Round 4 Question 4",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-24",
@@ -403,13 +423,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         24
       ],
       "notes": "Round 4 Question 1",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-25",
@@ -422,13 +443,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         25
       ],
       "notes": "Round 4 Question 3\nSource marked this answer FACEBOOK.",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-26",
@@ -441,13 +463,14 @@
       ],
       "scoring": "",
       "maxPoints": null,
-      "seconds": 240,
+      "seconds": 180,
       "sourceSlides": [
         26
       ],
       "notes": "Round 4 Question 2",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     },
     {
       "id": "slide-27",
@@ -469,14 +492,15 @@
       ],
       "scoring": "10 answers, 3 each",
       "maxPoints": 30,
-      "seconds": 240,
+      "seconds": 360,
       "sourceSlides": [
         27,
         28
       ],
       "notes": "Round 4 Bonus\nRound 4 Bonus",
       "issues": [],
-      "images": []
+      "images": [],
+      "autoTime": true
     }
   ],
   "source": [

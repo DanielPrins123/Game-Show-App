@@ -96,3 +96,78 @@
 .trivia-score-answer .trivia-grading-card ol{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;padding-left:20px}
 .trivia-score-answer .trivia-grading-card li{margin:2px 0}
 @media(max-width:800px){.trivia-score-answer{grid-template-columns:1fr}}
+
+.trivia-slide .is-concealed{visibility:hidden}
+.trivia-slide .answer-shown,.trivia-slide .trivia-answer-list[data-count="1"] .answer-shown,.trivia-slide .paired-answer.is-visible{background:#f0ce83;color:#251e17;border-radius:.6cqw;border:1px solid #ffe6aa}
+.trivia-slide .answer-shown .item-number{color:#66502b}
+.trivia-slide .trivia-answer-list[data-count="1"]{font-size:5.2cqw;align-content:start}
+.trivia-slide .trivia-answer-list[data-count="1"] li{padding:2cqw;min-height:8cqw}
+.trivia-slide .paired-answer{padding:.6cqw .9cqw;font-size:2.3cqw;margin-top:.6cqw;min-height:3.8cqw}
+.trivia-slide .paired-answer .answer-label{display:block;font-size:1cqw;color:#66502b;margin-bottom:.25cqw}
+.trivia-slide .answer-label{font-size:1.45cqw;font-weight:700;text-transform:uppercase}
+.trivia-stage header>b{position:relative}
+.trivia-extension{position:absolute;right:0;top:100%;font-size:1.7cqw;line-height:1.2;color:#f0ce83;white-space:nowrap}
+.trivia-slide .trivia-ranks .medal-1{background:#79602e;border-left:.8cqw solid #f0ce83;color:#fff7e6}
+.trivia-slide .trivia-ranks .medal-2{background:#4d5c70;border-left:.8cqw solid #d8e3f1;color:#fff}
+.trivia-slide .trivia-ranks .medal-3{background:#794e39;border-left:.8cqw solid #e9ae84;color:#fff4eb}
+.trivia-slide .trivia-ranks .shown>b:first-child{color:inherit}
+
+.trivia-time-notice{position:absolute;z-index:4;top:12cqw;left:50%;transform:translateX(-50%);padding:1.2cqw 2.5cqw;background:#f0ce83;color:#251e17;border:2px solid #ffe6aa;border-radius:1cqw;font-size:3cqw;font-weight:700;box-shadow:0 1cqw 3cqw #0006;white-space:nowrap}
+.trivia-countdown{position:absolute;z-index:4;right:3cqw;bottom:5cqw;width:15cqw;min-height:15cqw;display:flex;flex-direction:column;align-items:center;justify-content:center;border:.25cqw solid #f0ce83;border-radius:1.3cqw;background:#201928f5;color:#ffdfa5;box-shadow:0 1cqw 4cqw #0008;pointer-events:none}
+.trivia-countdown b{font-size:10cqw;line-height:1.05;font-variant-numeric:tabular-nums}.trivia-countdown span{font-size:1.2cqw;letter-spacing:.08em}
+
+.trivia-question-text{transform-origin:left top}
+.trivia-answer-board,.trivia-answers .paired-answer{animation:trivia-board-in .45s cubic-bezier(.2,.7,.2,1) both}
+.trivia-slide .trivia-answer-list .answer-hidden{background:#ffffff09;border:1px solid #c3a67970;border-radius:.6cqw;min-height:3.2cqw;color:#d5c4df}
+.trivia-slide .trivia-answer-list[data-count="1"] .answer-hidden{min-height:8cqw}
+.trivia-slide .paired-answer.is-concealed{visibility:visible;background:#ffffff09;border:1px solid #c3a67970;border-radius:.6cqw}
+@keyframes trivia-board-in{from{opacity:0;transform:translateY(1.5cqw)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.trivia-answer-board,.trivia-answers .paired-answer{animation:none}}
+
+/* A brighter evening palette, with calm dark surfaces behind large type. */
+.trivia-display,.trivia-app{background:#161329}
+.trivia-app .panel{background:#25213b;border-color:#625184}
+.trivia-app button,.trivia-app .file-button{background:#403161;border-color:#8b70ae}
+.trivia-app button:hover{background:#654587}.trivia-app .primary{background:#f2cd78;color:#2b2015;border-color:#ffe5a7}
+.trivia-app .trivia-toolbar a{color:#f3d396}
+.trivia-slide .trivia-stage{background:radial-gradient(ellipse at 100% 0,#176e7770 0,transparent 50%),radial-gradient(ellipse at 0 100%,#94386166 0,transparent 55%),linear-gradient(135deg,#38204e,#1b2346);border-top:.45cqw solid #f2cd78}
+.trivia-slide .trivia-stage header strong,.trivia-slide .trivia-stage footer{color:#f6d48b}
+.trivia-slide .trivia-centered h1{text-shadow:0 .2cqw 2cqw #bc6bea40}
+.trivia-slide .trivia-prompt-items li{border-top-color:#75d4d066}
+.trivia-slide .answer-shown,.trivia-slide .trivia-answer-list[data-count="1"] .answer-shown,.trivia-slide .paired-answer.is-visible{background:linear-gradient(120deg,#ffe3a0,#f0c468);border-color:#ffecbd;box-shadow:0 .3cqw 1.2cqw #100a2340}
+.trivia-slide .trivia-ranks .shown{background:#24565f;border-left-color:#77dad3}
+.trivia-slide .trivia-ranks .medal-1{background:linear-gradient(110deg,#9b702e,#654322);border-left-color:#ffdc81}
+.trivia-slide .trivia-ranks .medal-2{background:linear-gradient(110deg,#637b94,#384960);border-left-color:#e0edff}
+.trivia-slide .trivia-ranks .medal-3{background:linear-gradient(110deg,#a56140,#623c36);border-left-color:#ffc095}
+.trivia-slide .trivia-stage.trivia-answers header{min-height:5cqw}
+
+.trivia-answer-list{perspective:120cqw}
+.trivia-slide .answer-shown,.trivia-slide .paired-answer.is-visible{animation:trivia-answer-flip .5s ease-in-out both;transform-origin:center;backface-visibility:hidden}
+@keyframes trivia-answer-flip{0%{transform:rotateX(0deg);color:transparent;background:#382e4b}49%{transform:rotateX(90deg);color:transparent;background:#382e4b}50%{transform:rotateX(-90deg);color:#251e17}100%{transform:rotateX(0deg)}}
+.trivia-slide .answer-shown>span,.trivia-slide .paired-answer.is-visible>.answer-label{animation:trivia-answer-ink .5s step-end both}
+@keyframes trivia-answer-ink{0%{opacity:0}50%,100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.trivia-slide .answer-shown,.trivia-slide .paired-answer.is-visible,.trivia-slide .answer-shown>span,.trivia-slide .paired-answer.is-visible>.answer-label{animation:none}}
+
+.trivia-slide .trivia-intro{position:relative;justify-content:center;align-items:flex-start;padding:6cqw 7cqw;gap:1.5cqw;background:radial-gradient(ellipse at 92% 58%,#18857a88,transparent 48%),radial-gradient(ellipse at 0 100%,#b83c7470,transparent 55%),linear-gradient(120deg,#352054,#182344)}
+.trivia-slide .trivia-intro .trivia-brand{position:absolute;top:4cqw;right:5cqw;width:25cqw;height:8cqw;margin:0}
+.trivia-intro .intro-eyebrow{font-size:1.8cqw;letter-spacing:.1em;color:#8ce3d6;position:relative;z-index:1}
+.trivia-slide .trivia-intro h1{font-size:11cqw;line-height:.92;margin:1.5cqw 0 2.5cqw;letter-spacing:-.035em;position:relative;z-index:1}
+.trivia-intro h1 span{display:block}.trivia-intro h1 span:first-child{color:#fff5e7}.trivia-intro h1 span:last-child{color:#ffd479;font-style:italic;padding-left:6cqw}
+.trivia-intro .intro-details{width:100%;display:flex;align-items:end;justify-content:space-between;border-top:.15cqw solid #f2cd7866;padding-top:2cqw;position:relative;z-index:1;gap:3cqw}
+.trivia-slide .trivia-intro h2{font-size:2cqw;color:#f0dbbd;font-weight:400}.trivia-intro .trivia-host-credit{font-size:1.4cqw;color:#d6cbe5}.trivia-intro .trivia-host-credit strong{display:block;font-size:1.8cqw;color:#a6e9de;margin-top:.4cqw}
+.intro-orbit{position:absolute;right:8cqw;top:17cqw;width:22cqw;height:22cqw;border:1.2cqw solid #77d6cc77;border-radius:50%;box-shadow:0 0 0 3cqw #77d6cc10,0 0 0 6cqw #77d6cc08;transform:rotate(-15deg)}
+.intro-orbit:before{content:'?';position:absolute;inset:0;display:grid;place-items:center;font-size:17cqw;font-weight:700;color:#f2cd78}
+
+.trivia-slide .trivia-intro{align-items:center;text-align:center;justify-content:flex-start;padding:3.5cqw 6cqw;gap:1.4cqw}
+.trivia-slide .trivia-intro .trivia-brand{position:relative;top:auto;right:auto;width:44cqw;height:14cqw;margin:0 0 1cqw}
+.trivia-slide .trivia-intro h1{font-size:9.2cqw;line-height:1.1;margin:0 0 1.2cqw;white-space:nowrap;letter-spacing:-.03em}
+.trivia-intro h1 span{display:inline}.trivia-intro h1 span:last-child{padding-left:0}
+.trivia-intro .intro-eyebrow{font-size:1.6cqw;letter-spacing:.15em}
+.trivia-intro .intro-details{width:68cqw;flex-direction:column;align-items:center;gap:1.3cqw;padding-top:1.4cqw}
+.trivia-slide .trivia-intro h2{font-size:2cqw}.trivia-intro .trivia-host-credit{font-size:1.35cqw}.trivia-intro .trivia-host-credit strong{display:inline;font-size:1.5cqw;margin-left:.35cqw}
+.intro-orbit{right:-7cqw;top:27cqw;width:24cqw;height:24cqw;opacity:.25;transform:rotate(18deg)}
+.trivia-slide .trivia-answer-list li{position:relative;justify-content:center;text-align:center}
+.trivia-slide .trivia-answer-list li>.item-number{position:absolute;left:.8cqw}
+.trivia-slide .trivia-answer-list li>span:last-child{padding:0 1.2cqw}
+.trivia-slide .trivia-answer-list[data-count="1"]{text-align:center}
+.trivia-slide .paired-answer{text-align:center}

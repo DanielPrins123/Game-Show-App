@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const deck=JSON.parse(fs.readFileSync(process.env.TRIVIA_GAME_PATH||'test-results/trivia-legacy.json','utf8'));
 const browser=await chromium.launch({channel:'msedge',headless:true});
-try{const context=await browser.newContext();const p=await context.newPage();await p.goto('http://127.0.0.1:4173/#/display');
+try{const context=await browser.newContext({reducedMotion:'reduce'});const p=await context.newPage();await p.goto('http://127.0.0.1:4173/#/display');
 await p.evaluate(async d=>{await new Promise((resolve,reject)=>{const r=indexedDB.open('game-night-trivia',1);r.onupgradeneeded=()=>{r.result.createObjectStore('decks',{keyPath:'id'});r.result.createObjectStore('results',{keyPath:'id'});};r.onerror=reject;r.onsuccess=()=>{const db=r.result,tx=db.transaction('decks','readwrite');tx.objectStore('decks').put(d);tx.oncomplete=()=>{db.close();resolve();};};});localStorage.setItem('trivia.session.v1',JSON.stringify({version:1,deckId:d.id,title:d.title,date:'2026-09-19',venue:'Test',teams:[],muted:true,revision:1,history:[],index:0,phase:'intro',revealed:0,remaining:240,end:null,started:false,standingsShown:0}));},deck);
 await p.goto('http://127.0.0.1:4173/#/trivia/display');await p.reload();await p.getByAltText('Outspoken Entertainment').waitFor();
 async function set(values){await p.evaluate(v=>{const s=JSON.parse(localStorage.getItem('trivia.session.v1'));localStorage.setItem('trivia.session.v1',JSON.stringify({...s,...v}));window.dispatchEvent(new StorageEvent('storage',{key:'trivia.session.v1'}));},values);await p.locator('.trivia-slide').evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));}

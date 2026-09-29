@@ -136,3 +136,7 @@ PowerPoint conversion is heuristic and deliberately requires review. It does not
 TypeScript, ESLint, production build and all 53 unit tests pass. The full-sheet browser test enters scores across all 20 supplied questions and verifies four round subtotals (15, 40, 65, 90), halftime (55), pre-final (190), and total (210). It checks Enter/Tab navigation, private answer selection without TV changes, reload persistence, CSV download, and no horizontal table overflow at 1366px. Visual evidence: qa/trivia-full-score-sheet.png.
 
 The legacy-game browser regression also passes: import, timer, answer reveal, manual scores, dated saves, JSON restore, both audience synchronization channels and Feud score navigation. Unchanged full-deck geometry was not repeated for this score-sheet-only revision.
+
+### Trivia show polish and timer cues
+
+TypeScript, lint, production build and 54 unit tests pass. New timer/answer browser checks verify 60/30-second notices and one-shot warning sounds, final-ten-second ticks and overlay, +30 synchronization and countdown removal, hidden-answer board persistence, flip animation and hidden audience timer, and presenter-only audio. The existing timing check verifies seconds entry, custom duration persistence, reset, and 1366×768 presenter fit. Top-three colors and ascending score sounds are checked in the score-reveal browser test. Motion-reduced geometry checks inspect the complete supplied September 29 deck at 720p and 1080p.

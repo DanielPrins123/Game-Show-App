@@ -151,3 +151,5 @@
 }
 @media(min-width:1000px){.presenter.has-finale-controls{padding-bottom:8px}.presenter .finale-strike-controls{position:static;box-shadow:none;justify-content:center}.presenter .host-side .preview-panel>.board,.presenter .host-side .preview-panel>.opening-screen,.presenter .host-side .preview-panel>.score-show-board{max-width:210px}.presenter.has-finale-controls .host-answer>button:first-child{min-height:36px}}
 @media(min-width:1000px){.presenter .settings-panel .shortcuts p.micro{line-height:1.1}.presenter.has-finale-controls .host-side .preview-panel>.board{max-width:195px}}
+
+.score-show-row.medal-1{border-left:.8cqw solid #f0ce83;background:#79602e}.score-show-row.medal-2{border-left:.8cqw solid #d8e3f1;background:#4d5c70}.score-show-row.medal-3{border-left:.8cqw solid #e9ae84;background:#794e39}

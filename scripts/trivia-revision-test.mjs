@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const deck=JSON.parse(fs.readFileSync('public/trivia/2026-09-29.json','utf8'));
 const browser=await chromium.launch({channel:'msedge',headless:true});
 try{
- const context=await browser.newContext({viewport:{width:1366,height:768}}),host=await context.newPage(),tv=await context.newPage(),errors=[];
+ const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1366,height:768}}),host=await context.newPage(),tv=await context.newPage(),errors=[];
  context.on('page',p=>p.on('pageerror',e=>errors.push(String(e))));host.on('pageerror',e=>errors.push(String(e)));tv.on('pageerror',e=>errors.push(String(e)));
  await host.goto('http://127.0.0.1:4173/#/trivia');await host.getByRole('button',{name:'Start this set',exact:true}).click();
  await tv.goto('http://127.0.0.1:4173/#/trivia/display');await tv.getByAltText('Outspoken Entertainment').waitFor();

@@ -14,7 +14,7 @@ export interface TriviaTeam { id:string; name:string; scores:Record<string,numbe
 export interface Standing { id:string; name:string; total:number; rank:number }
 export interface TriviaFrame {
   index:number; phase:'intro'|'card'|'question'|'answers'|'scores'; revealed:number;
-  durations?:Record<string,number>; revealedAnswers?:number[]; remaining:number; end:number|null; started:boolean;
+  extensionAt?:number; durations?:Record<string,number>; revealedAnswers?:number[]; remaining:number; end:number|null; started:boolean;
   checkpoint?:'halfway'|'beforeFinal'|'final'|'manual'; standings?:Standing[]; standingsShown:number;
   scoreReturn?:TriviaFrame;
 }

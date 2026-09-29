@@ -5,6 +5,7 @@ try{
  const c=await b.newContext({viewport:{width:1366,height:768}});
  await c.addInitScript(()=>{window.tones=[];const original=AudioContext.prototype.createOscillator;AudioContext.prototype.createOscillator=function(){const osc=original.call(this),set=osc.frequency.setValueAtTime.bind(osc.frequency);osc.frequency.setValueAtTime=(value,time)=>{window.tones.push(value);return set(value,time);};return osc;};});
  const host=await c.newPage(),tv=await c.newPage();await host.goto('http://127.0.0.1:4173/#/trivia');await host.getByRole('button',{name:'Start this set',exact:true}).click();await tv.goto('http://127.0.0.1:4173/#/trivia/display');
+ await host.waitForFunction(()=>localStorage.getItem('trivia.session.v1'));
  await host.evaluate(()=>{const s=JSON.parse(localStorage.getItem('trivia.session.v1'));s.teams=[10,20,30].map((points,i)=>({id:String(i),name:['Third team','Second team','First team'][i],scores:{'slide-2':points}}));localStorage.setItem('trivia.session.v1',JSON.stringify(s));window.dispatchEvent(new StorageEvent('storage',{key:'trivia.session.v1'}));});
  await host.getByRole('button',{name:'Show scores on TV',exact:true}).click();
  for(let i=1;i<=3;i++){await host.getByRole('button',{name:'Reveal next team ↑',exact:true}).click();await host.waitForFunction(n=>window.tones.length===n,i);}

@@ -140,3 +140,7 @@ The legacy-game browser regression also passes: import, timer, answer reveal, ma
 ### Trivia show polish and timer cues
 
 TypeScript, lint, production build and 54 unit tests pass. New timer/answer browser checks verify 60/30-second notices and one-shot warning sounds, final-ten-second ticks and overlay, +30 synchronization and countdown removal, hidden-answer board persistence, flip animation and hidden audience timer, and presenter-only audio. The existing timing check verifies seconds entry, custom duration persistence, reset, and 1366×768 presenter fit. Top-three colors and ascending score sounds are checked in the score-reveal browser test. Motion-reduced geometry checks inspect the complete supplied September 29 deck at 720p and 1080p.
+
+### Softer theme and faster answer flips
+
+Removed the intro tagline. Trivia uses warm charcoal and ivory instead of purple/blue/gold surfaces. Answer flips and their text reveal now take 240 ms instead of 500 ms, with reduced-motion behavior retained. TypeScript, lint, production build, presenter timing/layout and countdown/reveal browser checks pass. Intro and answer screenshots were visually inspected.

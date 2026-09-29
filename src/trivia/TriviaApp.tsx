@@ -65,7 +65,7 @@ function TriviaDisplayContent({deck,session:s,now}:{deck:TriviaDeck;session:Triv
   const showing=s.phase==='answers';
   return <section className={`trivia-stage ${showing?'trivia-answers':''} ${parts.items.length?'has-prompts':''}`}>
     {!showing&&s.end!==null&&left>0&&left<=10&&<div className="trivia-countdown" role="status"><b>{Math.ceil(left)}</b><span>SECONDS LEFT</span></div>}
-    {!showing&&s.end!==null&&((left<=60&&left>57)||(left<=30&&left>27))&&<div className="trivia-time-notice" role="status">{left>30?'1 minute remaining':'30 seconds remaining'}</div>}
+    {!showing&&s.end!==null&&((left<=60&&left>57)||(left<=30&&left>27))&&<div className="trivia-time-notice" role="status" key={`${s.end}:${left>30?60:30}`}><span>{left>30?'1 minute remaining':'30 seconds remaining'}</span></div>}
     <header><span>{c.round}<strong>{c.title}</strong></span>{c.kind==='question'&&!showing&&<b className={s.started&&left===0?'time-up':''}>{s.started&&left===0?'TIME’S UP':formatTime(left)}{s.extensionAt!==undefined&&now-s.extensionAt<3000&&<small className="trivia-extension" key={s.extensionAt}>+30 seconds</small>}</b>}</header>
     <div className="trivia-question-body" data-length={parts.question.length>300?'long':parts.question.length>160?'medium':'short'}>
       <h2 className="trivia-question-text"><RichText text={parts.question||c.title}/></h2>

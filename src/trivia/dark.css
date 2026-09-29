@@ -199,3 +199,13 @@
 .trivia-extension{color:#dfe5d2}.trivia-time-notice{background:#e3e6d7;color:#292e24;border-color:#f2f3e9}.trivia-countdown{background:#2a2e25f5;color:#edf0e3;border-color:#bec8ac}
 .trivia-slide .trivia-ranks .shown{background:#444e3a;border-left-color:#bbc9a7}
 @keyframes trivia-answer-flip{0%{transform:rotateX(0deg);color:transparent;background:#3c4035}49%{transform:rotateX(90deg);color:transparent;background:#3c4035}50%{transform:rotateX(-90deg);color:#292c25}100%{transform:rotateX(0deg)}}
+
+/* Timer warnings float over the card, arriving from the upper-right clock. */
+.trivia-time-notice{inset:0;transform:none;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;pointer-events:none;color:#ffaaa0;font-size:5cqw;text-shadow:0 .2cqw .8cqw #000;white-space:nowrap}
+.trivia-time-notice:before{content:'';position:absolute;inset:0;background:#171b18b8;animation:trivia-warning-shade 2.8s ease both}
+.trivia-time-notice>span{position:relative;animation:trivia-warning-flight 2.8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes trivia-warning-flight{0%{opacity:0;transform:translate(25cqw,-21cqw) scale(.35)}14%,79%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(25cqw,-21cqw) scale(.35)}}
+@keyframes trivia-warning-shade{0%,100%{opacity:0}14%,79%{opacity:1}}
+.trivia-countdown{inset:0;width:auto;min-height:0;border:0;border-radius:0;background:#171b18b8;box-shadow:none;color:#ffaaa0;text-shadow:0 .2cqw .8cqw #000}
+.trivia-countdown b{font-size:15cqw}.trivia-countdown span{font-size:2cqw;letter-spacing:.12em;color:#f4e7dd}
+@media(prefers-reduced-motion:reduce){.trivia-time-notice>span{animation:trivia-warning-shade 2.8s ease both}}

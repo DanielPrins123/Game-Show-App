@@ -144,3 +144,7 @@ TypeScript, lint, production build and 54 unit tests pass. New timer/answer brow
 ### Softer theme and faster answer flips
 
 Removed the intro tagline. Trivia uses warm charcoal and ivory instead of purple/blue/gold surfaces. Answer flips and their text reveal now take 240 ms instead of 500 ms, with reduced-motion behavior retained. TypeScript, lint, production build, presenter timing/layout and countdown/reveal browser checks pass. Intro and answer screenshots were visually inspected.
+
+### Full-card time warnings
+
+60/30-second warnings now animate from the clock area over a dimmed card and retreat after a brief hold. The final countdown covers the card until expiration, pause or extension. TypeScript, lint, build and the timer browser regression verify synchronized notices, dismissal, full-width countdown, sounds and +30 removal. Reduced-motion mode fades the warning instead of moving it.

@@ -12,7 +12,7 @@ try{
  const state=()=>host.evaluate(()=>JSON.parse(localStorage.getItem('trivia.session.v1')));
  await click('Next →');await click('Next →');await click('Show question & start timer');
  await tv.getByText(deck.cards[1].prompt,{exact:true}).waitFor();assert.equal(await tv.getByText('Antarctica',{exact:true}).count(),0);assert.equal(await tv.getByAltText('Outspoken Entertainment').count(),0);
- await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.locator('.trivia-grading-card').getByText('Antarctica',{exact:true}).waitFor();await host.getByLabel('Team 1 Question 1 points',{exact:true}).fill('45');assert.equal(await tv.getByText('Antarctica',{exact:true}).count(),0);
+ await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.locator('.trivia-grading-card').getByText('Antarctica',{exact:true}).waitFor();await host.getByLabel('Team 1 Round 1 Question 1 points',{exact:true}).fill('45');assert.equal(await tv.getByText('Antarctica',{exact:true}).count(),0);
  await host.getByRole('link',{name:'Game editor & library',exact:true}).click();await click('Edit current game');
  const list=host.locator('.trivia-screen-list>button[draggable]');await list.nth(1).dragTo(list.nth(3));await click('Apply edits to current show');await host.getByText('Edits applied.',{exact:false}).waitFor();await tv.getByText(deck.cards[1].prompt,{exact:true}).waitFor();assert.equal((await state()).index,3);assert.equal((await state()).phase,'question');
  // Draft selections don't move the TV. Editing the active answer hides the board on Apply.

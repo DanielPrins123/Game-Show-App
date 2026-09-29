@@ -78,3 +78,21 @@
 .trivia-slide .trivia-ranks .medal-2{border-left-color:#adb7c4;background:#adb7c40c}
 .trivia-slide .trivia-ranks .medal-3{border-left-color:#b38b73;background:#b38b730c}
 .trivia-slide .trivia-ranks .medal-1>b:first-child{color:#d1bd97}.trivia-slide .trivia-ranks .medal-2>b:first-child{color:#c4cedb}.trivia-slide .trivia-ranks .medal-3>b:first-child{color:#d0aa91}
+.trivia-full-scorebook{padding:16px!important}.trivia-full-scorebook>p{font-size:13px;color:#c7bdd0;margin:8px 0 14px}
+.trivia-all-scores{table-layout:fixed;width:100%;font-variant-numeric:tabular-nums}
+.trivia-app .trivia-all-scores th,.trivia-app .trivia-all-scores td{padding:6px 2px;font-size:12px;letter-spacing:0;border-right:1px solid #ffffff0c}
+.trivia-app .trivia-all-scores tr th:first-child{min-width:0;width:auto}
+.trivia-app .trivia-all-scores thead tr:nth-child(2) th:first-child{position:static;text-align:center}
+.trivia-app .trivia-all-scores input{min-width:0!important;width:100%!important;padding:7px 2px;font-size:13px;text-align:center}
+.trivia-app .trivia-all-scores th input{text-align:left;font-size:12px}
+.trivia-app .trivia-all-scores .subtotal{min-width:0;background:#39313f;color:#f3eafa;border-left:1px solid #776383;border-right:1px solid #574660;font-size:12px}
+.trivia-app .trivia-all-scores .subtotal-total{font-weight:800;background:#50415d}
+.trivia-app .trivia-all-scores .round-headings th{background:#302637;border-bottom:1px solid #8e739e;text-align:center;font-size:13px;padding:10px 2px}
+.trivia-app .trivia-all-scores th button{min-height:30px;width:100%;padding:3px 0;border:0;border-radius:4px;background:transparent;font-size:11px;white-space:normal}
+.trivia-app .trivia-all-scores th .active-question{background:#574063;color:#fff}
+.trivia-app .trivia-all-scores thead th{white-space:normal}
+.trivia-score-answer{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+.trivia-score-answer .trivia-grading-card{position:static;padding:16px}
+.trivia-score-answer .trivia-grading-card ol{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;padding-left:20px}
+.trivia-score-answer .trivia-grading-card li{margin:2px 0}
+@media(max-width:800px){.trivia-score-answer{grid-template-columns:1fr}}

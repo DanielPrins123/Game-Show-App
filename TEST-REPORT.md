@@ -130,3 +130,9 @@ The new Edge browser test uploads the actual file through the production worker,
 The existing Family Feud browser regression passes: opening/instructions, reveals, timer extension/undo, ten-team scoring, same-window ranked score shows, finale manual grading/strikes, persistence, original-game paste import and storage fallback. Browser tests use isolated profiles and do not change the host's saved event.
 
 PowerPoint conversion is heuristic and deliberately requires review. It does not reproduce animations, master artwork or embedded media, and does not OCR image-only text. No physical projector or room audio system was available. The private source PowerPoint is not included in the repository.
+
+### Full trivia score sheet verification
+
+TypeScript, ESLint, production build and all 53 unit tests pass. The full-sheet browser test enters scores across all 20 supplied questions and verifies four round subtotals (15, 40, 65, 90), halftime (55), pre-final (190), and total (210). It checks Enter/Tab navigation, private answer selection without TV changes, reload persistence, CSV download, and no horizontal table overflow at 1366px. Visual evidence: qa/trivia-full-score-sheet.png.
+
+The legacy-game browser regression also passes: import, timer, answer reveal, manual scores, dated saves, JSON restore, both audience synchronization channels and Feud score navigation. Unchanged full-deck geometry was not repeated for this score-sheet-only revision.

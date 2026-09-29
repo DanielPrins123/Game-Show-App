@@ -193,3 +193,7 @@ Core controls fit a 1366×768 host screen. Audience preview, sound settings and 
 The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
 
 During the finale, the wrong-answer X stays pinned at the bottom of the presenter screen while scrolling; keyboard X also works. At each round’s first question, the audience transition prominently displays the round name. Other questions have numbered title cards. Opening the question starts the timer.
+
+### Full trivia score sheet
+
+All question inputs stay visible together, with compact headers such as R1Q4 and R1B (bonus). Round subtotal columns (Σ), halftime, pre-final and overall totals update as scores are entered. Enter moves down a team; Tab moves across questions. Select any score box or question header to view its private answer card below the table. The answer-card selector never filters the score sheet or changes the audience screen. All 20 supplied questions and totals fit across a 1366px laptop; smaller screens can scroll horizontally. CSV exports include the same subtotals.

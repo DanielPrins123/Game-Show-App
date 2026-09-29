@@ -23,9 +23,9 @@ await tv.getByText(/On September 8th/).waitFor();assert.equal(await tv.getByText
 await click('Pause');await click('Reveal next answer (0/1)');await tv.getByText('Hawai’i',{exact:true}).waitFor();
 await tv.reload();await tv.getByText('Hawai’i',{exact:true}).waitFor();
 await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.getByLabel('Venue',{exact:true}).pressSequentially('Community Hall');
-const first=host.getByLabel('Team 1 Question 1 points',{exact:true});await first.fill('5');await first.press('Enter');
-assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team 2 Question 1 points');
-await host.keyboard.type('3');await host.keyboard.press('Shift+Enter');assert.equal(await first.inputValue(),'5');assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team 1 Question 1 points');
+const first=host.getByLabel('Team 1 Round 1 Question 1 points',{exact:true});await first.fill('5');await first.press('Enter');
+assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team 2 Round 1 Question 1 points');
+await host.keyboard.type('3');await host.keyboard.press('Shift+Enter');assert.equal(await first.inputValue(),'5');assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team 1 Round 1 Question 1 points');
 await click('Save dated result');await host.getByText('Dated result saved locally.',{exact:false}).waitFor();
 await host.reload();assert.equal(await first.inputValue(),'5');assert.equal(await host.getByLabel('Venue',{exact:true}).inputValue(),'Community Hall');
 const downloadEvent=host.waitForEvent('download');await click('Export results JSON');const result=await downloadEvent;const path=await result.path();const backup=JSON.parse(fs.readFileSync(path,'utf8'));assert.equal(backup.session.teams[0].scores['slide-2'],5);
@@ -42,7 +42,7 @@ if(process.env.TRIVIA_SKIP_LAYOUT){await host.getByLabel('Jump to trivia screen'
 for(let i=0;i<10;i++)await click(`Reveal next answer (${i}/10)`);await tv.getByText('Whitney Houston',{exact:true}).waitFor();
 await tv.screenshot({path:'qa/trivia-final-answers.png'});await host.screenshot({path:'qa/trivia-presenter.png'});
 await click('Next →');await tv.getByText('FINAL STANDINGS',{exact:false}).waitFor();
-await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.locator('.trivia-app select').selectOption('slide-2');await host.getByLabel('Team 1 Question 1 points',{exact:true}).fill('9');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===9);
+await host.getByRole('link',{name:'Score sheet',exact:true}).click();await host.locator('.trivia-app select').selectOption('slide-2');await host.getByLabel('Team 1 Round 1 Question 1 points',{exact:true}).fill('9');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===9);
 await host.getByRole('link',{name:'Game editor & library',exact:true}).click();await host.getByLabel('Import trivia file',{exact:true}).setInputFiles({name:'trivia-results.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});await host.getByText('Saved result loaded into the editor.',{exact:false}).waitFor();await click('Start this game');await host.waitForFunction(()=>JSON.parse(localStorage.getItem('trivia.session.v1')).teams[0].scores['slide-2']===5);assert.equal((await state()).teams[0].scores['slide-2'],5);
 // Existing Feud score sheet uses the same keyboard conventions.
 await host.goto(base+'#/scores');const feud=host.getByLabel('Team Blue question 1',{exact:true});await feud.fill('7');await feud.press('Enter');assert.equal(await host.evaluate(()=>document.activeElement.getAttribute('aria-label')),'Team Gold question 1');await host.keyboard.type('4');await host.reload();assert.equal(await feud.inputValue(),'7');assert.equal(await host.getByLabel('Team Gold question 1',{exact:true}).inputValue(),'4');

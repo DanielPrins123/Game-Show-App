@@ -213,3 +213,5 @@ The library includes **10.12.2026 Trivia**, reconciled with the supplied host qu
 Bonus and final question transition cards display the supplied answer count and scoring before the question opens. Set the scoring field in the editor to keep that information with a custom question.
 
 Turquoise, warm yellow and coral decorate the slide edges and answer borders; all main reading surfaces retain black text on white.
+
+Trivia standings use light cards with black text and gold/silver/bronze accents keyed to actual rank (including silver for second with two teams). Tied ranks receive the same accent. The October final asks for 10 answers publicly while preserving all accepted answers for grading.

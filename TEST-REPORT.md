@@ -167,3 +167,6 @@ Corrected inherited pale transition headings, round labels, answer-stage questio
 Questions with up to six answers show hidden boxes immediately, with larger question text and centered spacing. Reveals preserve question bounds and hide the clock; crowded questions use a dedicated answer view. Bonus transitions show their scoring field. Focused geometry/contrast checks cover both bundled decks at 720p/1080p, hidden answer privacy and unchanged question bounds on reveal. Updated countdown coverage for immediate hidden boxes. Typecheck, lint and build pass.
 
 The broader editor/reorder/synchronization regression and countdown/sound browser checks also pass. Decorative turquoise, yellow and coral edges preserve white reading surfaces and black text.
+
+### Bright standings and rank accents
+Trivia standings use light backgrounds with black text and rank-based medal accents. Browser checks pass for 1/2/3/5/10 teams at 720p/1080p, including silver for the second of two teams. Two-team screenshot visually inspected. Question contrast/layout, typecheck, lint and build pass. Public October final wording shortened to 10 answers without changing accepted answers or scoring.

@@ -11,7 +11,7 @@ try{const c=await b.newContext({viewport:{width:1366,height:768},reducedMotion:'
  else{assert.deepEqual(rect,questionRect,'Question must not move on reveal');}
  if(width===1280&&index===1)await p.screenshot({path:'qa/trivia-combined-'+phase+'.png'});
  }
- if(phase==='card'&&card.kind==='question'&&card.scoring)assert.equal(await p.locator('.trivia-transition-scoring').innerText(),card.scoring);
+ if(phase==='card'&&card.kind==='question'&&card.scoring)assert.equal(await p.locator('.trivia-transition-scoring').innerText(),card.scoring.replace(/Name any 10 of 13;/gi,'10 answers;'));
  const contrastFailures=await p.locator('.trivia-slide').evaluate(el=>{
  const rgb=s=>(s.match(/[\d.]+/g)||[]).map(Number);
  const lum=c=>c.slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((a,v,i)=>a+v*[.2126,.7152,.0722][i],0);

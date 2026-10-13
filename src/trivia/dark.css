@@ -281,3 +281,17 @@
 .trivia-slide .paired-answer{border-left:.45cqw solid #00a6b2}
 .trivia-slide .trivia-transition-scoring{border-bottom:.35cqw solid #f4b942;padding-bottom:1.2cqw}
 .trivia-slide .trivia-ranks>div.shown{border-left-color:#00a6b2}
+/* Bright score cards: medals follow rank, never reveal order or team count. */
+.trivia-slide .trivia-ranks>div{background:#f3f8f9;color:#111;border:1px solid #9bb6bb;border-left:.8cqw solid #00a6b2;border-radius:.8cqw}
+.trivia-slide .trivia-ranks>div.shown{background:#e8f8fa;color:#111;border-left-color:#008b98;box-shadow:0 .15cqw .5cqw #00000012;animation:trivia-rank-arrive .25s ease-out}
+.trivia-slide .trivia-ranks>div.shown[data-rank="1"]{background:#fff6dc;border-left-color:#bf8500}
+.trivia-slide .trivia-ranks>div.shown[data-rank="2"]{background:#f0f3f7;border-left-color:#78899c}
+.trivia-slide .trivia-ranks>div.shown[data-rank="3"]{background:#fff0e7;border-left-color:#ad6634}
+.trivia-slide .trivia-ranks>div.shown>b:first-child{color:#111;background:#ffffffb8;border-radius:.6cqw;text-align:center;padding:.3cqw 0}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-hidden{background:#eef9fb}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-shown{background:#fffdf5}
+.trivia-slide .trivia-question-note{border-left-color:#00a6b2}
+@keyframes trivia-rank-arrive{from{opacity:.4;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.trivia-slide .trivia-ranks>div.shown{animation:none}}
+/* Peripheral decoration stays outside the main reading area. */
+.trivia-slide .trivia-stage{background-image:radial-gradient(circle at 100% 100%,transparent 0 3.6cqw,#00a6b22b 3.65cqw 4.15cqw,transparent 4.2cqw),radial-gradient(circle at 0 100%,#f4b94230 0 2.4cqw,transparent 2.45cqw);background-color:#fff}

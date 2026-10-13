@@ -202,10 +202,14 @@ All question inputs stay visible together, with compact headers such as R1Q4 and
 
 Enter durations in seconds (10–3600). At 60 and 30 seconds remaining, large coral text travels down from the timer over a dimmed card, holds briefly, then returns to the timer, accompanied by a gentle tone. The last ten seconds have a large centered countdown over the dimmed card and quiet ticks; the countdown stays until time expires. Pausing hides the countdown; adding time removes it immediately when more than ten seconds remain and displays **+30 seconds** beside the timer. Sound follows presenter mute/volume and never duplicates on the TV.
 
-**Show answer board** pauses the clock, hides the audience timer, moves the question upward, and brings in empty answer boxes. **Reveal next answer** quickly flips each box to its white answer face. You can also reveal directly without preparing the board. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
+Questions with up to six answers open with large question text and hidden answer boxes together. **Reveal next answer** flips a box in place and hides the timer without moving the question. Crowded questions, including the final bonus, use a separate answer view; **Show answer board** prepares that view without revealing answers. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
 
 Standings use the full available row area in both game modes. Names and scores automatically grow for small groups and shrink for up to ten displayed teams. Every revealed team uses the same clear highlight.
 
 ### October 12 trivia set
 
 The library includes **10.12.2026 Trivia**, reconciled with the supplied host question sheet: four rounds and 20 questions, including Mark Ruffalo in the Hulk bonus and all 13 accepted Billy Joel titles for the name-any-ten final (30 points maximum). Open Trivia → Game editor & library → Start this set. Existing saved games are preserved. Trivia uses white surfaces, bold black text, outlined answer cards, and restrained coral accents for daylight readability.
+
+Bonus and final question transition cards display the supplied answer count and scoring before the question opens. Set the scoring field in the editor to keep that information with a custom question.
+
+Turquoise, warm yellow and coral decorate the slide edges and answer borders; all main reading surfaces retain black text on white.

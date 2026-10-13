@@ -162,3 +162,8 @@ Replaced the green theme with white backgrounds, black text and coral accents ac
 
 ### Light-theme contrast regression fix
 Corrected inherited pale transition headings, round labels, answer-stage question text and secondary timer/score labels. Browser regression now includes question-title transitions and asserts at least 4.5:1 text contrast on all October round, transition, question and answer screens at 720p/1080p. Checks pass; transition screenshot visually inspected. Typecheck, lint and build pass.
+
+### Stable question-and-answer layout
+Questions with up to six answers show hidden boxes immediately, with larger question text and centered spacing. Reveals preserve question bounds and hide the clock; crowded questions use a dedicated answer view. Bonus transitions show their scoring field. Focused geometry/contrast checks cover both bundled decks at 720p/1080p, hidden answer privacy and unchanged question bounds on reveal. Updated countdown coverage for immediate hidden boxes. Typecheck, lint and build pass.
+
+The broader editor/reorder/synchronization regression and countdown/sound browser checks also pass. Decorative turquoise, yellow and coral edges preserve white reading surfaces and black text.

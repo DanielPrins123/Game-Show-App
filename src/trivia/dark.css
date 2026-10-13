@@ -249,3 +249,9 @@
 .trivia-slide .trivia-ranks>div.shown{background:#111;color:#fff;border-left-color:#e64b38}
 .trivia-slide .trivia-stage header .time-up{color:#b52317}
 .trivia-slide .paired-answer{color:#111}
+/* Explicit light-theme text for transitions and secondary information. */
+.trivia-slide .trivia-centered h1,.trivia-slide .trivia-centered h2,.trivia-slide .trivia-centered>p{color:#111;text-shadow:none}
+.trivia-slide .trivia-extension,.trivia-slide .item-number,.trivia-slide .answer-shown .item-number,.trivia-slide .paired-answer .answer-label{color:#222}
+.trivia-app .trivia-full-scorebook>p,.trivia-app .trivia-timer-controls>b{color:#222}
+.trivia-app .trivia-message{background:#eee;color:#111}
+.trivia-slide .trivia-answers .trivia-question-text{color:#111}

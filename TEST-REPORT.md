@@ -159,3 +159,6 @@ All 55 unit tests, TypeScript, ESLint and the production build pass. The October
 
 ### Light trivia theme — October 13
 Replaced the green theme with white backgrounds, black text and coral accents across audience slides, presenter and scoring. Typecheck, lint, production build and all-card October browser layout/persistence checks pass at 720p/1080p. Intro inspected visually. Actual sunlight/projector conditions require a venue check.
+
+### Light-theme contrast regression fix
+Corrected inherited pale transition headings, round labels, answer-stage question text and secondary timer/score labels. Browser regression now includes question-title transitions and asserts at least 4.5:1 text contrast on all October round, transition, question and answer screens at 720p/1080p. Checks pass; transition screenshot visually inspected. Typecheck, lint and build pass.

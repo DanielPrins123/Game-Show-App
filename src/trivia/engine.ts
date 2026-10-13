@@ -53,7 +53,7 @@ export function reduceTrivia(state:TriviaSession,action:TriviaAction,deck:Trivia
     const left=triviaLeft(s,now);s.remaining=left||questionSeconds(s,c);s.end=s.end===null?now+s.remaining*1000:null;s.started=true;
   }else if(action.type==='extend'){if(!['question','answers'].includes(s.phase))return state;s.extensionAt=now;s.remaining=triviaLeft(s,now)+30;if(s.end!==null)s.end=now+s.remaining*1000;}
   else if(action.type==='duration'){
-    if(c.kind!=='question'||s.phase==='scores'||!Number.isInteger(action.seconds)||action.seconds<0||action.seconds>600||action.seconds%15!==0)return state;
+    if(c.kind!=='question'||s.phase==='scores'||!Number.isInteger(action.seconds)||action.seconds<0||action.seconds>600||action.seconds%30!==0)return state;
     s.durations={...s.durations,[c.id]:action.seconds};s.remaining=action.seconds;if(s.end!==null||action.start)s.end=now+action.seconds*1000;if(action.start)s.started=true;
   }
   else if(action.type==='resetTimer'){s.remaining=questionSeconds(s,c);s.end=null;s.started=false;}

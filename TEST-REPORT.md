@@ -176,3 +176,6 @@ Presenter timer is a 0–600-second slider in 15-second increments with a single
 
 ### Stronger edge accents
 Removed cream-yellow answer fill. Increased top stripe, corner decoration and answer-border color while retaining white faces and black text. Production build and October deck geometry/contrast checks pass at 720p/1080p; combined answer screenshot visually inspected.
+
+### Timer setup before reveal and broader accents
+Timer slider is enabled on question title cards, autosaves without starting, spans available control width and has 30-second ticks/time labels. Browser checks verify pre-reveal save/reload with no question leak, automatic start, endpoints, pause/resume and laptop fit. Added blue, pink and lime decorative accents while retaining black-on-white text. Typecheck, lint, timing tests and production build pass.

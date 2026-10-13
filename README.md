@@ -200,7 +200,7 @@ All question inputs stay visible together, with compact headers such as R1Q4 and
 
 ### Trivia timer cues and answer animation
 
-Use the timer slider (0–10 minutes in 15-second steps) and its single Start / Pause / Restart button. Sound controls sit below. The + keyboard shortcut still adds 30 seconds. At 60 and 30 seconds remaining, large coral text travels down from the timer over a dimmed card, holds briefly, then returns to the timer, accompanied by a gentle tone. The last ten seconds have a large centered countdown over the dimmed card and quiet ticks; the countdown stays until time expires. Pausing hides the countdown; adding time removes it immediately when more than ten seconds remain and displays **+30 seconds** beside the timer. Sound follows presenter mute/volume and never duplicates on the TV.
+Use the timer slider (0–10 minutes in 30-second steps) and its single Start / Pause / Restart button. Sound controls sit below. The + keyboard shortcut still adds 30 seconds. At 60 and 30 seconds remaining, large coral text travels down from the timer over a dimmed card, holds briefly, then returns to the timer, accompanied by a gentle tone. The last ten seconds have a large centered countdown over the dimmed card and quiet ticks; the countdown stays until time expires. Pausing hides the countdown; adding time removes it immediately when more than ten seconds remain and displays **+30 seconds** beside the timer. Sound follows presenter mute/volume and never duplicates on the TV.
 
 Questions with up to six answers open with large question text and hidden answer boxes together. **Reveal next answer** flips a box in place and hides the timer without moving the question. Crowded questions, including the final bonus, use a separate answer view; **Show answer board** prepares that view without revealing answers. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
 
@@ -217,3 +217,5 @@ Turquoise, warm yellow and coral decorate the slide edges and answer borders; al
 Trivia standings use light cards with black text and gold/silver/bronze accents keyed to actual rank (including silver for second with two teams). Tied ranks receive the same accent. The October final asks for 10 answers publicly while preserving all accepted answers for grading.
 
 Answer faces are crisp white. Stronger turquoise/coral edge stripes, corner rings and answer borders add color without tinting the text surfaces.
+
+Set the timer on a question title card before revealing it; changes save automatically and the countdown starts when the question opens. The full-width slider has half-minute ticks and labeled time markers.

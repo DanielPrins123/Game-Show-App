@@ -215,3 +215,5 @@ Bonus and final question transition cards display the supplied answer count and 
 Turquoise, warm yellow and coral decorate the slide edges and answer borders; all main reading surfaces retain black text on white.
 
 Trivia standings use light cards with black text and gold/silver/bronze accents keyed to actual rank (including silver for second with two teams). Tied ranks receive the same accent. The October final asks for 10 answers publicly while preserving all accepted answers for grading.
+
+Answer faces are crisp white. Stronger turquoise/coral edge stripes, corner rings and answer borders add color without tinting the text surfaces.

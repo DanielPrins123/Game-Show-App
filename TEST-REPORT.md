@@ -173,3 +173,6 @@ Trivia standings use light backgrounds with black text and rank-based medal acce
 
 ### Simplified timer controls
 Presenter timer is a 0–600-second slider in 15-second increments with a single Start/Pause/Restart button. Sound controls are grouped below. Browser tests verify pause/resume, zero and ten-minute endpoints, step size, 270-second persistence, audience synchronization and 1366×768 fit. Existing countdown/sound checks pass using the + keyboard extension. Timing unit tests, typecheck, lint and production build pass.
+
+### Stronger edge accents
+Removed cream-yellow answer fill. Increased top stripe, corner decoration and answer-border color while retaining white faces and black text. Production build and October deck geometry/contrast checks pass at 720p/1080p; combined answer screenshot visually inspected.

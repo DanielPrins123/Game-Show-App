@@ -297,3 +297,13 @@
 .trivia-slide .trivia-stage{background-image:radial-gradient(circle at 100% 100%,transparent 0 3.6cqw,#00a6b22b 3.65cqw 4.15cqw,transparent 4.2cqw),radial-gradient(circle at 0 100%,#f4b94230 0 2.4cqw,transparent 2.45cqw);background-color:#fff}
 .trivia-question-timing label{flex:1;min-width:160px}.trivia-question-timing input[type=range]{display:block;width:100%;max-width:280px;padding:0;margin-top:8px;accent-color:#008b98}.trivia-question-timing label strong{font-variant-numeric:tabular-nums;color:#111}
 .trivia-sound-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid #bbb;margin-top:14px;padding-top:12px;font-size:12px}.trivia-sound-controls input[type=range]{width:110px}.trivia-sound-controls input[type=checkbox]{width:auto}.trivia-slider-scale{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}.trivia-question-timing{align-items:center}.trivia-question-timing label{max-width:280px}.trivia-question-timing label>strong{float:right;font-size:22px}
+/* Bolder party accents around crisp, untinted reading surfaces. */
+.trivia-slide .trivia-stage{border-top-width:.75cqw;border-image:linear-gradient(90deg,#00a8b5 0 48%,#ff755e 48% 82%,#45c6dd 82% 100%) 1;background-image:radial-gradient(circle at 102% 103%,transparent 0 5.7cqw,#00a8b5 5.75cqw 6.6cqw,transparent 6.65cqw 7.8cqw,#45c6dd55 7.85cqw 8.5cqw,transparent 8.55cqw),radial-gradient(circle at -2% 104%,#ff755e 0 4.6cqw,transparent 4.65cqw);background-color:#fff}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-shown,.trivia-slide .trivia-answer-list .answer-shown,.trivia-slide .paired-answer.is-visible{background:#fff;border-left:.65cqw solid #00a8b5}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-shown:nth-child(3n+2),.trivia-slide .trivia-answer-list .answer-shown:nth-child(3n+2){border-left-color:#ff755e}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-shown:nth-child(3n),.trivia-slide .trivia-answer-list .answer-shown:nth-child(3n){border-left-color:#45c6dd}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-hidden{border-left-width:.65cqw}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-hidden:nth-child(3n+2){border-left-color:#ff755e}
+.trivia-slide .trivia-combined .trivia-answer-list .answer-hidden:nth-child(3n){border-left-color:#45c6dd}
+.trivia-slide .trivia-transition-scoring{border-bottom-color:#00a8b5}
+.trivia-slide .intro-orbit{opacity:.4;border-color:#00a8b5;box-shadow:0 0 0 2cqw #ff755e44,0 0 0 4cqw #45c6dd22}

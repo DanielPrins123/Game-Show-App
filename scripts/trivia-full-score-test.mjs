@@ -1,7 +1,7 @@
 import{chromium}from'@playwright/test';
 import assert from'node:assert/strict';
 const b=await chromium.launch({channel:'msedge',headless:true});
-try{const c=await b.newContext({viewport:{width:1366,height:768}}),host=await c.newPage(),tv=await c.newPage();await host.goto('http://127.0.0.1:4173/#/trivia');await host.getByRole('button',{name:'Start this set',exact:true}).click();await tv.goto('http://127.0.0.1:4173/#/trivia/display');await tv.getByRole('heading',{name:'Trivia night',exact:true}).waitFor();await host.getByRole('link',{name:'Score sheet',exact:true}).click();
+try{const c=await b.newContext({viewport:{width:1366,height:768}}),host=await c.newPage(),tv=await c.newPage();await host.goto('http://127.0.0.1:4173/#/trivia');await host.locator('.trivia-library-item').filter({hasText:'09.29.2026 Trivia'}).getByRole('button',{name:'Start this set',exact:true}).click();await tv.goto('http://127.0.0.1:4173/#/trivia/display');await tv.getByRole('heading',{name:'Trivia night',exact:true}).waitFor();await host.getByRole('link',{name:'Score sheet',exact:true}).click();
  const rows=host.locator('.trivia-all-scores tbody tr'),first=rows.first();await first.locator('input[type=number]').first().waitFor();assert.equal(await first.locator('input[type=number]').count(),20);
  const inputs=first.locator('input[type=number]');for(let i=0;i<20;i++)await inputs.nth(i).fill(String(i+1));
  const value=id=>first.locator('[data-score-column="'+id+'"]').innerText();

@@ -1,0 +1,771 @@
+{
+  "version": 1,
+  "type": "trivia",
+  "id": "trivia-2026-10-12",
+  "title": "10.12.2026 Trivia",
+  "fileName": "10.12.2026.pptx",
+  "importedAt": "2026-10-13T12:00:00.000Z",
+  "cards": [
+    {
+      "id": "slide-1",
+      "kind": "round",
+      "title": "Round 1",
+      "round": "Round 1",
+      "prompt": "Current Events\nU.S. Geography\nHistory\nCards",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        1
+      ],
+      "notes": "Round 1 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-2",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 1",
+      "prompt": "The Nobel Peace Prize was awarded on Friday to Navanathem “Navi” Pillay, who hails from what country?",
+      "answers": [
+        "South Africa"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        2
+      ],
+      "notes": "Round 1 Question 1\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-3",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 1",
+      "prompt": "What is the most populous city by city proper in Kentucky?",
+      "answers": [
+        "Louisville"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        3
+      ],
+      "notes": "Round 1 Question 2\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-4",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 1",
+      "prompt": "What city state did Athens battle in the Peloponnesian War?",
+      "answers": [
+        "Sparta"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        4
+      ],
+      "notes": "Round 1 Question 3\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-5",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 1",
+      "prompt": "What name is given to the highest-ranking standard poker hand?",
+      "answers": [
+        "Royal Flush"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        5
+      ],
+      "notes": "Round 1 Question 4\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-6",
+      "kind": "question",
+      "title": "BONUS (2 answers, 5 each)",
+      "round": "Round 1",
+      "prompt": "What two US presidents have Presidential libraries located in California?",
+      "answers": [
+        "Ronald Reagan",
+        "Richard Nixon"
+      ],
+      "scoring": "2 answers, 5 each",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        6,
+        7
+      ],
+      "notes": "Round 1 Bonus Question\nRound 1 Bonus Question\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-8",
+      "kind": "round",
+      "title": "Round 2",
+      "round": "Round 2",
+      "prompt": "The White House\nBands\nRescues\nWorld Leaders",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        8
+      ],
+      "notes": "Round 2 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-9",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 2",
+      "prompt": "On this day in 1792, the cornerstone of the White House was laid. What president would later become the first to reside there?",
+      "answers": [
+        "John Adams"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        9
+      ],
+      "notes": "Round 2 Question 1\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-10",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 2",
+      "prompt": "Also featuring Noel Redding & Mitch Mitchell, what musical act's band “The Experience” made their debut on this day in 1966?",
+      "answers": [
+        "Jimi Hendrix"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        10
+      ],
+      "notes": "Round 2 Question 2\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-11",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 2",
+      "prompt": "On this day in 2010, all 33 miners caught in a collapsed mine were successfully rescued in Capiapo, located in which country?",
+      "answers": [
+        "Chile"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        11
+      ],
+      "notes": "Round 2 Question 4\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-12",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 2",
+      "prompt": "Who was Europe's first female prime minister and the Prime minister of the United Kingdom to be elected for three consecutive terms in the 20th century?",
+      "answers": [
+        "Margaret Thatcher"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        12
+      ],
+      "notes": "Round 2 Question 3\nQuestion and answer checked against the supplied host question sheet.\nHost note from question sheet: Margaret Thatcher born 10/13/1925.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-13",
+      "kind": "question",
+      "title": "BONUS (3 answers, 3 each, 10 for all)",
+      "round": "Round 2",
+      "prompt": "Name the 3 actors that have played the Incredible Hulk in a theatrically released feature film.",
+      "answers": [
+        "Eric Bana",
+        "Edward Norton",
+        "Mark Ruffalo"
+      ],
+      "scoring": "3 answers, 3 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        13,
+        14
+      ],
+      "notes": "Round 2 Bonus\nRound 2 Bonus\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-15",
+      "kind": "round",
+      "title": "Round 3",
+      "round": "Round 3",
+      "prompt": "Film Cameos\nAuthors\nScience!\nBaseball",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        15
+      ],
+      "notes": "Round 3 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-16",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 3",
+      "prompt": "In what 1995 film does Dan Aykroyd make a cameo appearance as Ray Stanz, a character that he made famous in the Ghostbusters films?",
+      "answers": [
+        "Casper"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        16
+      ],
+      "notes": "Round 3 Question 1\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-17",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 3",
+      "prompt": "What Nobel Prize winning author’s best-known works include Demian, Steppenwolf, and Siddhartha?",
+      "answers": [
+        "Herman Hesse"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        17
+      ],
+      "notes": "Round 3 Question 2\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-18",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 3",
+      "prompt": "What is the most abundant mineral in the human body?",
+      "answers": [
+        "Calcium"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        18
+      ],
+      "notes": "Round 3 Question 3\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-19",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 3",
+      "prompt": "What Hall of Famer is the most recent player in Braves franchise history to win the regular season MVP award in the same season that the Braves won a World Series?\nNote: This is Braves franchise history, not just their time as the Atlanta Braves.",
+      "answers": [
+        "Hank Aaron (1957)"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        19
+      ],
+      "notes": "Round 3 Question 4\nQuestion and answer checked against the supplied host question sheet.\nEmphasize franchise history.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-20",
+      "kind": "question",
+      "title": "BONUS (2 answers, 5 each)",
+      "round": "Round 3",
+      "prompt": "While Hank Aaron is the Braves' career leader in many categories, which two Hall of Fame thirdbasemen are right behind him in several categories, ranking 2nd & 3rd in career: games, at bats, runs scored, hits, home runs, and RBIs?",
+      "answers": [
+        "Chipper Jones",
+        "Eddie Mathews"
+      ],
+      "scoring": "2 answers, 5 each",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        20,
+        21
+      ],
+      "notes": "Round 3 Bonus\nRound 3 Bonus\nQuestion and answer checked against the supplied host question sheet.\nHost note from question sheet: Eddie Mathews born 10/13/1931.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-22",
+      "kind": "round",
+      "title": "Round 4",
+      "round": "Round 4",
+      "prompt": "NFL\nActors in Space\nSoftware Engineering\nMusicians",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 240,
+      "sourceSlides": [
+        22
+      ],
+      "notes": "Round 4 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-23",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 4",
+      "prompt": "Who was the head coach of the Chicago Bears for their only Super Bowl victory (Super Bowl XX), becoming the 2nd of only 4 individuals to win a Super Bowl as both a player and a head coach?",
+      "answers": [
+        "Mike Ditka"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        23
+      ],
+      "notes": "Round 4 Question 4\nQuestion and answer checked against the supplied host question sheet.\nOriginal email annotation: Mike Ditka (RIP).",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-24",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 4",
+      "prompt": "What actor became the oldest person in space at the time, flying on Blue Origin NS-18 on October 13th, 2021 at the age of 90 years?",
+      "answers": [
+        "William Shatner"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        24
+      ],
+      "notes": "Round 4 Question 1\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-25",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 4",
+      "prompt": "What software engineer led the development of the on-board flight software for NASA's Apollo Guidance Computer, later founding two software companies in Cambridge, MA?",
+      "answers": [
+        "Margaret Hamilton"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        25
+      ],
+      "notes": "Round 4 Question 3\nQuestion and answer checked against the supplied host question sheet.\nFacebook answer: Margaret Hamilton. Original email annotation: (RIP).",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-26",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 4",
+      "prompt": "Released on this week in 1978, “52nd Street” was the 6th album from what musical act, giving him is only Grammy Award for Album of the Year?",
+      "answers": [
+        "Billy Joel"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        26
+      ],
+      "notes": "Round 4 Question 2\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-27",
+      "kind": "question",
+      "title": "Final Bonus (10 answers, 3 each)",
+      "round": "Round 4",
+      "prompt": "Name any 10 of the 13 songs from Billy Joel to reach the top 10 in the Billboard Hot 100 charts?",
+      "answers": [
+        "Just the Way You Are",
+        "My Life",
+        "You May Be Right",
+        "It's Still Rock and Roll to Me",
+        "Tell Her About It",
+        "Uptown Girl",
+        "An Innocent Man",
+        "You're Only Human (Second Wind)",
+        "Modern Woman",
+        "A Matter of Trust",
+        "We Didn't Start the Fire",
+        "I Go to Extremes",
+        "The River of Dreams"
+      ],
+      "scoring": "Name any 10 of 13; 3 points each, 30 points maximum",
+      "maxPoints": 30,
+      "seconds": 360,
+      "sourceSlides": [
+        27,
+        28
+      ],
+      "notes": "Round 4 Bonus\nRound 4 Bonus\nQuestion and answer checked against the supplied host question sheet.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    }
+  ],
+  "source": [
+    {
+      "number": 1,
+      "paragraphs": [
+        "Current Events",
+        "U.S. Geography",
+        "History",
+        "Cards",
+        "Round 1 Categories"
+      ],
+      "notes": "Round 1 Categories"
+    },
+    {
+      "number": 2,
+      "paragraphs": [
+        "Question 1",
+        "The Nobel Peace Prize was awarded on Friday to Navanathem “Navi” Pillay, who hails from what country?",
+        "South Africa"
+      ],
+      "notes": "Round 1 Question 1"
+    },
+    {
+      "number": 3,
+      "paragraphs": [
+        "Question 2",
+        "Louisville",
+        "What is the most populous city by city proper in Kentucky?"
+      ],
+      "notes": "Round 1 Question 2"
+    },
+    {
+      "number": 4,
+      "paragraphs": [
+        "Question 3",
+        "Sparta",
+        "What city state did Athens battle in the Peloponnesian War?"
+      ],
+      "notes": "Round 1 Question 3"
+    },
+    {
+      "number": 5,
+      "paragraphs": [
+        "Question 4",
+        "Royal Flush",
+        "What name is given to the highest-ranking standard poker hand?"
+      ],
+      "notes": "Round 1 Question 4"
+    },
+    {
+      "number": 6,
+      "paragraphs": [
+        "BONUS (2 answers, 5 each)",
+        "What two US presidents have Presidential libraries located in California?"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 7,
+      "paragraphs": [
+        "BONUS",
+        "Ronald Reagan",
+        "Richard Nixon"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 8,
+      "paragraphs": [
+        "The White House",
+        "Bands",
+        "Rescues",
+        "World Leaders",
+        "Round 2 Categories"
+      ],
+      "notes": "Round 2 Categories"
+    },
+    {
+      "number": 9,
+      "paragraphs": [
+        "Question 1",
+        "On this day in 1792, the cornerstone of the White House was laid. What president would later become the first to reside there?",
+        "John Adams"
+      ],
+      "notes": "Round 2 Question 1"
+    },
+    {
+      "number": 10,
+      "paragraphs": [
+        "Question 2",
+        "Also featuring Noel Redding & Mitch Mitchell, what musical act's band “The Experience” made their debut on this day in 1966?",
+        "Jimi Hendrix"
+      ],
+      "notes": "Round 2 Question 2"
+    },
+    {
+      "number": 11,
+      "paragraphs": [
+        "Question 3",
+        "On this day in 2010, all 33 miners caught in a collapsed mine were successfully rescued in Capiapo, located in which country?",
+        "Chile"
+      ],
+      "notes": "Round 2 Question 4"
+    },
+    {
+      "number": 12,
+      "paragraphs": [
+        "Question 4",
+        "Who was Europe's first female prime minister and the Prime minister of the United Kingdom to be elected for three consecutive terms in the 20th century?",
+        "Margaret Thatcher"
+      ],
+      "notes": "Round 2 Question 3"
+    },
+    {
+      "number": 13,
+      "paragraphs": [
+        "BONUS (3 answers, 3 each, 10 for all)",
+        "Name the 3 actors that have played the Incredible Hulk in a theatrically released feature film."
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 14,
+      "paragraphs": [
+        "Eric Bana",
+        "Edward Norton"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 15,
+      "paragraphs": [
+        "Film Cameos",
+        "Authors",
+        "Science!",
+        "Baseball",
+        "Round 3 Categories"
+      ],
+      "notes": "Round 3 Categories"
+    },
+    {
+      "number": 16,
+      "paragraphs": [
+        "Question 1",
+        "In what 1995 film does Dan Aykroyd make a cameo appearance as Ray Stanz, a character that he made famous in the Ghostbusters films?",
+        "Casper"
+      ],
+      "notes": "Round 3 Question 1"
+    },
+    {
+      "number": 17,
+      "paragraphs": [
+        "Question 2",
+        "What Nobel Prize winning author’s best-known works include Demian, Steppenwolf, and Siddhartha?",
+        "Herman Hesse"
+      ],
+      "notes": "Round 3 Question 2"
+    },
+    {
+      "number": 18,
+      "paragraphs": [
+        "Question 3",
+        "What is the most abundant mineral in the human body?",
+        "Calcium"
+      ],
+      "notes": "Round 3 Question 3"
+    },
+    {
+      "number": 19,
+      "paragraphs": [
+        "Question 4",
+        "What Hall of Famer is the most recent player in Braves franchise history to win the regular season MVP award in the same season that the Braves won a World Series?",
+        "Hank Aaron (1957)"
+      ],
+      "notes": "Round 3 Question 4"
+    },
+    {
+      "number": 20,
+      "paragraphs": [
+        "BONUS (2 answers, 5 each)",
+        "While Hank Aaron is the Braves' career leader in many categories, which two Hall of Fame thirdbasemen are right behind him in several categories, ranking 2nd & 3rd in career: games, at bats, runs scored, hits, home runs, and RBIs?"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 21,
+      "paragraphs": [
+        "Bonus",
+        "Chipper Jones",
+        "Eddie Mathews"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 22,
+      "paragraphs": [
+        "NFL",
+        "Actors in Space",
+        "Software Engineering",
+        "Musicians",
+        "Round 4 Categories"
+      ],
+      "notes": "Round 4 Categories"
+    },
+    {
+      "number": 23,
+      "paragraphs": [
+        "Question 1",
+        "Who was the head coach of the Chicago Bears for their only Super Bowl victory (Super Bowl XX), becoming the 2nd of only 4 individuals to win a Super Bowl as both a player and a head coach?",
+        "Mike Ditka"
+      ],
+      "notes": "Round 4 Question 4"
+    },
+    {
+      "number": 24,
+      "paragraphs": [
+        "Question 2",
+        "What actor became the oldest person in space at the time, flying on Blue Origin NS-18 on October 13th, 2021 at the age of 90 years?",
+        "William Shatner"
+      ],
+      "notes": "Round 4 Question 1"
+    },
+    {
+      "number": 25,
+      "paragraphs": [
+        "Question 3",
+        "What software engineer led the development of the on-board flight software for NASA's Apollo Guidance Computer, later founding two software companies in Cambridge, MA?",
+        "Margaret Hamilton - FACEBOOK"
+      ],
+      "notes": "Round 4 Question 3"
+    },
+    {
+      "number": 26,
+      "paragraphs": [
+        "Question 4",
+        "Released on this week in 1978, “52nd Street” was the 6th album from what musical act, giving him is only Grammy Award for Album of the Year?",
+        "Billy Joel"
+      ],
+      "notes": "Round 4 Question 2"
+    },
+    {
+      "number": 27,
+      "paragraphs": [
+        "Final Bonus (10 answers, 3 each)",
+        "Name any 10 of the 13 songs from Billy Joel to reach the top 10 in the Billboard Hot 100 charts?"
+      ],
+      "notes": "Round 4 Bonus"
+    },
+    {
+      "number": 28,
+      "paragraphs": [
+        "Just the Way You Are",
+        "My Life",
+        "You May Be Right",
+        "It’s Still Rock & Roll to Me",
+        "Tell Her About It",
+        "Uptown Girl",
+        "An Innocent Man",
+        "You’re Only Human",
+        "(Second Wind)",
+        "Modern Woman",
+        "A Matter of Trust",
+        "We Didn’t Start the Fire",
+        "I Go to Extremes",
+        "The River of Dreams"
+      ],
+      "notes": "Round 4 Bonus"
+    }
+  ],
+  "warnings": []
+}

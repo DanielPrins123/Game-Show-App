@@ -6,7 +6,7 @@ const browser=await chromium.launch({channel:'msedge',headless:true});
 try{
  const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1366,height:768}}),host=await context.newPage(),tv=await context.newPage(),errors=[];
  context.on('page',p=>p.on('pageerror',e=>errors.push(String(e))));host.on('pageerror',e=>errors.push(String(e)));tv.on('pageerror',e=>errors.push(String(e)));
- await host.goto('http://127.0.0.1:4173/#/trivia');await host.getByRole('button',{name:'Start this set',exact:true}).click();
+ await host.goto('http://127.0.0.1:4173/#/trivia');await host.locator('.trivia-library-item').filter({hasText:'09.29.2026 Trivia'}).getByRole('button',{name:'Start this set',exact:true}).click();
  await tv.goto('http://127.0.0.1:4173/#/trivia/display');await tv.getByAltText('Outspoken Entertainment').waitFor();
  const click=name=>host.getByRole('button',{name,exact:true}).click();
  const state=()=>host.evaluate(()=>JSON.parse(localStorage.getItem('trivia.session.v1')));

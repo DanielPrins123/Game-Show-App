@@ -152,3 +152,7 @@ Removed the intro tagline. Trivia uses warm charcoal and ivory instead of purple
 ### Standings scaling
 
 TypeScript, lint and build pass. Browser checks cover 1, 2, 3, 5 and 10 trivia teams at 720p/1080p, full-width rows, four-digit totals, font scaling and distinct medal backgrounds. Feud standings are checked with 3 and 10 teams. Ascending reveal sound regression also passes.
+
+### October set and high-contrast trivia — October 13, 2026
+
+All 55 unit tests, TypeScript, ESLint and the production build pass. The October 12 deck is reconciled with the supplied host sheet (20 questions, 28 source slides, Mark Ruffalo restored, complete 13-song final with a 30-point scoring maximum). Isolated browser checks cover every card at 720p/1080p, private answers, full score entry and reload persistence. Intro and final-answer screenshots were visually inspected. Score-reveal checks verify ascending notes, no duplicate audience sound, silent undo, and uniform highlights. Standings scale for 1/2/3/5/10 teams; medal colors have been removed from both modes. This supersedes the earlier theme and medal-color notes.

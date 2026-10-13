@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 const browser=await chromium.launch({channel:'msedge',headless:true});
 try{
  const context=await browser.newContext({viewport:{width:1366,height:768}}),host=await context.newPage(),tv=await context.newPage();
- await host.goto('http://127.0.0.1:4173/#/trivia');await host.getByRole('button',{name:'Start this set',exact:true}).click();await tv.goto('http://127.0.0.1:4173/#/trivia/display');
+ await host.goto('http://127.0.0.1:4173/#/trivia');await host.locator('.trivia-library-item').filter({hasText:'09.29.2026 Trivia'}).getByRole('button',{name:'Start this set',exact:true}).click();await tv.goto('http://127.0.0.1:4173/#/trivia/display');
  const click=name=>host.getByRole('button',{name,exact:true}).click();
  await tv.getByAltText('Outspoken Entertainment').waitFor();await tv.screenshot({path:'qa/trivia-refined-intro.png'});
  await host.getByLabel('Jump to trivia screen').selectOption('1');assert.equal(await host.getByLabel('Seconds for this question').inputValue(),'180');await host.getByLabel('Seconds for this question').fill('270');await click('Set / restart time');await click('Show question & start timer');await tv.waitForFunction(()=>document.querySelector('.trivia-stage header>b')?.textContent.startsWith('4:'));

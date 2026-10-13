@@ -178,7 +178,7 @@ Browser tests require port 4173 and installed Microsoft Edge. Vite’s runner co
 
 The audience board now uses a much larger timer and larger question, answer and standings text. The opening format screen summarizes four rounds, fifteen written questions, regular/bonus points and the timed finale. It adapts to edited game contents. The presenter alone controls the sequence.
 
-Answer reveals use a short, soft bing. Team-reveal notes ascend toward first place in both modes. Top-three standings use distinct gold, silver and bronze row colors with light text. Under presenter sound settings, **Answer & score reveal sound** can be set to **Silent** without muting timer alerts. Quiet ticks during the final 10 seconds can be switched off separately.
+Answer reveals use a short, soft bing. Team-reveal notes ascend toward first place in both modes. Revealed standings use a consistent highlight with light text. Under presenter sound settings, **Answer & score reveal sound** can be set to **Silent** without muting timer alerts. Quiet ticks during the final 10 seconds can be switched off separately.
 
 Live progress and score entry save automatically. Closing and reopening the same browser/profile at the same address restores them; a running timer continues against the clock. Save result stores a separate dated result, and Export JSON backs up scores for transfer. If an update retires an active finale question, its earned points are retained and that turn is closed; written play resumes paused.
 
@@ -202,6 +202,10 @@ All question inputs stay visible together, with compact headers such as R1Q4 and
 
 Enter durations in seconds (10–3600). At 60 and 30 seconds remaining, large coral text travels down from the timer over a dimmed card, holds briefly, then returns to the timer, accompanied by a gentle tone. The last ten seconds have a large centered countdown over the dimmed card and quiet ticks; the countdown stays until time expires. Pausing hides the countdown; adding time removes it immediately when more than ten seconds remain and displays **+30 seconds** beside the timer. Sound follows presenter mute/volume and never duplicates on the TV.
 
-**Show answer board** pauses the clock, hides the audience timer, moves the question upward, and brings in empty answer boxes. **Reveal next answer** quickly flips each box to its soft ivory answer face. You can also reveal directly without preparing the board. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
+**Show answer board** pauses the clock, hides the audience timer, moves the question upward, and brings in empty answer boxes. **Reveal next answer** quickly flips each box to its white answer face. You can also reveal directly without preparing the board. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
 
-Standings use the full available row area in both game modes. Names and scores automatically grow for small groups and shrink for up to ten displayed teams. Gold, silver and bronze backgrounds identify the top three once revealed.
+Standings use the full available row area in both game modes. Names and scores automatically grow for small groups and shrink for up to ten displayed teams. Every revealed team uses the same clear highlight.
+
+### October 12 trivia set
+
+The library includes **10.12.2026 Trivia**, reconciled with the supplied host question sheet: four rounds and 20 questions, including Mark Ruffalo in the Hulk bonus and all 13 accepted Billy Joel titles for the name-any-ten final (30 points maximum). Open Trivia → Game editor & library → Start this set. Existing saved games are preserved. Trivia uses near-black and deep green surfaces, white text, and white answer cards for high contrast.

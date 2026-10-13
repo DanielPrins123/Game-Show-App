@@ -24,7 +24,15 @@ async function transaction<T>(name:'decks'|'results'|'drafts',mode:IDBTransactio
 export const saveTriviaDeck=(deck:TriviaDeck)=>transaction('decks','readwrite',s=>s.put(deck));
 function currentTiming(deck:TriviaDeck){if(deck.id!=='trivia-2026-09-29')return deck;return {...deck,cards:deck.cards.map(c=>c.autoTime===undefined&&c.seconds===240?{...c,autoTime:true}:c)};}
 export const getTriviaDeck=async(id:string)=>{const deck=await transaction<TriviaDeck|undefined>('decks','readonly',s=>s.get(id));return deck?currentTiming(deck):undefined;};
-export async function listTriviaDecks(){const saved=await transaction<TriviaDeck[]>('decks','readonly',s=>s.getAll());if(!saved.some(d=>d.id==='trivia-2026-09-29')){const response=await fetch('./trivia/2026-09-29.json');if(!response.ok)throw Error('The included trivia set could not load. Restart the updated app.');const bundled=validateTriviaDeck(await response.json());await saveTriviaDeck(bundled);saved.push(bundled);}return saved.map(currentTiming).sort((a,b)=>Number(b.id==='trivia-2026-09-29')-Number(a.id==='trivia-2026-09-29'));}
+export async function listTriviaDecks(){
+ const saved=await transaction<TriviaDeck[]>('decks','readonly',s=>s.getAll());
+ for(const date of ['2026-10-12','2026-09-29'])if(!saved.some(d=>d.id===`trivia-${date}`)){
+  const response=await fetch(`./trivia/${date}.json`);if(!response.ok)throw Error('The included trivia set could not load. Restart the updated app.');
+  const bundled=validateTriviaDeck(await response.json());await saveTriviaDeck(bundled);saved.push(bundled);
+ }
+ return saved.map(currentTiming).sort((a,b)=>b.importedAt.localeCompare(a.importedAt));
+}
+
 export interface TriviaResult { id:string; savedAt:string; session:TriviaSession; deck:TriviaDeck }
 export const saveTriviaResult=(session:TriviaSession,deck:TriviaDeck)=>transaction('results','readwrite',s=>s.put({id:crypto.randomUUID(),savedAt:new Date().toISOString(),session:structuredClone(session),deck}));
 export const listTriviaResults=()=>transaction<TriviaResult[]>('results','readonly',s=>s.getAll());

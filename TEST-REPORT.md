@@ -156,3 +156,6 @@ TypeScript, lint and build pass. Browser checks cover 1, 2, 3, 5 and 10 trivia t
 ### October set and high-contrast trivia — October 13, 2026
 
 All 55 unit tests, TypeScript, ESLint and the production build pass. The October 12 deck is reconciled with the supplied host sheet (20 questions, 28 source slides, Mark Ruffalo restored, complete 13-song final with a 30-point scoring maximum). Isolated browser checks cover every card at 720p/1080p, private answers, full score entry and reload persistence. Intro and final-answer screenshots were visually inspected. Score-reveal checks verify ascending notes, no duplicate audience sound, silent undo, and uniform highlights. Standings scale for 1/2/3/5/10 teams; medal colors have been removed from both modes. This supersedes the earlier theme and medal-color notes.
+
+### Light trivia theme — October 13
+Replaced the green theme with white backgrounds, black text and coral accents across audience slides, presenter and scoring. Typecheck, lint, production build and all-card October browser layout/persistence checks pass at 720p/1080p. Intro inspected visually. Actual sunlight/projector conditions require a venue check.

@@ -208,4 +208,4 @@ Standings use the full available row area in both game modes. Names and scores a
 
 ### October 12 trivia set
 
-The library includes **10.12.2026 Trivia**, reconciled with the supplied host question sheet: four rounds and 20 questions, including Mark Ruffalo in the Hulk bonus and all 13 accepted Billy Joel titles for the name-any-ten final (30 points maximum). Open Trivia → Game editor & library → Start this set. Existing saved games are preserved. Trivia uses near-black and deep green surfaces, white text, and white answer cards for high contrast.
+The library includes **10.12.2026 Trivia**, reconciled with the supplied host question sheet: four rounds and 20 questions, including Mark Ruffalo in the Hulk bonus and all 13 accepted Billy Joel titles for the name-any-ten final (30 points maximum). Open Trivia → Game editor & library → Start this set. Existing saved games are preserved. Trivia uses white surfaces, bold black text, outlined answer cards, and restrained coral accents for daylight readability.

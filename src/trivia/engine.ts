@@ -1,6 +1,6 @@
 import type { TriviaDeck, TriviaFrame, TriviaSession, Standing } from './types';
 import {cardSeconds,questionSeconds} from './timing';
-export type TriviaAction={type:'showAnswerBoard'|'next'|'previous'|'undo'|'reveal'|'hideAnswers'|'toggleTimer'|'extend'|'resetTimer'|'intro'|'closeScores'|'revealStanding'}|{type:'duration';seconds:number}|{type:'revealAnswer';index:number}|{type:'jump';index:number}|{type:'scores';checkpoint:'manual'|'halfway'|'beforeFinal'|'final'};
+export type TriviaAction={type:'showAnswerBoard'|'next'|'previous'|'undo'|'reveal'|'hideAnswers'|'toggleTimer'|'extend'|'resetTimer'|'intro'|'closeScores'|'revealStanding'}|{type:'duration';seconds:number;start?:boolean}|{type:'revealAnswer';index:number}|{type:'jump';index:number}|{type:'scores';checkpoint:'manual'|'halfway'|'beforeFinal'|'final'};
 export const triviaLeft=(s:TriviaFrame,now=Date.now())=>Math.max(0,s.end===null?s.remaining:(s.end-now)/1000);
 export function newTriviaSession(deck:TriviaDeck):TriviaSession{
   const date=new Date();return {version:1,deckId:deck.id,title:deck.title,date:`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`,venue:'',teams:[{id:crypto.randomUUID(),name:'Team 1',scores:{}},{id:crypto.randomUUID(),name:'Team 2',scores:{}}],muted:false,revision:0,history:[],index:0,phase:'intro',revealed:0,remaining:deck.cards[0]?cardSeconds(deck.cards[0]):180,end:null,started:false,standingsShown:0};
@@ -53,8 +53,8 @@ export function reduceTrivia(state:TriviaSession,action:TriviaAction,deck:Trivia
     const left=triviaLeft(s,now);s.remaining=left||questionSeconds(s,c);s.end=s.end===null?now+s.remaining*1000:null;s.started=true;
   }else if(action.type==='extend'){if(!['question','answers'].includes(s.phase))return state;s.extensionAt=now;s.remaining=triviaLeft(s,now)+30;if(s.end!==null)s.end=now+s.remaining*1000;}
   else if(action.type==='duration'){
-    if(c.kind!=='question'||s.phase==='scores'||!Number.isInteger(action.seconds)||action.seconds<10||action.seconds>3600)return state;
-    s.durations={...s.durations,[c.id]:action.seconds};s.remaining=action.seconds;if(s.end!==null)s.end=now+action.seconds*1000;
+    if(c.kind!=='question'||s.phase==='scores'||!Number.isInteger(action.seconds)||action.seconds<0||action.seconds>600||action.seconds%15!==0)return state;
+    s.durations={...s.durations,[c.id]:action.seconds};s.remaining=action.seconds;if(s.end!==null||action.start)s.end=now+action.seconds*1000;if(action.start)s.started=true;
   }
   else if(action.type==='resetTimer'){s.remaining=questionSeconds(s,c);s.end=null;s.started=false;}
   s.history=[...state.history.slice(-49),before];return s;

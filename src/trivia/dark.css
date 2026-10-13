@@ -295,3 +295,5 @@
 @media(prefers-reduced-motion:reduce){.trivia-slide .trivia-ranks>div.shown{animation:none}}
 /* Peripheral decoration stays outside the main reading area. */
 .trivia-slide .trivia-stage{background-image:radial-gradient(circle at 100% 100%,transparent 0 3.6cqw,#00a6b22b 3.65cqw 4.15cqw,transparent 4.2cqw),radial-gradient(circle at 0 100%,#f4b94230 0 2.4cqw,transparent 2.45cqw);background-color:#fff}
+.trivia-question-timing label{flex:1;min-width:160px}.trivia-question-timing input[type=range]{display:block;width:100%;max-width:280px;padding:0;margin-top:8px;accent-color:#008b98}.trivia-question-timing label strong{font-variant-numeric:tabular-nums;color:#111}
+.trivia-sound-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid #bbb;margin-top:14px;padding-top:12px;font-size:12px}.trivia-sound-controls input[type=range]{width:110px}.trivia-sound-controls input[type=checkbox]{width:auto}.trivia-slider-scale{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}.trivia-question-timing{align-items:center}.trivia-question-timing label{max-width:280px}.trivia-question-timing label>strong{float:right;font-size:22px}

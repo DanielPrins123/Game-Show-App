@@ -42,7 +42,7 @@ export function validateTriviaDeck(value:unknown):TriviaDeck {
 export function validateTriviaSession(value:unknown,deck:TriviaDeck):TriviaSession {
   const s=value as TriviaSession;
   if(!s||s.version!==1||s.deckId!==deck.id||[s.title,s.date,s.venue].some(v=>typeof v!=='string')||!Array.isArray(s.teams)||!s.teams.length||!Number.isInteger(s.index)||s.index<0||s.index>=deck.cards.length||!['intro','card','question','answers','scores'].includes(s.phase)||!Number.isFinite(s.remaining)||s.remaining<0||(s.end!==null&&!Number.isFinite(s.end))||!Number.isInteger(s.revealed)||s.revealed<0)throw Error('This trivia result has invalid saved state.');
-  if(s.durations&&(typeof s.durations!=='object'||Object.values(s.durations).some(n=>!Number.isInteger(n)||n<10||n>3600)))throw Error('Invalid question timer settings.');
+  if(s.durations&&(typeof s.durations!=='object'||Object.values(s.durations).some(n=>!Number.isInteger(n)||n<0||n>3600)))throw Error('Invalid question timer settings.');
   const ids=new Set<string>();for(const t of s.teams){if(!t||typeof t.id!=='string'||ids.has(t.id)||typeof t.name!=='string'||!t.scores||typeof t.scores!=='object'||Object.values(t.scores).some(v=>v!==null&&!Number.isFinite(v)))throw Error('This trivia result has invalid team scores.');ids.add(t.id);}
   // Imported nights resume paused at a title card: scores survive without reviving an old timer.
   return {...structuredClone(s),phase:'card',end:null,remaining:s.durations?.[deck.cards[s.index].id]??cardSeconds(deck.cards[s.index]),revealed:0,revealedAnswers:[],started:false,history:[],standings:undefined,standingsShown:0,checkpoint:undefined,scoreReturn:undefined,muted:!!s.muted,revision:0};

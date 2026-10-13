@@ -170,3 +170,6 @@ The broader editor/reorder/synchronization regression and countdown/sound browse
 
 ### Bright standings and rank accents
 Trivia standings use light backgrounds with black text and rank-based medal accents. Browser checks pass for 1/2/3/5/10 teams at 720p/1080p, including silver for the second of two teams. Two-team screenshot visually inspected. Question contrast/layout, typecheck, lint and build pass. Public October final wording shortened to 10 answers without changing accepted answers or scoring.
+
+### Simplified timer controls
+Presenter timer is a 0–600-second slider in 15-second increments with a single Start/Pause/Restart button. Sound controls are grouped below. Browser tests verify pause/resume, zero and ten-minute endpoints, step size, 270-second persistence, audience synchronization and 1366×768 fit. Existing countdown/sound checks pass using the + keyboard extension. Timing unit tests, typecheck, lint and production build pass.

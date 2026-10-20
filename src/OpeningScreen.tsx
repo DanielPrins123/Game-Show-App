@@ -1,5 +1,6 @@
+import { eventDate as displayDate, today } from './IntroDetails';
 import { liveGame, type Game } from './model';
-export function OpeningScreen({screen,game}:{screen:'logo'|'instructions';game:Game}){
+export function OpeningScreen({screen,game,hostName='Daniel Prins',eventDate=today()}:{screen:'logo'|'instructions';game:Game;hostName?:string;eventDate?:string}){
   game=liveGame(game);
   const questions=game.rounds.flatMap(round=>round.questions);
   const perRound=game.rounds[0].questions.length;
@@ -9,7 +10,7 @@ export function OpeningScreen({screen,game}:{screen:'logo'|'instructions';game:G
   const points=(bonus:boolean)=>[...new Set(questions.filter(question=>question.bonus===bonus).map(question=>question.points))].join(' / ');
   return <section className={`opening-screen ${screen}`} data-testid={`opening-${screen}`}>
     <div className="opening-lights" aria-hidden="true"/>
-    {screen==='logo'?<><header className="feud-logo" aria-label="Family Feud"><span>FAMILY</span><strong>FEUD</strong></header><div className="opening-welcome"><h1>{game.title}</h1><p className="host-credit">With your host, <strong>Daniel Prins</strong></p><span>We’ll begin shortly.</span></div></>:<div className="format-overview">
+    {screen==='logo'?<><header className="feud-logo" aria-label="Family Feud"><span>FAMILY</span><strong>FEUD</strong></header><div className="opening-welcome"><h1>{game.title}</h1>{eventDate&&<p>{displayDate(eventDate)}</p>}{hostName.trim()&&<p className="host-credit">With your host, <strong>{hostName}</strong></p>}<span>We’ll begin shortly.</span></div></>:<div className="format-overview">
       <h1>Tonight’s game</h1>
       <div className="format-numbers"><p><strong>{game.rounds.length}</strong><span>ROUNDS</span></p><p><strong>{equalRounds?perRound:questions.length}</strong><span>{equalRounds?'QUESTIONS EACH':'WRITTEN QUESTIONS'}</span></p></div>
       <p className="format-rounds">{equalBonuses?`${perRound-bonuses} regular ${perRound-bonuses===1?'question':'questions'} + ${bonuses} bonus ${bonuses===1?'question':'questions'} per round`:`${questions.length} questions across ${game.rounds.length} rounds`}</p>

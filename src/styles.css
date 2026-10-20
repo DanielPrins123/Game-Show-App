@@ -158,3 +158,4 @@
 .score-show-board .score-show-list .score-show-row strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .score-show-board .score-show-list .score-show-row b{font-size:1.08em;min-width:11cqw}
 .score-show-board .score-show-list .score-show-row{font-size:inherit}
+.intro-details-controls{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.intro-details-controls label{flex:1;min-width:160px}.intro-details-controls input{display:block;width:100%;margin-top:5px}.trivia-host-credit strong{overflow-wrap:anywhere}

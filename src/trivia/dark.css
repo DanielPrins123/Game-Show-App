@@ -81,7 +81,8 @@
 .trivia-full-scorebook{padding:16px!important}.trivia-full-scorebook>p{font-size:13px;color:#c9ced0;margin:8px 0 14px}
 .trivia-all-scores{table-layout:fixed;width:100%;font-variant-numeric:tabular-nums}
 .trivia-app .trivia-all-scores th,.trivia-app .trivia-all-scores td{padding:6px 2px;font-size:12px;letter-spacing:0;border-right:1px solid #ffffff0c}
-.trivia-app .trivia-all-scores tr th:first-child{min-width:0;width:auto}
+.trivia-app .trivia-all-scores tr th:first-child{min-width:0;width:auto;background:#fff;color:#111}
+.trivia-app .trivia-full-scorebook .eyebrow{color:#222!important}
 .trivia-app .trivia-all-scores thead tr:nth-child(2) th:first-child{position:static;text-align:center}
 .trivia-app .trivia-all-scores input{min-width:0!important;width:100%!important;padding:7px 2px;font-size:13px;text-align:center}
 .trivia-app .trivia-all-scores th input{text-align:left;font-size:12px}

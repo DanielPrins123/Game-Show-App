@@ -1,0 +1,4 @@
+import {it,expect} from 'vitest';
+import {readFileSync} from 'node:fs';
+import {validateTriviaDeck} from './types';
+it('preserves the complete October 20 source and scoring',()=>{const d=validateTriviaDeck(JSON.parse(readFileSync('public/trivia/2026-10-20.json','utf8')));expect(d.source).toHaveLength(28);expect(d.cards).toHaveLength(24);const qs=d.cards.filter(c=>c.kind==='question');expect(qs).toHaveLength(20);expect(qs.flatMap(q=>q.answers)).toHaveLength(35);expect(qs.filter(q=>q.maxPoints!==null).map(q=>q.maxPoints)).toEqual([10,10,10,30]);for(const q of qs){const source=q.sourceSlides.flatMap(n=>d.source.find(s=>s.number===n)!.paragraphs).join('\n');expect(source).toContain(q.prompt);for(const answer of q.answers)expect(source).toContain(answer);}expect(qs.at(-1)!.answers).toEqual(['California','Iowa','Texas','Nebraska','Kansas','Minnesota','Illinois','North Carolina','Indiana','Wisconsin']);expect(qs.at(-1)!.notes).toContain('Facebook answer: Illinois');});

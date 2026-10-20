@@ -26,7 +26,7 @@ function currentTiming(deck:TriviaDeck){if(deck.id!=='trivia-2026-09-29')return 
 export const getTriviaDeck=async(id:string)=>{const deck=await transaction<TriviaDeck|undefined>('decks','readonly',s=>s.get(id));return deck?currentTiming(deck):undefined;};
 export async function listTriviaDecks(){
  const saved=await transaction<TriviaDeck[]>('decks','readonly',s=>s.getAll());
- for(const date of ['2026-10-12','2026-09-29'])if(!saved.some(d=>d.id===`trivia-${date}`)){
+ for(const date of ['2026-10-20','2026-10-12','2026-09-29'])if(!saved.some(d=>d.id===`trivia-${date}`)){
   const response=await fetch(`./trivia/${date}.json`);if(!response.ok)throw Error('The included trivia set could not load. Restart the updated app.');
   const bundled=validateTriviaDeck(await response.json());await saveTriviaDeck(bundled);saved.push(bundled);
  }

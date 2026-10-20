@@ -15,11 +15,30 @@ function enter(s:TriviaSession,deck:TriviaDeck,index:number){s.index=Math.max(0,
 function showScores(s:TriviaSession,deck:TriviaDeck,checkpoint:'manual'|'halfway'|'beforeFinal'|'final',now:number){s.scoreReturn=frame(s,now);s.remaining=triviaLeft(s,now);s.end=null;s.phase='scores';s.checkpoint=checkpoint;s.standings=triviaStandings(s,deck,checkpoint==='halfway'||checkpoint==='beforeFinal'?s.index:undefined).slice(0,10);s.standingsShown=0;}
 export function reduceTrivia(state:TriviaSession,action:TriviaAction,deck:TriviaDeck,now=Date.now()):TriviaSession{
   const s=structuredClone(state);const c=deck.cards[s.index];
-  if(action.type==='undo'||action.type==='previous'){
+  if(action.type==='undo'){
     const previous=s.history.pop();if(!previous)return state;s.extensionAt=undefined;Object.assign(s,previous);s.end=previous.end===null?null:now+previous.remaining*1000;return s;
   }
   const before=frame(state,now);
-  if(action.type==='intro'){s.phase='intro';s.end=null;s.remaining=triviaLeft(state,now);}
+  if(action.type==='previous'){
+    if(s.phase==='intro')return state;
+    if(s.phase==='scores'&&s.checkpoint==='manual'&&s.scoreReturn){const back=s.scoreReturn;enter(s,deck,back.index);s.phase=back.phase==='answers'?'question':back.phase;s.remaining=back.remaining;}
+    else {
+      const slides:{index:number;phase:'intro'|'card'|'question'|'scores';checkpoint?:'halfway'|'beforeFinal'|'final'}[]=[{index:0,phase:'intro'}];
+      const rounds=deck.cards.filter(card=>card.kind==='round');
+      deck.cards.forEach((card,index)=>{
+        const round=card.kind==='round'?rounds.findIndex(r=>r.id===card.id):-1;
+        if(index>0&&card.kind==='question'&&index===deck.cards.map(q=>q.kind).lastIndexOf('question'))slides.push({index:index-1,phase:'scores',checkpoint:'beforeFinal'});
+        else if(index>0&&(round===2||(rounds.length===2&&round===1)))slides.push({index:index-1,phase:'scores',checkpoint:'halfway'});
+        slides.push({index,phase:'card'});if(card.kind==='question')slides.push({index,phase:'question'});
+      });
+      slides.push({index:deck.cards.length-1,phase:'scores',checkpoint:'final'});
+      const position=slides.findIndex(x=>x.index===s.index&&x.phase===(s.phase==='answers'?'question':s.phase)&&(x.phase!=='scores'||x.checkpoint===s.checkpoint));
+      const target=slides[Math.max(0,position-1)];enter(s,deck,target.index);
+      if(target.phase==='scores')showScores(s,deck,target.checkpoint!,now);else s.phase=target.phase;
+    }
+  }
+  else if(action.type==='intro'){
+s.phase='intro';s.end=null;s.remaining=triviaLeft(state,now);}
   else if(action.type==='jump')enter(s,deck,action.index);
   else if(action.type==='scores'){if(s.phase==='scores')return state;showScores(s,deck,action.checkpoint,now);}
   else if(action.type==='revealStanding'){if(s.phase!=='scores')return state;s.standingsShown=Math.min(s.standings?.length??0,s.standingsShown+1);}

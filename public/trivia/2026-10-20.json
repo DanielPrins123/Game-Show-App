@@ -1,0 +1,770 @@
+{
+  "version": 1,
+  "type": "trivia",
+  "id": "trivia-2026-10-20",
+  "title": "10.20.2026 Trivia",
+  "fileName": "10.20.2026 Trivia.pptx",
+  "importedAt": "2026-10-20T18:21:14.447Z",
+  "cards": [
+    {
+      "id": "slide-1",
+      "kind": "round",
+      "title": "Round 1",
+      "round": "Round 1",
+      "prompt": "Current Events\nCars\nScience & Music\nSports",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        1
+      ],
+      "notes": "Round 1 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-2",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 1",
+      "prompt": "Which team swept the defending champion Los Angeles Dodgers last week to reach the World Series for the first time since 1982?",
+      "answers": [
+        "Milwaukee Brewers"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        2
+      ],
+      "notes": "Round 1 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-3",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 1",
+      "prompt": "In 2009, what Japanese car company debuted the Leaf, the world's first mass market fully electric vehicle?",
+      "answers": [
+        "Nissan"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        3
+      ],
+      "notes": "Round 1 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-4",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 1",
+      "prompt": "As seen on the cover of Pink Floyd's Dark Side of the Moon, what is the term for a glass triangle that refracts colored light?",
+      "answers": [
+        "Prism"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        4
+      ],
+      "notes": "Round 1 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-5",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 1",
+      "prompt": "What baseball team is known for wacky stunts, players on stilts, and giant fruit shaped mascot with six pack abs?",
+      "answers": [
+        "Savannah Bananas"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        5
+      ],
+      "notes": "Round 1 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-6",
+      "kind": "question",
+      "title": "BONUS (4 answers, 2 each, 10 for all)",
+      "round": "Round 1",
+      "prompt": "What does STEM stand for with respect to education?",
+      "answers": [
+        "Science",
+        "Technology",
+        "Engineering",
+        "Math"
+      ],
+      "scoring": "4 answers, 2 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        6,
+        7
+      ],
+      "notes": "Round 1 Bonus Question\nRound 1 Bonus Question",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-8",
+      "kind": "round",
+      "title": "Round 2",
+      "round": "Round 2",
+      "prompt": "Current Events\nTV\nPop Culture\nGeography",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        8
+      ],
+      "notes": "Round 2 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-9",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 2",
+      "prompt": "On Oct 10th, the US made a controversial agreement with what country to buy diesel in order to lower US gas prices?",
+      "answers": [
+        "Russia"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        9
+      ],
+      "notes": "Round 2 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-10",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 2",
+      "prompt": "What long-running animated series began as a segment on The Tracey Ullman Show?",
+      "answers": [
+        "The Simpsons"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        10
+      ],
+      "notes": "Round 2 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-11",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 2",
+      "prompt": "In 2024, Selena Gomez got engaged to what music producer known for his hit songs “Circus” and “Diamonds”?",
+      "answers": [
+        "Benny Blanco"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        11
+      ],
+      "notes": "Round 2 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-12",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 2",
+      "prompt": "Nestled between Switzerland and Austria, what country is only 15 miles long?",
+      "answers": [
+        "Liechtenstein"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        12
+      ],
+      "notes": "Round 2 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-13",
+      "kind": "question",
+      "title": "BONUS (2 answers, 5 each)",
+      "round": "Round 2",
+      "prompt": "What are the only two elements that are liquid at standard conditions for temperature and pressure?",
+      "answers": [
+        "Mercury",
+        "Bromine"
+      ],
+      "scoring": "2 answers, 5 each",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        13,
+        14
+      ],
+      "notes": "Round 2 Bonus\nRound 2 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-15",
+      "kind": "round",
+      "title": "Round 3",
+      "round": "Round 3",
+      "prompt": "Science!\nSports\nGeography\n80s Movies",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        15
+      ],
+      "notes": "Round 3 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-16",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 3",
+      "prompt": "What mostly nocturnal animal makes approximately 25% of all mammal species worldwide?",
+      "answers": [
+        "Bats"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        16
+      ],
+      "notes": "Round 3 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-17",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 3",
+      "prompt": "Who has the most rushing touchdowns for a quarterback in regular season NFL history, with 87?",
+      "answers": [
+        "Josh Allen"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        17
+      ],
+      "notes": "Round 3 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-18",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 3",
+      "prompt": "At over 2,000 miles, which African country has the longest coastline on its mainland?",
+      "answers": [
+        "Somalia"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        18
+      ],
+      "notes": "Round 3 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-19",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 3",
+      "prompt": "What is the nickname of Abe Froman in the movie Ferris Bueller's Day Off?",
+      "answers": [
+        "Sausage King of Chicago"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        19
+      ],
+      "notes": "Round 3 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-20",
+      "kind": "question",
+      "title": "BONUS (3 answers, 3 each, 10 for all)",
+      "round": "Round 3",
+      "prompt": "What three US States are home to counties named Orange County with a population of over 400,000?",
+      "answers": [
+        "California",
+        "Florida",
+        "New York"
+      ],
+      "scoring": "3 answers, 3 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        20,
+        21
+      ],
+      "notes": "Round 3 Bonus\nRound 3 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-22",
+      "kind": "round",
+      "title": "Round 4",
+      "round": "Round 4",
+      "prompt": "Sports\nWords\nPop Culture*\nMedicine",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        22
+      ],
+      "notes": "Round 4 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-23",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 4",
+      "prompt": "What school has won the most division 1 Women's basketball national championships?",
+      "answers": [
+        "UConn"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        23
+      ],
+      "notes": "Round 4 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-24",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 4",
+      "prompt": "Merriam Webster defines defenestration as the act of throwing a thing or person out of a what?",
+      "answers": [
+        "Window"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        24
+      ],
+      "notes": "Round 4 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-25",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 4",
+      "prompt": "Taken by American photographer Bruce McBroom in 1976, who adorns the best selling poster of all time selling over 12 million copies?",
+      "answers": [
+        "Farrah Fawcett"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        25
+      ],
+      "notes": "Round 4 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-26",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 4",
+      "prompt": "According to Stanford medicine, what remedy for men is used to treat children with potentially fatal pulmonary hypertension?",
+      "answers": [
+        "Viagra (Sildenafil/ Revatio)"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        26
+      ],
+      "notes": "Round 4 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-27",
+      "kind": "question",
+      "title": "Final Bonus (10 answers, 3 each)",
+      "round": "Round 4",
+      "prompt": "Using data from the U.S. Department of Agriculture, measuring crops, livestock, farm services, and forestry, what are the top 10 US states in agricultural production in 2025?\nNOTE: before costs, reflecting the scale output rather than farm profits",
+      "answers": [
+        "California",
+        "Iowa",
+        "Texas",
+        "Nebraska",
+        "Kansas",
+        "Minnesota",
+        "Illinois",
+        "North Carolina",
+        "Indiana",
+        "Wisconsin"
+      ],
+      "scoring": "10 answers, 3 each",
+      "maxPoints": 30,
+      "seconds": 360,
+      "sourceSlides": [
+        27,
+        28
+      ],
+      "notes": "Round 4 Bonus\nRound 4 Bonus\nFacebook answer: Illinois",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    }
+  ],
+  "source": [
+    {
+      "number": 1,
+      "paragraphs": [
+        "Current Events",
+        "Cars",
+        "Science & Music",
+        "Sports",
+        "Round 1 Categories"
+      ],
+      "notes": "Round 1 Categories"
+    },
+    {
+      "number": 2,
+      "paragraphs": [
+        "Question 1",
+        "Which team swept the defending champion Los Angeles Dodgers last week to reach the World Series for the first time since 1982?",
+        "Milwaukee Brewers"
+      ],
+      "notes": "Round 1 Question 1"
+    },
+    {
+      "number": 3,
+      "paragraphs": [
+        "Question 2",
+        "Nissan",
+        "In 2009, what Japanese car company debuted the Leaf, the world's first mass market fully electric vehicle?"
+      ],
+      "notes": "Round 1 Question 2"
+    },
+    {
+      "number": 4,
+      "paragraphs": [
+        "Question 3",
+        "Prism",
+        "As seen on the cover of Pink Floyd's Dark Side of the Moon, what is the term for a glass triangle that refracts colored light?"
+      ],
+      "notes": "Round 1 Question 3"
+    },
+    {
+      "number": 5,
+      "paragraphs": [
+        "Question 4",
+        "Savannah Bananas",
+        "What baseball team is known for wacky stunts, players on stilts, and giant fruit shaped mascot with six pack abs?"
+      ],
+      "notes": "Round 1 Question 4"
+    },
+    {
+      "number": 6,
+      "paragraphs": [
+        "BONUS (4 answers, 2 each, 10 for all)",
+        "What does STEM stand for with respect to education?"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 7,
+      "paragraphs": [
+        "BONUS",
+        "Science",
+        "Technology",
+        "Engineering",
+        "Math"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 8,
+      "paragraphs": [
+        "Current Events",
+        "TV",
+        "Pop Culture",
+        "Geography",
+        "Round 2 Categories"
+      ],
+      "notes": "Round 2 Categories"
+    },
+    {
+      "number": 9,
+      "paragraphs": [
+        "Question 1",
+        "On Oct 10th, the US made a controversial agreement with what country to buy diesel in order to lower US gas prices?",
+        "Russia"
+      ],
+      "notes": "Round 2 Question 1"
+    },
+    {
+      "number": 10,
+      "paragraphs": [
+        "Question 2",
+        "What long-running animated series began as a segment on The Tracey Ullman Show?",
+        "The Simpsons"
+      ],
+      "notes": "Round 2 Question 2"
+    },
+    {
+      "number": 11,
+      "paragraphs": [
+        "Question 3",
+        "In 2024, Selena Gomez got engaged to what music producer known for his hit songs “Circus” and “Diamonds”?",
+        "Benny Blanco"
+      ],
+      "notes": "Round 2 Question 4"
+    },
+    {
+      "number": 12,
+      "paragraphs": [
+        "Question 4",
+        "Nestled between Switzerland and Austria, what country is only 15 miles long?",
+        "Liechtenstein"
+      ],
+      "notes": "Round 2 Question 3"
+    },
+    {
+      "number": 13,
+      "paragraphs": [
+        "BONUS (2 answers, 5 each)",
+        "What are the only two elements that are liquid at standard conditions for temperature and pressure?"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 14,
+      "paragraphs": [
+        "Mercury",
+        "Bromine"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 15,
+      "paragraphs": [
+        "Science!",
+        "Sports",
+        "Geography",
+        "80s Movies",
+        "Round 3 Categories"
+      ],
+      "notes": "Round 3 Categories"
+    },
+    {
+      "number": 16,
+      "paragraphs": [
+        "Question 1",
+        "What mostly nocturnal animal makes approximately 25% of all mammal species worldwide?",
+        "Bats"
+      ],
+      "notes": "Round 3 Question 1"
+    },
+    {
+      "number": 17,
+      "paragraphs": [
+        "Question 2",
+        "Who has the most rushing touchdowns for a quarterback in regular season NFL history, with 87?",
+        "Josh Allen"
+      ],
+      "notes": "Round 3 Question 2"
+    },
+    {
+      "number": 18,
+      "paragraphs": [
+        "Question 3",
+        "At over 2,000 miles, which African country has the longest coastline on its mainland?",
+        "Somalia"
+      ],
+      "notes": "Round 3 Question 3"
+    },
+    {
+      "number": 19,
+      "paragraphs": [
+        "Question 4",
+        "What is the nickname of Abe Froman in the movie Ferris Bueller's Day Off?",
+        "Sausage King of Chicago"
+      ],
+      "notes": "Round 3 Question 4"
+    },
+    {
+      "number": 20,
+      "paragraphs": [
+        "BONUS (3 answers, 3 each, 10 for all)",
+        "What three US States are home to counties named Orange County with a population of over 400,000?"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 21,
+      "paragraphs": [
+        "Bonus",
+        "California",
+        "Florida",
+        "New York"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 22,
+      "paragraphs": [
+        "Sports",
+        "Words",
+        "Pop Culture*",
+        "Medicine",
+        "Round 4 Categories"
+      ],
+      "notes": "Round 4 Categories"
+    },
+    {
+      "number": 23,
+      "paragraphs": [
+        "Question 1",
+        "What school has won the most division 1 Women's basketball national championships?",
+        "UConn"
+      ],
+      "notes": "Round 4 Question 4"
+    },
+    {
+      "number": 24,
+      "paragraphs": [
+        "Question 2",
+        "Merriam Webster defines defenestration as the act of throwing a thing or person out of a what?",
+        "Window"
+      ],
+      "notes": "Round 4 Question 1"
+    },
+    {
+      "number": 25,
+      "paragraphs": [
+        "Question 3",
+        "Taken by American photographer Bruce McBroom in 1976, who adorns the best selling poster of all time selling over 12 million copies?",
+        "Farrah Fawcett"
+      ],
+      "notes": "Round 4 Question 3"
+    },
+    {
+      "number": 26,
+      "paragraphs": [
+        "Question 4",
+        "According to Stanford medicine, what remedy for men is used to treat children with potentially fatal pulmonary hypertension?",
+        "Viagra (Sildenafil/ Revatio)"
+      ],
+      "notes": "Round 4 Question 2"
+    },
+    {
+      "number": 27,
+      "paragraphs": [
+        "Final Bonus (10 answers, 3 each)",
+        "Using data from the U.S. Department of Agriculture, measuring crops, livestock, farm services, and forestry, what are the top 10 US states in agricultural production in 2025?",
+        "NOTE: before costs, reflecting the scale output rather than farm profits"
+      ],
+      "notes": "Round 4 Bonus"
+    },
+    {
+      "number": 28,
+      "paragraphs": [
+        "California",
+        "Iowa",
+        "Texas",
+        "Nebraska",
+        "Kansas",
+        "Minnesota",
+        "Illinois - FACEBOOK",
+        "North Carolina",
+        "Indiana",
+        "Wisconsin"
+      ],
+      "notes": "Round 4 Bonus"
+    }
+  ],
+  "warnings": []
+}

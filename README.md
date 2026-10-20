@@ -219,3 +219,8 @@ Trivia standings use light cards with black text and gold/silver/bronze accents 
 Answer faces are crisp white. Stronger turquoise/coral edge stripes, corner rings and answer borders add color without tinting the text surfaces.
 
 Set the timer on a question title card before revealing it; changes save automatically and the countdown starts when the question opens. The full-width slider has half-minute ticks and labeled time markers.
+
+### October 20 update
+Normal launch opens Choose a game. Pick a new trivia set, continue the autosaved night, or reopen a saved game. The October 20 set includes all 20 supplied questions. In the presenter, left/right arrows move through the show; U undoes the last action. Use Intro to edit the event date and host name (also available on the Family Feud welcome controls). Changes save locally and update the audience.
+
+The full score grid is directly below the presenter controls and preview. In trivia, the Score sheet link scrolls to it without leaving the presenter. Enter/Tab still move between score boxes, and the private answer key follows the current question.

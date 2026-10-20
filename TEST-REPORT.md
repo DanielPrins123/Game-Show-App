@@ -179,3 +179,10 @@ Removed cream-yellow answer fill. Increased top stripe, corner decoration and an
 
 ### Timer setup before reveal and broader accents
 Timer slider is enabled on question title cards, autosaves without starting, spans available control width and has 30-second ticks/time labels. Browser checks verify pre-reveal save/reload with no question leak, automatic start, endpoints, pause/resume and laptop fit. Added blue, pink and lime decorative accents while retaining black-on-white text. Typecheck, lint, timing tests and production build pass.
+
+### October 20 set, chooser and intro settings
+Imported 28 source slides into four rounds and 20 questions, preserving 35 accepted answers and bonus maximums 10/10/10/30. Source-content unit checks cover every question and answer. Navigation tests traverse the entire forward/backward sequence including score breaks; previous does not undo timer settings or reveal old answers. Browser checks pass for the new chooser, new/autosaved/saved trivia selection, arrow navigation and separate U undo, intro host/date synchronization and reload in both modes, and the entire new set at 720p/1080p with contrast checks. Browser profiles are isolated from the user's live event.
+
+Full score entry now sits beneath the presenter in both modes. Trivia's private answer card follows question changes, while selecting/scoring another question never changes the audience. Score fields retain Enter/Tab navigation and are excluded from presenter shortcuts.
+
+Final validation: 59 unit tests passed; typecheck, lint and production build passed. Isolated browser checks covered inline scoring and keyboard navigation, saved-state restoration, synchronization, editor safety, timing, sounds and 720p/1080p slide layouts. Corrected and visually verified score-sheet team-name contrast.

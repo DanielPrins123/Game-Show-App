@@ -19,7 +19,7 @@ export interface TriviaFrame {
   scoreReturn?:TriviaFrame;
 }
 export interface TriviaSession extends TriviaFrame {
-  version:1; deckId:string; title:string; date:string; venue:string; teams:TriviaTeam[];
+  version:1; deckId:string; title:string; date:string; hostName?:string; venue:string; teams:TriviaTeam[];
   muted:boolean; volume?:number; revision:number; history:TriviaFrame[]; scoreReturn?:TriviaFrame;
 }
 
@@ -42,6 +42,7 @@ export function validateTriviaDeck(value:unknown):TriviaDeck {
 export function validateTriviaSession(value:unknown,deck:TriviaDeck):TriviaSession {
   const s=value as TriviaSession;
   if(!s||s.version!==1||s.deckId!==deck.id||[s.title,s.date,s.venue].some(v=>typeof v!=='string')||!Array.isArray(s.teams)||!s.teams.length||!Number.isInteger(s.index)||s.index<0||s.index>=deck.cards.length||!['intro','card','question','answers','scores'].includes(s.phase)||!Number.isFinite(s.remaining)||s.remaining<0||(s.end!==null&&!Number.isFinite(s.end))||!Number.isInteger(s.revealed)||s.revealed<0)throw Error('This trivia result has invalid saved state.');
+  if(s.hostName!==undefined&&typeof s.hostName!=='string')throw Error('Invalid host name.');
   if(s.durations&&(typeof s.durations!=='object'||Object.values(s.durations).some(n=>!Number.isInteger(n)||n<0||n>3600)))throw Error('Invalid question timer settings.');
   const ids=new Set<string>();for(const t of s.teams){if(!t||typeof t.id!=='string'||ids.has(t.id)||typeof t.name!=='string'||!t.scores||typeof t.scores!=='object'||Object.values(t.scores).some(v=>v!==null&&!Number.isFinite(v)))throw Error('This trivia result has invalid team scores.');ids.add(t.id);}
   // Imported nights resume paused at a title card: scores survive without reviving an old timer.

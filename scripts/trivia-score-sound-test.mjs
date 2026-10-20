@@ -11,6 +11,6 @@ try{
  for(let i=1;i<=3;i++){await host.getByRole('button',{name:'Reveal next team ↑',exact:true}).click();await host.waitForFunction(n=>window.tones.length===n,i);}
  const tones=await host.evaluate(()=>window.tones);assert.ok(tones[0]<tones[1]&&tones[1]<tones[2]);assert.equal(tones[2],880);
  await tv.waitForFunction(()=>document.querySelectorAll('.trivia-ranks .shown').length===3);assert.equal(await tv.locator('[class*=medal-]').count(),0);await tv.waitForTimeout(300);await tv.screenshot({path:'qa/trivia-medal-standings.png'});
- await host.getByRole('button',{name:'← Back / undo',exact:true}).click();await tv.waitForFunction(()=>document.querySelectorAll('.trivia-ranks .shown').length===2);assert.equal(await host.evaluate(()=>window.tones.length),3);assert.equal(await tv.evaluate(()=>window.tones.length),0);
+ await host.keyboard.press('u');await tv.waitForFunction(()=>document.querySelectorAll('.trivia-ranks .shown').length===2);assert.equal(await host.evaluate(()=>window.tones.length),3);assert.equal(await tv.evaluate(()=>window.tones.length),0);
  console.log('PASS: trivia team reveals ascend 440 → 622 → 880 Hz, uniform reveal highlights, undo stays silent, no audience duplicate sounds.');
 }finally{await b.close();}

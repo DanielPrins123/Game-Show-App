@@ -12,7 +12,7 @@ try{
  await slider.press('Home');assert.equal(await slider.inputValue(),'0');await button.click();await tv.getByText('TIME’S UP',{exact:true}).waitFor();
  await host.reload();await slider.waitFor();assert.equal(await slider.inputValue(),'0');await slider.press('ArrowRight');assert.equal(await slider.inputValue(),'30');for(let i=1;i<9;i++)await slider.press('ArrowRight');await button.click();await tv.waitForFunction(()=>document.querySelector('header>b')?.textContent.startsWith('4:'));
  await host.reload();await slider.waitFor();assert.equal(await slider.inputValue(),'270');assert.equal(await host.locator('.trivia-question-timing button').count(),1);
- const timer=await host.locator('.trivia-question-timing').boundingBox(),sound=await host.locator('.trivia-sound-controls').boundingBox();assert.ok(sound.y>=timer.y+timer.height);assert.ok(await host.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1));await host.screenshot({path:'qa/trivia-slider-presenter.png'});
+ const timer=await host.locator('.trivia-question-timing').boundingBox(),sound=await host.locator('.trivia-sound-controls').boundingBox();assert.ok(sound.y>=timer.y+timer.height);assert.ok(await host.evaluate(()=>document.querySelector('.trivia-host').getBoundingClientRect().bottom<=innerHeight+1));await host.screenshot({path:'qa/trivia-slider-presenter.png'});
  await host.getByRole('button',{name:'Reveal next answer (0/1)',exact:true}).click();await tv.getByText('Antarctica',{exact:true}).waitFor();assert.equal(await tv.locator('header>b').count(),0);
  console.log('PASS: 0–600 slider, 30-second steps, pre-reveal saved settings, one start/pause/restart button, pause/resume, endpoints, reload, TV sync, sound below timer and laptop fit.');
 }finally{await browser.close();}

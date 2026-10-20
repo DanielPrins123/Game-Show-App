@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $gameRoot = $PSScriptRoot
-$gameUrl = 'http://127.0.0.1:4173/#/presenter'
+$gameUrl = 'http://127.0.0.1:4173/#/home'
 $nodeCommand = Get-Command node.exe -ErrorAction SilentlyContinue
 $gameNode = if ($nodeCommand) { $nodeCommand.Source } else { Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' }
 if (-not (Test-Path -LiteralPath $gameNode)) { throw 'Node.js is required. Install Node.js 22 or newer, then reopen Start Game.cmd.' }

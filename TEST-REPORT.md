@@ -189,3 +189,6 @@ Final validation: 59 unit tests passed; typecheck, lint and production build pas
 
 ### October 27 import and standings fixes
 All 64 unit tests, typecheck, lint and production build pass. The new deck retains 28 source slides, 20 questions, 42 accepted answers and bonus maximums 10/10/10/30. Browser checks verify removal/cancellation/reload, inline scoring, hidden ranks, grouped tie reveals and undo, and synchronization in both modes. All new slides passed contrast and layout checks at 720p/1080p, including paired prompts and the 15-answer final. Final-answer and tied-standings screenshots visually inspected.
+
+### Removal toggle, uniform paired answers and longer defaults
+Team removal is hidden until toggled below the grid. Isolated browser checks verify toggle on/off, confirmation, deletion and reload. Paired answer boxes have equal widths/heights before and after reveal; all October 27 slides fit at 720p/1080p. Automatic trivia durations increase by 30 seconds; explicit overrides are preserved. Typecheck, lint, production build and 62 unit tests pass (two optional source-file tests skipped).

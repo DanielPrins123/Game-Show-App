@@ -225,4 +225,6 @@ Normal launch opens Choose a game. Pick a new trivia set, continue the autosaved
 
 The full score grid is directly below the presenter controls and preview. In trivia, the Score sheet link scrolls to it without leaving the presenter. Enter/Tab still move between score boxes, and the private answer key follows the current question.
 
-October 27 update: choose **10.27.2026 Trivia** in the trivia library. R2Q3 uses Frank Gehry; the final retains all 15 accepted franchises and the Jaws - FACEBOOK annotation. Use Remove beneath a team name in the presenter's score sheet to delete that team and its scores (confirmation required). Tied teams reveal together; hidden standings do not show ranks.
+October 27 update: choose **10.27.2026 Trivia** in the trivia library. R2Q3 uses Frank Gehry; the final retains all 15 accepted franchises and the Jaws - FACEBOOK annotation. Use Remove teams below the score grid to show removal buttons beneath team names; click Done removing teams to hide them again. Deletion requires confirmation. Tied teams reveal together; hidden standings do not show ranks.
+
+Automatic trivia timers are 3:30 for one answer, 4:30 for 2–4 answers, 5:30 for 5 or more, and 6:30 for finals. Custom times remain unchanged.

@@ -12,6 +12,11 @@ try{const c=await b.newContext({viewport:{width:1366,height:768},reducedMotion:'
  if(width===1280&&index===1)await p.screenshot({path:'qa/trivia-combined-'+phase+'.png'});
  }
  if(phase==='card'&&card.kind==='question'&&card.scoring)assert.equal(await p.locator('.trivia-transition-scoring').innerText(),card.scoring.replace(/Name any 10 of 13;/gi,'10 answers;'));
+ if(await p.locator('.paired-answer').count()){
+ const boxes=await p.locator('.paired-answer').evaluateAll(elements=>elements.map(el=>{const r=el.getBoundingClientRect();return {width:r.width,height:r.height,overflow:el.scrollHeight>el.clientHeight+1};}));
+ assert.ok(boxes.every(r=>Math.abs(r.width-boxes[0].width)<1&&Math.abs(r.height-boxes[0].height)<1&&!r.overflow),'Paired answer slots must be equal-sized and fit');
+ if(width===1280)await p.screenshot({path:'qa/oct27-paired-'+phase+'.png'});
+ }
  const contrastFailures=await p.locator('.trivia-slide').evaluate(el=>{
  const rgb=s=>(s.match(/[\d.]+/g)||[]).map(Number);
  const lum=c=>c.slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((a,v,i)=>a+v*[.2126,.7152,.0722][i],0);

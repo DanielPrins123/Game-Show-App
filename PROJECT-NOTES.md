@@ -21,5 +21,8 @@ Standing preferences:
 
 October 27 updates:
 - Bundled 10.27.2026 set: 20 questions, four rounds, final accepts 15 franchises for 10 requested answers. Keep Jaws - FACEBOOK; R2Q3 uses Frank Gehry.
-- Trivia team removal is in the inline score sheet; confirm deletion and retain at least one team.
+- Team removal buttons are hidden normally. A bottom-of-grid Remove teams toggle shows them under team names; click again to hide. Confirm deletion and retain at least one team.
 - Unrevealed standings must hide ranks and tie information. Reveal tied teams together in one action in both modes; undo hides the whole group.
+
+- Paired hint/answer boxes must have equal dimensions, hidden and revealed, so their size never hints at the answer.
+- Automatic trivia question defaults increased by 30 seconds: 210/270/330/390 seconds. Explicit custom times stay unchanged.

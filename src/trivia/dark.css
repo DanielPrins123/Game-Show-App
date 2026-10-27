@@ -317,3 +317,7 @@
 .trivia-slide .trivia-combined .trivia-answer-list :is(.answer-shown,.answer-hidden):nth-child(5n){border-left-color:#99c93c}
 .trivia-slide .trivia-prompt-items li:nth-child(even) .paired-answer{border-left-color:#369be8}
 .trivia-slide .intro-orbit{border-color:#369be8;box-shadow:0 0 0 2cqw #ed6ba455,0 0 0 4cqw #99c93c33}
+
+/* Equal answer slots: neither hint nor answer length changes the box. */
+.trivia-slide .trivia-prompt-items li>div{flex:1;min-width:0}
+.trivia-slide .trivia-prompt-items .paired-answer{width:100%;height:5.2cqw;min-height:5.2cqw;display:flex;flex-direction:column;justify-content:center;font-size:2cqw;overflow-wrap:anywhere}

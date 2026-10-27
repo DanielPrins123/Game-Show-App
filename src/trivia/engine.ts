@@ -1,3 +1,4 @@
+import {stepStandings} from '../standings-reveal';
 import type { TriviaDeck, TriviaFrame, TriviaSession, Standing } from './types';
 import {cardSeconds,questionSeconds} from './timing';
 export type TriviaAction={type:'showAnswerBoard'|'next'|'previous'|'undo'|'reveal'|'hideAnswers'|'toggleTimer'|'extend'|'resetTimer'|'intro'|'closeScores'|'revealStanding'}|{type:'duration';seconds:number;start?:boolean}|{type:'revealAnswer';index:number}|{type:'jump';index:number}|{type:'scores';checkpoint:'manual'|'halfway'|'beforeFinal'|'final'};
@@ -41,7 +42,7 @@ export function reduceTrivia(state:TriviaSession,action:TriviaAction,deck:Trivia
 s.phase='intro';s.end=null;s.remaining=triviaLeft(state,now);}
   else if(action.type==='jump')enter(s,deck,action.index);
   else if(action.type==='scores'){if(s.phase==='scores')return state;showScores(s,deck,action.checkpoint,now);}
-  else if(action.type==='revealStanding'){if(s.phase!=='scores')return state;s.standingsShown=Math.min(s.standings?.length??0,s.standingsShown+1);}
+  else if(action.type==='revealStanding'){if(s.phase!=='scores')return state;s.standingsShown=stepStandings(s.standings??[],s.standingsShown,1);}
   else if(action.type==='closeScores'){
     if(s.phase!=='scores'||!s.scoreReturn)return state;const back=s.scoreReturn;Object.assign(s,back);s.end=back.end===null?null:now+back.remaining*1000;s.scoreReturn=undefined;
   }else if(action.type==='next'){

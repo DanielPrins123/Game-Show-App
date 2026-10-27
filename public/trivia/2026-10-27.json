@@ -1,0 +1,789 @@
+{
+  "version": 1,
+  "type": "trivia",
+  "id": "trivia-2026-10-27",
+  "title": "10.27.2026 Trivia",
+  "fileName": "10.27.2026 Trivia.pptx",
+  "importedAt": "2026-10-27T12:00:00.000Z",
+  "cards": [
+    {
+      "id": "slide-1",
+      "kind": "round",
+      "title": "Round 1",
+      "round": "Round 1",
+      "prompt": "Geography\nSocial Media\nAirplanes\nMountains",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        1
+      ],
+      "notes": "Round 1 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-2",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 1",
+      "prompt": "What breed of dog was named after Mexico's largest state by area?",
+      "answers": [
+        "Chihuahua"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        2
+      ],
+      "notes": "Round 1 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-3",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 1",
+      "prompt": "What popular social media app went dark for over 12 hours in January of 2025 after it federally was banned?",
+      "answers": [
+        "TikTok"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        3
+      ],
+      "notes": "Round 1 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-4",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 1",
+      "prompt": "Of the \"700 series\" of airplanes built by Boeing, which was one of the first to fly and usher in the Jet Age?",
+      "answers": [
+        "707"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        4
+      ],
+      "notes": "Round 1 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-5",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 1",
+      "prompt": "The highest mountain in North America is located in what US State?",
+      "answers": [
+        "Alaska"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        5
+      ],
+      "notes": "Round 1 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-6",
+      "kind": "question",
+      "title": "BONUS (4 answers, 2 each, 10 for all)",
+      "round": "Round 1",
+      "prompt": "Name the 4 stringed instruments in a traditional orchestra.",
+      "answers": [
+        "Violin",
+        "Viola",
+        "Cello",
+        "Bass (Double/ Upright Bass)"
+      ],
+      "scoring": "4 answers, 2 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        6,
+        7
+      ],
+      "notes": "Round 1 Bonus Question\nRound 1 Bonus Question",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-8",
+      "kind": "round",
+      "title": "Round 2",
+      "round": "Round 2",
+      "prompt": "Entertainment\nHistory\nDesign\nCuisine",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        8
+      ],
+      "notes": "Round 2 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-9",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 2",
+      "prompt": "What multi-platinum rapper played a wheelchair bound teen in Degrassi: The Next Generation?",
+      "answers": [
+        "Drake"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        9
+      ],
+      "notes": "Round 2 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-10",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 2",
+      "prompt": "What US military branch's official song refers to the halls of Montezuma and the shores of Tripoli?",
+      "answers": [
+        "Marines"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        10
+      ],
+      "notes": "Round 2 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-11",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 2",
+      "prompt": "Frank Lloyd Wright and Frank Gehry respectively designed the New York and Bilbao locations for what art museums?",
+      "answers": [
+        "Guggenheim"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        11
+      ],
+      "notes": "Round 2 Question 4\nHost correction: second architect is Frank Gehry.",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-12",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 2",
+      "prompt": "More popular in the US than in China, what dish was named for a military leader of the Qing Dynasty?",
+      "answers": [
+        "General Tso’s Chicken"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        12
+      ],
+      "notes": "Round 2 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-13",
+      "kind": "question",
+      "title": "BONUS (2 answers, 5 each)",
+      "round": "Round 2",
+      "prompt": "With the passing of Walter Koenig, who played Ensign Pavel Chekov on Star Trek, who are the two characters that were portrayed on the USS Enterprise that are still living?",
+      "answers": [
+        "Capt. James T. Kirk",
+        "Lt. Hikaru Sulu"
+      ],
+      "scoring": "2 answers, 5 each",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        13,
+        14
+      ],
+      "notes": "Round 2 Bonus\nRound 2 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-15",
+      "kind": "round",
+      "title": "Round 3",
+      "round": "Round 3",
+      "prompt": "Food\nEntertainment\nPresidents\nLiterature",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        15
+      ],
+      "notes": "Round 3 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-16",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 3",
+      "prompt": "Commonly eaten in Spain and Portugal, what cold soup is often made from tomatoes, but can include other vegetables as well?",
+      "answers": [
+        "Gazpacho"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        16
+      ],
+      "notes": "Round 3 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-17",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 3",
+      "prompt": "What actor was offered the role of Indiana Jones but turned it down due to a commitment on a then current TV show?",
+      "answers": [
+        "Tom Selleck"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        17
+      ],
+      "notes": "Round 3 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-18",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 3",
+      "prompt": "Who was the first president to take office as a direct result of death, resignation, or impeachment?",
+      "answers": [
+        "John Tyler"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        18
+      ],
+      "notes": "Round 3 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-19",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 3",
+      "prompt": "The book \"All Quiet on the Western Front\" takes place during what war?",
+      "answers": [
+        "World War I"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        19
+      ],
+      "notes": "Round 3 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-20",
+      "kind": "question",
+      "title": "BONUS (5 answers, 2 each)",
+      "round": "Round 3",
+      "prompt": "Given their back-up band or group, name the musical artist\nThe Heartbreakers\nThe Wailers\nThe Band\nThe Revolution\nThe Jordanaires",
+      "answers": [
+        "Tom Petty",
+        "Bob Marley",
+        "Bob Dylan",
+        "Prince",
+        "Elvis Presley"
+      ],
+      "scoring": "5 answers, 2 each",
+      "maxPoints": 10,
+      "seconds": 300,
+      "sourceSlides": [
+        20,
+        21
+      ],
+      "notes": "Round 3 Bonus\nRound 3 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-22",
+      "kind": "round",
+      "title": "Round 4",
+      "round": "Round 4",
+      "prompt": "Scary Movies\nCandy\nThe Great Pumpkin\nWorld History",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        22
+      ],
+      "notes": "Round 4 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-23",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 4",
+      "prompt": "A 1958 Plymouth Fury is the title character of what 1983 Stephen King novel (and later a movie)?",
+      "answers": [
+        "Christine"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        23
+      ],
+      "notes": "Round 4 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-24",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 4",
+      "prompt": "What often ridiculed candy was originally known as \"Chicken Feed\" when first introduced in 1888?",
+      "answers": [
+        "Candy Corn"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        24
+      ],
+      "notes": "Round 4 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-25",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 4",
+      "prompt": "In It's the Great Pumpkin, Charlie Brown, what does Charlie Brown get in his \"Tricks or Treats\" bag instead of candy, causing him to once again lament on his bad luck?",
+      "answers": [
+        "A Rock"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        25
+      ],
+      "notes": "Round 4 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-26",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 4",
+      "prompt": "On Oct 31, 1517, what German monk posted his 95 Theses to a church door in Wittenberg, signaling the start of the Protestant Reformation?",
+      "answers": [
+        "Martin Luther"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        26
+      ],
+      "notes": "Round 4 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-27",
+      "kind": "question",
+      "title": "Final Bonus (10 answers, 3 each)",
+      "round": "Round 4",
+      "prompt": "According to Wikipedia, name 10 out of the top 15 highest grossing horror film franchises, based on worldwide gross income.",
+      "answers": [
+        "The Conjuring",
+        "Alien",
+        "Resident Evil",
+        "It",
+        "Saw",
+        "Scream",
+        "Final Destination",
+        "Predator",
+        "Hannibal Lecter",
+        "Insidious",
+        "A Quiet Place",
+        "Paranormal Activity",
+        "Halloween",
+        "Jaws - FACEBOOK",
+        "The Exorcist"
+      ],
+      "scoring": "10 answers, 3 each",
+      "maxPoints": 30,
+      "seconds": 360,
+      "sourceSlides": [
+        27,
+        28
+      ],
+      "notes": "Round 4 Bonus\nRound 4 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    }
+  ],
+  "source": [
+    {
+      "number": 1,
+      "paragraphs": [
+        "Geography",
+        "Social Media",
+        "Airplanes",
+        "Mountains",
+        "Round 1 Categories"
+      ],
+      "notes": "Round 1 Categories"
+    },
+    {
+      "number": 2,
+      "paragraphs": [
+        "Question 1",
+        "What breed of dog was named after Mexico's largest state by area?",
+        "Chihuahua"
+      ],
+      "notes": "Round 1 Question 1"
+    },
+    {
+      "number": 3,
+      "paragraphs": [
+        "Question 2",
+        "TikTok",
+        "What popular social media app went dark for over 12 hours in January of 2025 after it federally was banned?"
+      ],
+      "notes": "Round 1 Question 2"
+    },
+    {
+      "number": 4,
+      "paragraphs": [
+        "Question 3",
+        "707",
+        "Of the \"700 series\" of airplanes built by Boeing, which was one of the first to fly and usher in the Jet Age?"
+      ],
+      "notes": "Round 1 Question 3"
+    },
+    {
+      "number": 5,
+      "paragraphs": [
+        "Question 4",
+        "Alaska",
+        "The highest mountain in North America is located in what US State?"
+      ],
+      "notes": "Round 1 Question 4"
+    },
+    {
+      "number": 6,
+      "paragraphs": [
+        "BONUS (4 answers, 2 each, 10 for all)",
+        "Name the 4 stringed instruments in a traditional orchestra."
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 7,
+      "paragraphs": [
+        "BONUS",
+        "Violin",
+        "Viola",
+        "Cello",
+        "Bass (Double/ Upright Bass)"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 8,
+      "paragraphs": [
+        "Entertainment",
+        "History",
+        "Design",
+        "Cuisine",
+        "Round 2 Categories"
+      ],
+      "notes": "Round 2 Categories"
+    },
+    {
+      "number": 9,
+      "paragraphs": [
+        "Question 1",
+        "What multi-platinum rapper played a wheelchair bound teen in Degrassi: The Next Generation?",
+        "Drake"
+      ],
+      "notes": "Round 2 Question 1"
+    },
+    {
+      "number": 10,
+      "paragraphs": [
+        "Question 2",
+        "What US military branch's official song refers to the halls of Montezuma and the shores of Tripoli?",
+        "Marines"
+      ],
+      "notes": "Round 2 Question 2"
+    },
+    {
+      "number": 11,
+      "paragraphs": [
+        "Question 3",
+        "Frank Lloyd Wright and Frank Geary respectively designed the New York and Bilbao locations for what art museums?",
+        "Guggenheim"
+      ],
+      "notes": "Round 2 Question 4"
+    },
+    {
+      "number": 12,
+      "paragraphs": [
+        "Question 4",
+        "More popular in the US than in China, what dish was named for a military leader of the Qing Dynasty?",
+        "General Tso’s Chicken"
+      ],
+      "notes": "Round 2 Question 3"
+    },
+    {
+      "number": 13,
+      "paragraphs": [
+        "BONUS (2 answers, 5 each)",
+        "With the passing of Walter Koenig, who played Ensign Pavel Chekov on Star Trek, who are the two characters that were portrayed on the USS Enterprise that are still living?"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 14,
+      "paragraphs": [
+        "Capt. James T. Kirk",
+        "Lt. Hikaru Sulu"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 15,
+      "paragraphs": [
+        "Food",
+        "Entertainment",
+        "Presidents",
+        "Literature",
+        "Round 3 Categories"
+      ],
+      "notes": "Round 3 Categories"
+    },
+    {
+      "number": 16,
+      "paragraphs": [
+        "Question 1",
+        "Commonly eaten in Spain and Portugal, what cold soup is often made from tomatoes, but can include other vegetables as well?",
+        "Gazpacho"
+      ],
+      "notes": "Round 3 Question 1"
+    },
+    {
+      "number": 17,
+      "paragraphs": [
+        "Question 2",
+        "What actor was offered the role of Indiana Jones but turned it down due to a commitment on a then current TV show?",
+        "Tom Selleck"
+      ],
+      "notes": "Round 3 Question 2"
+    },
+    {
+      "number": 18,
+      "paragraphs": [
+        "Question 3",
+        "Who was the first president to take office as a direct result of death, resignation, or impeachment?",
+        "John Tyler"
+      ],
+      "notes": "Round 3 Question 3"
+    },
+    {
+      "number": 19,
+      "paragraphs": [
+        "Question 4",
+        "The book \"All Quiet on the Western Front\" takes place during what war?",
+        "World War I"
+      ],
+      "notes": "Round 3 Question 4"
+    },
+    {
+      "number": 20,
+      "paragraphs": [
+        "BONUS (5 answers, 2 each)",
+        "Given their back-up band or group, name the musical artist",
+        "The Heartbreakers",
+        "The Wailers",
+        "The Band",
+        "The Revolution",
+        "The Jordanaires"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 21,
+      "paragraphs": [
+        "Bonus",
+        "Tom Petty",
+        "Bob Marley",
+        "Bob Dylan",
+        "Prince",
+        "Elvis Presley"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 22,
+      "paragraphs": [
+        "Scary Movies",
+        "Candy",
+        "The Great Pumpkin",
+        "World History",
+        "Round 4 Categories"
+      ],
+      "notes": "Round 4 Categories"
+    },
+    {
+      "number": 23,
+      "paragraphs": [
+        "Question 1",
+        "A 1958 Plymouth Fury is the title character of what 1983 Stephen King novel (and later a movie)?",
+        "Christine"
+      ],
+      "notes": "Round 4 Question 4"
+    },
+    {
+      "number": 24,
+      "paragraphs": [
+        "Question 2",
+        "What often ridiculed candy was originally known as \"Chicken Feed\" when first introduced in 1888?",
+        "Candy Corn"
+      ],
+      "notes": "Round 4 Question 1"
+    },
+    {
+      "number": 25,
+      "paragraphs": [
+        "Question 3",
+        "In It's the Great Pumpkin, Charlie Brown, what does Charlie Brown get in his \"Tricks or Treats\" bag instead of candy, causing him to once again lament on his bad luck?",
+        "A Rock"
+      ],
+      "notes": "Round 4 Question 3"
+    },
+    {
+      "number": 26,
+      "paragraphs": [
+        "Question 4",
+        "On Oct 31, 1517, what German monk posted his 95 Theses to a church door in Wittenberg, signaling the start of the Protestant Reformation?",
+        "Martin Luther"
+      ],
+      "notes": "Round 4 Question 2"
+    },
+    {
+      "number": 27,
+      "paragraphs": [
+        "Final Bonus (10 answers, 3 each)",
+        "According to Wikipedia, name 10 out of the top 15 highest grossing horror film franchises, based on worldwide gross income."
+      ],
+      "notes": "Round 4 Bonus"
+    },
+    {
+      "number": 28,
+      "paragraphs": [
+        "The Conjuring",
+        "Alien",
+        "Resident Evil",
+        "It",
+        "Saw",
+        "Scream",
+        "Final Destination",
+        "Predator",
+        "Hannibal Lecter",
+        "Insidious",
+        "A Quiet Place",
+        "Paranormal Activity",
+        "Halloween",
+        "Jaws",
+        "- FACEBOOK",
+        "The Exorcist"
+      ],
+      "notes": "Round 4 Bonus"
+    }
+  ],
+  "warnings": []
+}

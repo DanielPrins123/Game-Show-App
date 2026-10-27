@@ -186,3 +186,6 @@ Imported 28 source slides into four rounds and 20 questions, preserving 35 accep
 Full score entry now sits beneath the presenter in both modes. Trivia's private answer card follows question changes, while selecting/scoring another question never changes the audience. Score fields retain Enter/Tab navigation and are excluded from presenter shortcuts.
 
 Final validation: 59 unit tests passed; typecheck, lint and production build passed. Isolated browser checks covered inline scoring and keyboard navigation, saved-state restoration, synchronization, editor safety, timing, sounds and 720p/1080p slide layouts. Corrected and visually verified score-sheet team-name contrast.
+
+### October 27 import and standings fixes
+All 64 unit tests, typecheck, lint and production build pass. The new deck retains 28 source slides, 20 questions, 42 accepted answers and bonus maximums 10/10/10/30. Browser checks verify removal/cancellation/reload, inline scoring, hidden ranks, grouped tie reveals and undo, and synchronization in both modes. All new slides passed contrast and layout checks at 720p/1080p, including paired prompts and the 15-answer final. Final-answer and tied-standings screenshots visually inspected.

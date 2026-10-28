@@ -1,28 +1,14 @@
-# Game Night project notes
+# Project behavior
 
-## October 20, 2026
-
-Source chat: Improve App Visibility (6acea27e-75cc-83e9-8f34-65e036c29272).
-- Normal launch opens a chooser, with new sets, autosaved games and saved results. Do not automatically replace or erase a live game.
-- Left/right navigate the show sequence. Undo is separate on U. Returning to a question must not expose an old answer unexpectedly.
-- Presenter wording should describe the show, not internal state names or implementation details.
-
-Current additions:
-- October 20 PowerPoint is bundled as trivia-2026-10-20. Its 28 source slides become four round cards and 20 questions with 35 accepted answers. Bonus maximums are 10, 10, 10 and 30. Source text is retained; Facebook marks the answer of the day: preserve that annotation on the answer, as clarified October 27.
-- Intro date and host name are editable from the intro controls. Trivia uses the event date rather than a hardcoded date in the set title. Both modes synchronize changes to the audience and persist them locally.
-
-Standing preferences:
-- White reading surfaces, black text, colorful edge accents. Audience readability takes priority.
-- Normal questions and hidden answers share one stable layout; crowded finals have a separate answer view.
-- Timer can be configured before revealing a question, with a full-width 0–10 minute slider, 30-second ticks, and one live timer button. Sound controls sit below.
-- Full score entry is directly underneath the presenter controls and preview in both modes, with no page switching needed.
-- Scores stay uncapped; all question columns and round/checkpoint totals remain visible.
-- Test changes, then push to GitHub. Do not overwrite saved live events during verification.
-
-October 27 updates:
-- Bundled 10.27.2026 set: 20 questions, four rounds, final accepts 15 franchises for 10 requested answers. Keep Jaws - FACEBOOK; R2Q3 uses Frank Gehry.
-- Team removal buttons are hidden normally. A bottom-of-grid Remove teams toggle shows them under team names; click again to hide. Confirm deletion and retain at least one team.
-- Unrevealed standings must hide ranks and tie information. Reveal tied teams together in one action in both modes; undo hides the whole group.
-
-- Paired hint/answer boxes must have equal dimensions, hidden and revealed, so their size never hints at the answer.
-- Automatic trivia question defaults increased by 30 seconds: 210/270/330/390 seconds. Explicit custom times stay unchanged.
+- Launch into the game chooser. Keep new-game controls there.
+- Presenter navigation follows one show sequence, including standings. Do not add separate leaderboard or scorebook navigation.
+- Family Feud keeps clickable answer toggles and sequential Space reveals. No Reveal all or Hide all buttons.
+- Keep a large audience preview beside the controls. Score entry and a cell-selected private answer key are below; sound and save/export options are farther down.
+- Navigation never changes entered scores. Revisited questions hide answers; undo remains a separate action.
+- Timer sliders span 0–600 seconds in 30-second increments, work before reveal, and include +30 sec in both modes.
+- Team removal is hidden behind a bottom-of-grid toggle. Confirm deletion.
+- Standings hide ranks until revealed; ties reveal together. Display the top ten while retaining all teams in scoring.
+- Trivia uses white reading surfaces, black text and colorful edge accents. Paired hint-answer boxes have equal dimensions.
+- Host names have no personal default. Keep generated screenshots and exports out of Git.
+- Preserve supplied game content. October 27 R2Q3 uses Frank Gehry; Jaws retains the FACEBOOK answer-of-the-day annotation.
+- Verify changes before pushing. Tests use isolated browser data.

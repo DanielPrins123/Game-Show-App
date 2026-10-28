@@ -5,3 +5,6 @@ playwright-report/
 .sites-runtime/
 .server-pid
 *.tsbuildinfo
+
+# Generated screenshots and local test exports
+qa/

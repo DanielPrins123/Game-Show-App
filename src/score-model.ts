@@ -3,7 +3,7 @@ export interface ResultTeam {id:string;name:string;scores:(number|null)[];bonus?
 export interface ScoreSheet {id:string;title:string;date:string;venue:string;questions:string[];teams:ResultTeam[];savedAt?:string;liveFinale?:boolean}
 export function validateResult(value:unknown):ScoreSheet{
   const wrapper=value as {version?:number;result?:ScoreSheet};const s=wrapper?.result;
-  if(wrapper?.version!==1||!s||typeof s.id!=='string'||!s.id||typeof s.title!=='string'||typeof s.date!=='string'||typeof s.venue!=='string'||!Array.isArray(s.questions)||!s.questions.length||s.questions.some(q=>typeof q!=='string')||!Array.isArray(s.teams)||s.teams.length<2)throw new Error('Choose an exported game-night result with at least two teams.');
+  if(wrapper?.version!==1||!s||typeof s.id!=='string'||!s.id||typeof s.title!=='string'||typeof s.date!=='string'||typeof s.venue!=='string'||!Array.isArray(s.questions)||!s.questions.length||s.questions.some(q=>typeof q!=='string')||!Array.isArray(s.teams)||s.teams.length<1)throw new Error('Choose an exported game-night result with at least one team.');
   const ids=new Set<string>();
   for(const t of s.teams){if(typeof t.id!=='string'||!t.id||ids.has(t.id)||typeof t.name!=='string'||!t.name.trim()||!Array.isArray(t.scores)||t.scores.length!==s.questions.length||t.scores.some(n=>n!==null&&(!Number.isFinite(n)||!Number.isInteger(n)))||(t.bonus!==undefined&&(!Number.isInteger(t.bonus)||t.bonus<0)))throw new Error('Result contains invalid teams or scores.');ids.add(t.id);}
   return {...structuredClone(s),liveFinale:false};
@@ -12,7 +12,7 @@ export const total=(team:ResultTeam,end?:number)=>team.scores.slice(0,end??team.
 export const ranking=(teams:ResultTeam[])=>[...teams].sort((a,b)=>total(b)-total(a));
 export const rank=(team:ResultTeam,teams:ResultTeam[])=>1+teams.filter(t=>total(t)>total(team)).length;
 export type Checkpoint='halfway'|'beforeFinale'|'final';
-export const checkpointName=(stage:Checkpoint)=>stage==='halfway'?'HALFTIME STANDINGS':stage==='beforeFinale'?'BEFORE THE TIMED FINALE':'FINAL RESULTS';
+export const checkpointName=(stage:Checkpoint)=>stage==='final'?'FINAL STANDINGS':'STANDINGS';
 export interface ScoreReveal {teamCount?:number;id:string;title:string;venue:string;date:string;stage:Checkpoint;revealed:number;teams:{id:string;name:string;total:number;rank:number}[]}
 export function withFinale(sheet:ScoreSheet,session:Session):ScoreSheet{
   if(!sheet.liveFinale)return sheet;

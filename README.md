@@ -1,230 +1,94 @@
-# Family Feud Game Night
+# Game Night
 
-A local React + TypeScript + Vite browser app for Daniel Prins’s written-answer game nights, supporting **any number of teams (at least two)**, private hosting, an audience screen, an editor, saved results and an optional timed finale.
+A local browser app for hosting trivia and survey-answer games. It includes a presenter view, a separate audience display, question editors, team scoring, standings reveals, timers, and saved results.
 
-The source files preserve all **4 rounds, 16 questions and 82 answers**, including wording, rankings, counts and original points. Live play uses **15 written questions**, followed by the timed finale. Original Q16 is now a finale option with its lowest-ranked answer omitted (six remain). Original regular answers earn **1 point**, original bonus answers **2 points**. The separate timed finale earns **4 points** per correct answer. Survey counts never determine team points.
+## Run on Windows
 
-## Start or update on Windows
+Install Node.js 22 or newer, then double-click **Start Game.cmd**. The launcher installs dependencies when needed, builds the app, and opens the game chooser. First setup requires an internet connection; installed games run locally afterward.
 
-1. On the laptop, use GitHub Desktop → **Fetch origin**, then **Pull origin** if offered.
-2. Install Node.js 22 or newer once, including npm.
-3. Double-click **Start Game.cmd**. The launcher rebuilds the app and refreshes dependencies when an update changes them. First setup and dependency updates need internet; subsequent play works offline.
-4. Open `http://127.0.0.1:4173/#/presenter`. Refresh older game tabs after updating.
-5. **Build Game.cmd** forces a rebuild. **Stop Game.cmd** stops the background server.
+- **Build Game.cmd** rebuilds the app.
+- **Stop Game.cmd** stops the local server.
+- The app opens at `http://127.0.0.1:4173/`.
 
-Keep the project folder together. Do not open `dist/index.html` as a file. The launcher uses installed Node.js or the available Codex bundled runtime. GitHub transfers program files, **not browser saves**: use game JSON and result JSON exports to move content/results between computers.
+Keep the project folder together. Use the local server rather than opening `dist/index.html` directly. After pulling an update, restart the launcher and refresh existing browser tabs.
 
-## Intro → instructions → questions
+## Choose a game
 
-Only the **presenter** has buttons. A new session starts on an audience welcome logo with **“With your host, Daniel Prins.”** No answers, menus or buttons appear on the TV.
+The opening page provides separate Trivia and Family Feud choices. Start a set, resume the current game, open saved results, or edit a set. Starting a new game archives the current scores. Intro date and host name are editable; the host name is blank by default.
 
-- **Start show / opening logo:** show the welcome screen while setting up teams, venue and sound.
-- **2 · Show brief instructions:** explain the written-answer format.
-- **3 · Begin questions:** show the first round/question title card. **Show question** opens the board and starts its timer automatically.
+## Presenter and audience
 
-Revisiting this sequence preserves the current question/reveals and pauses its running timer until you return.
+Keep the presenter on the host computer. **Open audience display** opens a separate view for the TV. On Windows, use **Win + P → Extend**, then move the audience window to the TV. Double-click that window for fullscreen. Both windows must use the same browser profile and server address.
 
-## Laptop and TV
+The presenter shows navigation and reveal controls beside a large audience preview. The score grid and answer key sit below it. Sound controls, result saving, and exports are near the bottom of the page.
 
-1. Connect the TV; press **Windows + P → Extend**.
-2. Keep Presenter on the laptop. Click **Open Audience Display** once and drag that window onto the TV.
-3. Use **Enable / test sound** on the presenter, then double-click the audience screen or press **F** for fullscreen.
-4. Keep both windows in the same browser profile and at the same address/port.
-5. Scores replace the board **inside the existing TV window**. Closing scores restores the board and fullscreen without dragging another window.
+**Next / Previous** and the arrow keys move through the show. Intro, instructions, round titles, question titles, questions, and standings are part of the sequence. Opening a question starts its timer. Moving backward pauses the timer and does not undo entered scores. Revisited questions start with answers hidden.
 
-BroadcastChannel synchronizes windows, with localStorage events as a fallback. The host shows connection status. Hidden answers and unrevealed standings are absent from the audience DOM. Share only the audience window when streaming.
-
-## Written rounds
-
-All teams discuss and write the requested number of answers, then bring sheets to the host. Grade everyone in **Score entry / teams**, then reveal the board in any order. The TV shows neither strikes nor head-to-head team scores during these rounds.
-
-Default time is **3 minutes for 1–3 answers, 4 minutes for 4–6, 5 minutes for 7+** when using the standard four-minute game setting. Explicit question timers and custom game settings are respected. Choose 3/4/5 minutes or custom seconds. Existing unused default 20-second timers migrate to four minutes; active timers are preserved.
-
-**+30 seconds** adds exactly 30 seconds, with a gold audience notice and chime. The host sees an extension count; extensions can be repeated or undone. **All sheets in · end early** stops the timer. Zero never advances the question automatically.
-
-The timestamp-based clock shows minutes:seconds, warns at **30 seconds**, and buzzes with a **TIME’S UP** visual at zero. Background tabs do not slow the timer. **Reveal all** is a recap; written scores are entered manually using the question’s indicated points. Navigation preserves reveals; Undo restores gameplay actions.
-
-Four minutes × 15 questions is 60 minutes before grading, reveals and breaks. End early when everyone submits to aim for 7:30–7:45 from a 6:00 start; the app does not impose a schedule.
-
-## Scorebook, records and reveals
-
-**Score entry / teams** uses the current host tab. **Back to presenter** returns without changing the TV.
-
-Enter the event title/date/venue and all team names. Enter points per written question: blank means ungraded, zero means no points. Team names retain a running total and position while scrolling. Ties rank **1, 1, 3**.
-
-The live sheet has a halfway subtotal after question 8. **Written total** includes all 15 questions. **Timed bonus** is separate; the final running total includes both. **Save result** keeps a dated record; save again at the end. JSON export/import transfers a complete result. CSV export works in spreadsheets. Saved records/imports are snapshots, while the active sheet’s linked finale points update automatically without being repeatedly added.
-
-For the audience reveal choose:
-
-- **Halfway:** first half of written questions.
-- **Before timed finale:** all written questions, excluding timed bonus.
-- **Final:** written points plus timed bonus.
-
-Click **Show scores on TV**, then **Reveal next team ↑**. Teams appear from bottom to top, first place last. **Undo reveal** hides the most recent team; **Reveal all teams** finishes. A snapshot freezes scores for that show; later grading edits require a fresh snapshot. **Close scores · return to game** restores the question and resumes its timer. Ten rows fit at 16:9.
-
-Leaderboard is a separate private running ranking. The audience reveal is controlled from the scorebook or presenter.
-
-## Optional timed finale
-
-Set up the team roster in Scorebook. The finale controls are integrated into the main Presenter question panel. Eleven six-answer boards are available (ten sourced boards and the adapted original Q16); each turn starts at 60 seconds. Four points per answer is the suggested grading rule, 24 for one six-answer turn. You enter the grade yourself; scores have no upper cap, so enter the combined total when playing multiple cycles.
-
-1. Select any team and question, then **Open selected team & question**. The question stays hidden until **Start 60-second turn**.
-2. Reveal answers as you judge them. Reveals never change the score. Three strikes, all six reveals or time running out stops the turn.
-3. Enter **Finale points** in Presenter or the **Timed bonus** column in Scorebook. The number replaces that team’s grade, so retries cannot double-count points.
-4. Use **Previous bonus / Next bonus**, or select any team and board. Revisiting an attempt restores its answers and strikes with the timer paused.
-5. **Reset this turn · 60 seconds** clears answers and strikes for another chance. The entered grade remains until you edit it. Undo also works.
-6. **Return to written rounds** works at any time. Show final standings and save the dated result when ready.
-
-The board bank contains scenario questions without Steve Harvey references. Source counts and answer rankings are preserved; prompts are shortened. Similar response distributions help selection but cannot guarantee identical difficulty. See BONUS-SOURCES.md.
-
-## Keyboard and sound
+Family Feud answer buttons toggle individual answers. **Space** reveals the next hidden answer or the next standings group. Trivia uses the reveal button or Space. Multiple-part trivia questions can pair each hint with an equally sized answer box.
 
 | Key | Action |
 | --- | --- |
-| 1–8 | Reveal ranked answer |
-| T | Start / pause / resume |
-| R | Reset regular timer |
-| + | Add 30 seconds in written rounds |
-| X | Finale wrong answer only |
-| U | Undo gameplay |
-| N / Right; P / Left | Next / previous written question |
-| F | Fullscreen focused window |
-| Space during score show | Next team reveal |
-| Escape during score show | Return to game; browser may also exit fullscreen |
+| Left / Right | Previous / next slide |
+| Space | Reveal next answer or standings group |
+| U | Undo the last presentation action |
+| T | Start / pause timer |
+| + | Add 30 seconds |
+| 1–8 | Toggle the corresponding Family Feud answer |
+| X | Add a strike during a Family Feud final turn |
 
-Shortcuts do not fire in text fields. Opening sequence controls are private host buttons. Mute/volume synchronize. Original local Web Audio sounds: short soft answer/score bing, rounded wrong-answer tone, warning ping, gentle expiry tone and extension tone. There are no downloaded show recordings or external assets. Sound plays from the host window. Use **Enable / test sound** there and select the intended speakers or HDMI output in Windows; no audience click is needed for audio. A browser still requires an initial host click or keypress to enable audio. Gameplay works when audio is muted/blocked.
+Presentation shortcuts do not run while entering scores or editing fields.
 
-## Editor and importing games
+## Timers and sound
 
-Editor autosaves separately from live play. Add/reorder rounds/questions/answers, edit points/timers and team defaults, or duplicate games. Start a new session to apply a saved game; save event results first because live progress/finale resets.
+Set question time with the 0–10 minute slider in 30-second steps. Changes made on a question title are saved before the question opens. **+30 sec** adds time during play. Timers use timestamps, so background tabs do not slow them down.
 
-**Paste Questions** parses locally and deterministically. Supported: round headings, questions, count-ending answer lines, Markdown emphasis, numbered answers, divider lines and two columns separated by tabs or multiple spaces. Review errors/preview before confirming. Full original text: `src/data/original.txt`.
+Automatic trivia times are 3:30 for one answer, 4:30 for two to four answers, 5:30 for larger questions, and 6:30 for finals. Explicit custom times take precedence. Family Feud final turns default to 60 seconds and can be adjusted.
 
-**JSON game import/export:** version-1 game content with team defaults. Imports receive fresh IDs. **TXT:** loads into paste preview. **CSV:** one answer per row, required columns `round,question,answer,count`; optional `bonus,points,timer,rank`. Quote cells containing commas/quotes.
+Use **Enable / test sound** to activate audio in the presenter. Choose volume, mute, or countdown ticks below the score grid. Sounds are generated locally; no external audio files are required. Select the desired speakers or HDMI output in Windows.
 
-```csv
-round,question,answer,count,points,rank
-Round 1,Name something you take to a hotel.,Luggage,69,1,1
-Round 1,Name something you take to a hotel.,Clothing / sleepwear,8,1,2
-```
+## Scores and standings
 
-Game JSON is content, result JSON is scores/date/venue/bonus totals, browser session is live progress. Browser saves are not synced by GitHub. Keep the same browser/profile/address during an event and export backups. Storage failures display an alert.
+Enter points directly in the grid. All question columns, round subtotals, totals, and team ranks are available together. Score fields do not impose a question maximum. Blank cells mean no grade has been entered; zero is a recorded score.
 
-## Trivia editor and text import
+Selecting a score cell shows that question's private answer key without changing the audience slide. Enter moves down to the next team, Shift+Enter moves up, and Tab moves across the row. Up/down arrows also move between teams.
 
-Choose **Game mode → Trivia night**, then **Game editor & library**. The included **09.29.2026 Trivia** set contains all 20 questions from the supplied deck; choose **Start this set** in the library. Create a game in the editor, use **Paste Questions → Parse & preview → Confirm import as draft**, or import a TXT / trivia JSON file. PowerPoint import is no longer part of the hosting workflow. Previously saved trivia games, pictures and results remain compatible.
+**Remove teams** below the grid shows removal buttons; press it again to hide them. Deletion requires confirmation. At least one team remains.
 
-Drag the left-hand questions to reorder them, or use the Move buttons with a keyboard. **Edit current game → Apply edits to current show** preserves the current question by its ID and keeps scores. Applying changed answers hides them until you reveal them again. Deleting the displayed question moves to a hidden title card; deleting other questions leaves the TV on its current question. A saved result archives the pre-edit night.
+Standings appear at the scheduled breaks and at the end. The display shows up to ten teams, lowest score first. Hidden rows do not reveal ranks or ties. Teams with equal scores appear together. Tied ranks use competition ranking, such as 1, 1, 3.
 
-The editor supports adding rounds and questions, editing public prompts/private answers, setting points and timers, reordering/duplicating/deleting screens, private notes, and a TV preview. Drafts save separately from the running show; wait for **Draft saved locally** before closing. Save a game to the library or export JSON for backup. Starting an edited game creates a separate live copy and archives the previous night's scores.
+## Family Feud format
 
-Use this predictable text format (the Paste Questions panel includes an example):
+The included source retains four rounds, sixteen questions, and eighty-two ranked answers with their survey counts. Live play uses fifteen questions followed by a timed final. The original sixteenth question is available as a final option with its six highest-ranked answers.
 
-```text
-Title: Friday Trivia
-Round 1: General knowledge
-Categories: Geography, Food, Music
+Regular answers are worth one point; bonus answers are worth two. Final answers are worth four points each. Scores are entered manually; revealing an answer never grades a team. Survey counts are displayed separately from earned points.
 
-Question 1
-Question: What is the **capital** of Canada?
-Answer: Ottawa
-Points: 1
-Timer: 240
+Select up to five finalists at the standings break before the final. Each team has a title and question in the show sequence. The host can change its question, restart a turn, or go back. Three strikes, time expiry, or revealing all answers ends the timed turn. Answers can still be reviewed afterward without changing scores.
 
-Bonus
-Question: Name the two planets closest to the Sun.
-Answer: Mercury
-Answer: Venus
-Points: 4
-Scoring: 2 points per correct answer
-```
+## Editors and imports
 
-Use **Prompt items / choices** for separate clues, and **Pair each prompt with its answer** for matching questions. In text imports, repeat `Prompt item:` and use `Answer layout: paired`. The larger presenter preview replaces individual answer buttons. **Reveal next answer** walks through hidden answers; **Hide answers** clears them and **Back / undo** reverses a reveal. Clues and their revealed answers stay on the same screen. Score sheet shows a private answer card for the selected question.
+Trivia sets support editable questions, prompts, answers, scoring text, and individual timers. Drag questions in the editor list to reorder them. Applying edits preserves the current audience question when possible and does not expose unrevealed answers. Deleting the current question returns to a title card.
 
-The charcoal/ivory display uses separate question and clue typography, centered ivory answer cards and no audience answer counter. Single answers have no number. A transparent ivory/lavender Outspoken logo is integrated into the intro, with Trivia night as the largest text and the host credit small. Score reveals occur before Round 3, before the last question, and after the last question. Each stop reveals up to ten teams from bottom to top; Next continues the show.
+Trivia text import accepts round headings, questions, answers, and optional scoring/timing fields. JSON exports preserve a full editable set. PowerPoint import extracts content for review; it does not reproduce every PowerPoint layout or animation. Review imported content before starting.
 
-Repeat Answer: for multiple answers, or use Answers: followed by a bullet list. Points are the maximum for the question; scoring instructions describe partial credit. Omitted points remain for the host to decide. Automatic timing uses 3 minutes for one answer, 4 for 2–4 answers, 5 for larger answer sets and 6 for a final question. Use **Seconds for this question → Set / restart time** in Presenter to save a per-question override for the current night. A running timer restarts with that full duration. Overrides survive reset, navigation and reload. The editor's time field saves game defaults, and its Automatic time checkbox restores adaptive timing. Explicit imported timings remain unchanged. Notes: are private. Line breaks and **bold** emphasis are preserved on the audience screen. TXT export preserves the editable question/answer content; JSON also preserves pictures and source information.
+The Family Feud editor supports JSON, TXT, CSV, and pasted questions. CSV columns are `round,question,bonus,points,timer,rank,answer,count`, with one answer per row. Quote fields containing commas. Review the parser preview before saving.
 
-Trivia uses a dark charcoal/ivory palette, warm ivory answer faces, and a centered intro with a large Outspoken Entertainment logo. Short questions and single answers use larger type; longer questions and multi-answer lists use more compact layouts. The presenter and editor retain dark mode. Family Feud retains its own appearance.
+## Saving and moving between computers
 
-**Presenter:** Next shows the round transition, question title, then the question and automatically starts its timer. Reveal answers individually after grading. Back/undo, jump, pause, reset and +30 seconds let you recover or revisit a question. Halfway standings appear before the second half of the rounds; final standings follow the last question. Reveal teams from bottom to top, up to ten on TV. Manual **Show scores on TV** replaces the current audience screen temporarily; **Close scores / return** restores the question and paused timer state. Open audience display uses the same named window as Family Feud. Double-click the TV view for fullscreen. Sound plays from the presenter; use Enable / test sound there.
+Game state and score entry save locally in the browser. Reopening the same browser profile and address restores them. Clearing browser storage removes these saves.
 
-**Score sheet:** One-question mode lists all teams in a single score column. Enter moves down to the next team, Shift+Enter moves up, and Tab moves across; arrow up/down also navigate. Full sheet mode includes all questions, halfway subtotal, total and rank. All grades are manual. Add as many teams as needed. Enter date and venue, then **Save dated result** to archive the night. Export CSV for a spreadsheet or results JSON for backup/transfer. Upload results JSON to review and restore a saved night with its scores; restored games start paused. Library **Reopen scores** also restores archived results. Starting another night automatically archives the current one first.
+Use **Save result** or **Save dated result** at the bottom of the page to keep an event record. Export results JSON for backup or transfer, and CSV for spreadsheet use. Export game JSON to transfer an editable set. GitHub synchronizes app files, not browser saves.
 
-Trivia state and scores autosave separately from Family Feud. Game content/pictures and archived results use IndexedDB; the active score sheet and show state use localStorage with BroadcastChannel/storage-event synchronization. Keep the same browser, profile and address. Closing a tab preserves the game; a running timer keeps counting against real time. Clearing browser data removes local saves. GitHub does not transfer event scores—export/import JSON for another laptop.
+## Development
 
-Family Feud's existing score sheet now uses the same Enter-down / Tab-across keyboard navigation.
+Built with React, TypeScript, and Vite.
 
-### Trivia verification
-
-Unit tests cover deterministic text parsing and round trips, legacy game compatibility, scoring, timers and undo, alongside the original Family Feud parser. For the supplied reference game, set `PPTX_SAMPLE_PATH` to the local original file and run tests; this writes an ignored compatibility fixture to `test-results/trivia-legacy.json`. With the production build running on port 4173, set `TRIVIA_GAME_PATH` to that JSON and run `node scripts/trivia-test.mjs` and `node scripts/trivia-layout-test.mjs`. These check paste/edit/draft persistence, legacy JSON, scoring/synchronization and all source questions at 720p/1080p. The source PowerPoint is not committed.
-
-## Development commands
-
-```text
+```sh
 npm install
 npm run dev
 npm run typecheck
 npm run lint
 npm test
 npm run build
-node scripts/server.mjs
-npm run test:browser
 ```
 
-Browser tests require port 4173 and installed Microsoft Edge. Vite’s runner config loader avoids an esbuild parent-folder access issue in Windows sandboxes. Dependencies and `dist` are not committed; the launcher builds cloned updates. See `TEST-REPORT.md` and `qa/` for validation.
-
-## Audience readability update
-
-The audience board now uses a much larger timer and larger question, answer and standings text. The opening format screen summarizes four rounds, fifteen written questions, regular/bonus points and the timed finale. It adapts to edited game contents. The presenter alone controls the sequence.
-
-Answer reveals use a short, soft bing. Team-reveal notes ascend toward first place in both modes. Revealed standings use a consistent highlight with light text. Under presenter sound settings, **Answer & score reveal sound** can be set to **Silent** without muting timer alerts. Quiet ticks during the final 10 seconds can be switched off separately.
-
-Live progress and score entry save automatically. Closing and reopening the same browser/profile at the same address restores them; a running timer continues against the clock. Save result stores a separate dated result, and Export JSON backs up scores for transfer. If an update retires an active finale question, its earned points are retained and that turn is closed; written play resumes paused.
-
-## Follow the show with Next
-
-**Next** progresses through the current title card and question, then the next title card. Opening the question starts its timer automatically. After Q8, Next opens halfway standings in the same presenter panel and audience window. Continue leads to Q9. After Q15, Next opens written standings, then the finalist selection and timed turns. Next team finishes the current turn and prepares the next selected finalist; after the last finalist it opens final results. Reveals remain one at a time from bottom to top. Manual navigation and retry controls remain available.
-
-Written play supports any number of teams (at least two); the finale has **at most five finalists**. Select all teams when there are five or fewer, use Top 3, or choose individual teams. Resolve any ties by adjusting the selected teams yourself. The lineup is saved with the session. Other teams remain in final standings.
-
-Core controls fit a 1366×768 host screen. Audience preview, sound settings and finale controls stay visible when moving between Presenter and Scorebook. Only Session & saved games is collapsed by default. Existing live 16-question score drafts are archived under Saved results before conversion to 15 written columns; saved historical results remain unchanged.
-
-The scorebook, editor, result imports/exports and private leaderboard retain all teams, with no ten-team limit. Audience standings show only the top ten and label the full event team count. The finale remains capped at five selected teams. Twenty-team totals and JSON validation are tested.
-
-During the finale, the wrong-answer X stays pinned at the bottom of the presenter screen while scrolling; keyboard X also works. At each round’s first question, the audience transition prominently displays the round name. Other questions have numbered title cards. Opening the question starts the timer.
-
-### Full trivia score sheet
-
-All question inputs stay visible together, with compact headers such as R1Q4 and R1B (bonus). Round subtotal columns (Σ), halftime, pre-final and overall totals update as scores are entered. Enter moves down a team; Tab moves across questions. Select any score box or question header to view its private answer card below the table. The answer-card selector never filters the score sheet or changes the audience screen. All 20 supplied questions and totals fit across a 1366px laptop; smaller screens can scroll horizontally. CSV exports include the same subtotals.
-
-### Trivia timer cues and answer animation
-
-Use the timer slider (0–10 minutes in 30-second steps) and its single Start / Pause / Restart button. Sound controls sit below. The + keyboard shortcut still adds 30 seconds. At 60 and 30 seconds remaining, large coral text travels down from the timer over a dimmed card, holds briefly, then returns to the timer, accompanied by a gentle tone. The last ten seconds have a large centered countdown over the dimmed card and quiet ticks; the countdown stays until time expires. Pausing hides the countdown; adding time removes it immediately when more than ten seconds remain and displays **+30 seconds** beside the timer. Sound follows presenter mute/volume and never duplicates on the TV.
-
-Questions with up to six answers open with large question text and hidden answer boxes together. **Reveal next answer** flips a box in place and hides the timer without moving the question. Crowded questions, including the final bonus, use a separate answer view; **Show answer board** prepares that view without revealing answers. Single answers are large and centered, without numbering. Reduced-motion preferences disable movement. The private score-sheet answer card is unchanged.
-
-Standings use the full available row area in both game modes. Names and scores automatically grow for small groups and shrink for up to ten displayed teams. Every revealed team uses the same clear highlight.
-
-### October 12 trivia set
-
-The library includes **10.12.2026 Trivia**, reconciled with the supplied host question sheet: four rounds and 20 questions, including Mark Ruffalo in the Hulk bonus and all 13 accepted Billy Joel titles for the name-any-ten final (30 points maximum). Open Trivia → Game editor & library → Start this set. Existing saved games are preserved. Trivia uses white surfaces, bold black text, outlined answer cards, and restrained coral accents for daylight readability.
-
-Bonus and final question transition cards display the supplied answer count and scoring before the question opens. Set the scoring field in the editor to keep that information with a custom question.
-
-Turquoise, warm yellow and coral decorate the slide edges and answer borders; all main reading surfaces retain black text on white.
-
-Trivia standings use light cards with black text and gold/silver/bronze accents keyed to actual rank (including silver for second with two teams). Tied ranks receive the same accent. The October final asks for 10 answers publicly while preserving all accepted answers for grading.
-
-Answer faces are crisp white. Stronger turquoise/coral edge stripes, corner rings and answer borders add color without tinting the text surfaces.
-
-Set the timer on a question title card before revealing it; changes save automatically and the countdown starts when the question opens. The full-width slider has half-minute ticks and labeled time markers.
-
-### October 20 update
-Normal launch opens Choose a game. Pick a new trivia set, continue the autosaved night, or reopen a saved game. The October 20 set includes all 20 supplied questions. In the presenter, left/right arrows move through the show; U undoes the last action. Use Intro to edit the event date and host name (also available on the Family Feud welcome controls). Changes save locally and update the audience.
-
-The full score grid is directly below the presenter controls and preview. In trivia, the Score sheet link scrolls to it without leaving the presenter. Enter/Tab still move between score boxes, and the private answer key follows the current question.
-
-October 27 update: choose **10.27.2026 Trivia** in the trivia library. R2Q3 uses Frank Gehry; the final retains all 15 accepted franchises and the Jaws - FACEBOOK annotation. Use Remove teams below the score grid to show removal buttons beneath team names; click Done removing teams to hide them again. Deletion requires confirmation. Tied teams reveal together; hidden standings do not show ranks.
-
-Automatic trivia timers are 3:30 for one answer, 4:30 for 2–4 answers, 5:30 for 5 or more, and 6:30 for finals. Custom times remain unchanged.
+Browser checks use Playwright with Microsoft Edge and an isolated profile. With the production server running on port 4173, run `node scripts/presenter-stack-test.mjs`. Optional PowerPoint integration tests use the `PPTX_SAMPLE_PATH` environment variable. Generated screenshots and result exports are stored locally under `qa/` and excluded from Git.

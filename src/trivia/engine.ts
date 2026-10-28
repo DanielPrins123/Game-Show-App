@@ -71,7 +71,7 @@ s.phase='intro';s.end=null;s.remaining=triviaLeft(state,now);}
   else if(action.type==='toggleTimer'){
     if(!['question','answers'].includes(s.phase))return state;
     const left=triviaLeft(s,now);s.remaining=left||questionSeconds(s,c);s.end=s.end===null?now+s.remaining*1000:null;s.started=true;
-  }else if(action.type==='extend'){if(!['question','answers'].includes(s.phase))return state;s.extensionAt=now;s.remaining=triviaLeft(s,now)+30;if(s.end!==null)s.end=now+s.remaining*1000;}
+  }else if(action.type==='extend'){if(c.kind!=='question'||!['card','question','answers'].includes(s.phase))return state;if(s.phase==='card'){s.durations={...s.durations,[c.id]:Math.min(600,questionSeconds(s,c)+30)};s.remaining=s.durations[c.id];}else{s.extensionAt=now;s.remaining=triviaLeft(s,now)+30;if(s.end!==null)s.end=now+s.remaining*1000;}}
   else if(action.type==='duration'){
     if(c.kind!=='question'||s.phase==='scores'||!Number.isInteger(action.seconds)||action.seconds<0||action.seconds>600||action.seconds%30!==0)return state;
     s.durations={...s.durations,[c.id]:action.seconds};s.remaining=action.seconds;if(s.end!==null||action.start)s.end=now+action.seconds*1000;if(action.start)s.started=true;

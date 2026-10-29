@@ -2,7 +2,7 @@
   "version": 1,
   "id": "feud-2026-10-29",
   "title": "Family Feud · October 29, 2026",
-  "timer": 270,
+  "timer": 210,
   "teams": [
     {
       "name": "Team Blue",
@@ -23,7 +23,7 @@
           "text": "Name something kids suffer from at summer camp.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q1-a1",
@@ -52,7 +52,7 @@
           "text": "Name something you do with your thumb.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q2-a1",
@@ -86,7 +86,7 @@
           "text": "Name an occupation which has a reputation for charging enormous prices.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q3-a1",
@@ -115,7 +115,7 @@
           "text": "Name something people do when they feel faint.",
           "bonus": true,
           "points": 2,
-          "timer": 270,
+          "timer": 240,
           "answers": [
             {
               "id": "20261029-q4-a1",
@@ -160,7 +160,7 @@
           "text": "Name an occasion when a husband should give his wife flowers.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q5-a1",
@@ -194,7 +194,7 @@
           "text": "Name something that makes your heart beat faster.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q6-a1",
@@ -228,7 +228,7 @@
           "text": "Name a magazine on whose cover most women like to appear.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q7-a1",
@@ -267,7 +267,7 @@
           "text": "Name someone husbands complain to about their wives.",
           "bonus": true,
           "points": 2,
-          "timer": 270,
+          "timer": 240,
           "answers": [
             {
               "id": "20261029-q8-a1",
@@ -317,7 +317,7 @@
           "text": "Name a gift a little boy might give to his first little girlfriend.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q9-a1",
@@ -351,7 +351,7 @@
           "text": "Name a government agency you feel regularly and deliberately breaks the law.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q10-a1",
@@ -380,7 +380,7 @@
           "text": "What are you usually doing at eleven o’clock at night?",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q11-a1",
@@ -409,7 +409,7 @@
           "text": "100 kids: If your mom gave up cooking and gave you money to eat out every night, what one food would you buy the most of?",
           "bonus": true,
           "points": 2,
-          "timer": 270,
+          "timer": 240,
           "answers": [
             {
               "id": "20261029-q12-a1",
@@ -459,7 +459,7 @@
           "text": "Specifically, what is your favorite food?",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q13-a1",
@@ -493,7 +493,7 @@
           "text": "Name something you love to have named in your honor.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q14-a1",
@@ -527,7 +527,7 @@
           "text": "Name an occupation whose participants wear flashy outfits.",
           "bonus": false,
           "points": 1,
-          "timer": 270,
+          "timer": 210,
           "answers": [
             {
               "id": "20261029-q15-a1",
@@ -561,7 +561,7 @@
           "text": "100 men: Name a fib men tell about themselves at singles’ bars.",
           "bonus": true,
           "points": 2,
-          "timer": 270,
+          "timer": 240,
           "answers": [
             {
               "id": "20261029-q16-a1",

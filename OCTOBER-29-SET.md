@@ -2,7 +2,7 @@
 
 Choose **Family Feud · October 29, 2026** on the Choose game screen, then Start new game. Existing sessions and scores are retained until a new game is started; starting a new game archives current scores.
 
-The supplied set contains 16 written questions: four rounds, each with three regular questions (one point per correct answer) and one bonus (two points per answer). The unmarked fourth-round bonus uses the same two-point rule. Default question time is 270 seconds and can be adjusted before revealing the question.
+The supplied set contains 16 written questions: four rounds, each with three regular questions (one point per correct answer) and one bonus (two points per answer). The unmarked fourth-round bonus uses the same two-point rule. Regular question time is 210 seconds (3½ minutes); written bonuses get 240 seconds and can be adjusted before revealing the question.
 
 Two supplied questions are final options rather than written questions: “Name something men hate to wear” (five answers) and “Name someone who takes an oath” (four answers). They retain all supplied answers and counts. Use the ten new six-answer options when equal-length final boards are wanted. All final options use 60 seconds and four points per answer, entered manually by the host. Previous final options remain available.
 

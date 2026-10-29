@@ -26,3 +26,4 @@
 .feud-controls .feud-slider-labels{color:#344355}
 .opening-screen.logo .feud-presented-by{position:absolute;top:5cqw;left:3cqw;right:3cqw;text-align:center;margin:0;font-size:2cqw}
 .opening-screen.logo{padding-top:14cqw}
+.feud-controls[data-final=true]>label{font-weight:700;font-size:12px}.feud-controls[data-final=true]>label select{display:block;width:100%;padding:5px;font-size:12px}.feud-controls[data-final=true] .feud-private-question{line-height:1.25;margin:0}.feud-controls[data-final=true] .feud-answer-buttons button{min-height:34px;padding:4px}.feud-controls .final-round-shortcut{padding:4px 8px;font-size:12px;align-self:flex-start}.board .question h1{flex-shrink:0;overflow-wrap:anywhere;margin:0}

@@ -5,7 +5,7 @@ export interface Team { name: string; color: string }
 export interface Game { version: 1; id: string; title: string; timer: number; teams: Team[]; rounds: Round[] }
 export const uid = () => crypto.randomUUID();
 export const newQuestion = (): Question => ({id:uid(),text:'New question',bonus:false,points:1,answers:[{id:uid(),text:'New answer',count:0}]});
-export const newGame = (): Game => ({version:1,id:uid(),title:'Untitled game',timer:240,teams:[{name:'Team Blue',color:'#48baff'},{name:'Team Gold',color:'#ffce65'}],rounds:[{id:uid(),name:'Round 1',questions:[newQuestion()]}]});
+export const newGame = (): Game => ({version:1,id:uid(),title:'Untitled game',timer:210,teams:[{name:'Team Blue',color:'#48baff'},{name:'Team Gold',color:'#ffce65'}],rounds:[{id:uid(),name:'Round 1',questions:[newQuestion()]}]});
 export function validateGame(value: unknown): Game {
   if (!value || typeof value !== 'object') throw new Error('Expected a game object.');
   const g = value as Game;

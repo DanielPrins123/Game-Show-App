@@ -1,9 +1,11 @@
+import fresh from './finale-2026-10-29.json';
 import type { Question } from '../model';
 export interface FinaleQuestion extends Question {source:string;season:number}
 // One selected six-answer board per source page. Survey counts are factual,
 // preserve the archive's ranking (including ties), and do not determine points.
 function board(season:number,text:string,answers:[string,number][]):FinaleQuestion{return {id:`finale-${season}${season===27?"":"-balanced"}`,text,bonus:true,points:4,timer:60,season,source:`https://mstiescott.neocities.org/feud${season}_6.html`,answers:answers.map(([text,count],i)=>({id:`finale-${season}${season===27?"":"-balanced"}-${i+1}`,text,count}))};}
 export const finaleQuestions:FinaleQuestion[]=[
+  ...fresh,
   board(27,"Name a tool in a toolbox that you'd hate to see your dentist holding.",[['HAMMER',46],['DRILL',17],['SAW',10],['PLIERS',10],['SCREWDRIVER',7],['CHISEL',4]]),
   board(26,'What would a cheapskate bring to your party?',[['LEFTOVERS/CHEAP FOOD',39],['CHEAP LIQUOR',37],['CUPS/PAPER PLATES',8],['BUPKIS',8],['WATER/ICE',4],['PAPER TOWELS',2]]),
   board(25,'What would Bigfoot complain about when campers visit?',[['DIRTY/LITTER',36],['NOISY',29],['FIRES/SMOKE',11],['B.O./THEY SMELL!',9],['INVADE PRIVACY',8],["DON'T SHARE FOOD",5]]),

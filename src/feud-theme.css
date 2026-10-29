@@ -1,0 +1,28 @@
+/* Flyer palette: sky blue, red marquee, lemon trim and white bulbs. */
+.feud-toolbar h1{color:#17212b}.feud-controls .timer-marks,.feud-controls .timer-ticks{color:#344355}
+.board,.opening-screen,.score-show-board{--gold:#f5e859;background:repeating-conic-gradient(from -12deg at 50% 110%,#72b5e5 0deg 12deg,#589ed5 12deg 24deg);color:#101820;border:4px solid #161616}
+.board::before{border:2px solid #fff9;border-radius:1cqw}
+.board-top .brand{color:#a61124;text-shadow:1px 1px #fff}.board-top .brand b{color:#a61124}.board-top .brand small{color:#101820}
+.board .round-tag{background:#fff;color:#17212b;border:2px solid #202a34}.board .round-tag i{color:#b7192d}
+.board .question{background:#fff;border-radius:1cqw;padding:.6cqw 1.4cqw;box-shadow:0 .35cqw 0 #c31e31;width:100%}
+.board .question h1{color:#111}.board .question p{color:#344355;margin-bottom:.5cqw}
+.board .answer-tile{background:#123b60;border-color:#fff;box-shadow:0 .3cqw 0 #102b43}
+.board .answer-tile .rank{background:#fff;color:#102b43;border-color:#fff}.board .concealed{color:#fff}
+.board .answer-tile.revealed{background:#fff;color:#101820;border-color:#be1d2b}
+.board .answer-tile.revealed .rank{background:#be1d2b;color:#fff;border-color:#be1d2b}
+.board .count{background:#f5e859;color:#101820;border-color:#c3a315}.board .count:empty{visibility:hidden}
+.board .round-card{color:#111}.board .round-card p,.board .round-card>span{color:#17212b;background:#fff;padding:.7cqw 1.4cqw;border-radius:.5cqw}
+.board .round-card h1{text-shadow:.2cqw .2cqw #fff;font-style:normal}
+.board .round-instructions strong,.board .round-instructions span,.board .countdown{color:#101820}.board .countdown.warning{color:#a40c20!important}
+.opening-screen.logo{background:linear-gradient(#111 0 21%,transparent 21%),repeating-conic-gradient(from -12deg at 50% 110%,#72b5e5 0deg 12deg,#589ed5 12deg 24deg);gap:2cqw}
+.feud-presented-by{color:#fff;font-weight:850;font-size:1.8cqw;letter-spacing:.2cqw;margin:0 0 1.5cqw}
+.opening-screen .feud-logo{background:#68afe0;border:.65cqw solid #f5e859;outline:1.4cqw solid #bf1d2b;box-shadow:0 0 0 1.7cqw #111;transform:none;color:#bc1428;text-shadow:.12cqw .12cqw #f5e859;font-style:normal;position:relative}
+.opening-screen .feud-logo::after{content:'';position:absolute;inset:-1.6cqw;border:.45cqw dotted white;border-radius:50%;pointer-events:none}
+.opening-lights{display:none}.opening-welcome h1{font-size:2.6cqw;color:#101820}.opening-welcome p,.opening-welcome .host-credit{color:#17212b;letter-spacing:.05cqw}
+.opening-screen.instructions .format-overview{background:#fff;border:.35cqw solid #bd1b2c;border-radius:1.5cqw;padding:2cqw;box-shadow:.7cqw .7cqw #f5e859}
+.format-overview p,.format-overview span,.format-overview strong{color:#101820}.format-overview .format-numbers strong{color:#b0192b}
+.score-show-board header p,.score-show-board header>span,.score-show-board footer,.score-show-board.complete footer{color:#17212b}.score-show-board .score-show-row,.score-show-board .score-show-row.first-place{background:#fff;color:#101820;border:2px solid #203448;border-left:.65cqw solid #bf1d2b}.score-show-board .score-show-row.shown{border-color:#bf1d2b}.score-show-board .show-rank,.score-show-board .score-show-row b{color:#101820}.score-show-board .score-show-row b small{color:#344355}.score-show-board .hidden-place,.score-show-board .score-suspense{color:#365875}
+.feud-presenter{background:linear-gradient(120deg,#eaf6ff,#c5e5fa);border-top:5px solid #bf1d2b}.feud-controls{background:#fff;color:#17212b;border:2px solid #508ab4;box-shadow:0 4px 0 #f0df4b}.feud-controls h2,.feud-controls p,.feud-controls label{color:#17212b}.feud-controls button,.feud-controls select,.feud-controls input:not([type=range]){background:#edf5fb;color:#17212b;border-color:#7898b0}.feud-controls button.primary{background:#b21b2b;color:#fff;border-color:#b21b2b}.feud-controls .feud-answer-buttons button{background:#173f63;color:white;border-color:#173f63}.feud-controls .feud-answer-buttons button.answer-is-shown{background:#fff5a8;color:#17212b;border-color:#bc1c2c}.feud-controls input[type=range]{accent-color:#b21b2b}.feud-preview{border-color:#17212b}
+.feud-controls .feud-slider-labels{color:#344355}
+.opening-screen.logo .feud-presented-by{position:absolute;top:5cqw;left:3cqw;right:3cqw;text-align:center;margin:0;font-size:2cqw}
+.opening-screen.logo{padding-top:14cqw}

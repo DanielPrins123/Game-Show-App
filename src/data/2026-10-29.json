@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "id": "feud-2026-10-29",
+  "title": "Family Feud · October 29, 2026",
+  "timer": 270,
+  "teams": [
+    {
+      "name": "Team Blue",
+      "color": "#2789cf"
+    },
+    {
+      "name": "Team Red",
+      "color": "#c82032"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "20261029-r1",
+      "name": "Round 1",
+      "questions": [
+        {
+          "id": "20261029-q1",
+          "text": "Name something kids suffer from at summer camp.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q1-a1",
+              "text": "Home sickness",
+              "count": 65
+            },
+            {
+              "id": "20261029-q1-a2",
+              "text": "Poison ivy",
+              "count": 28
+            },
+            {
+              "id": "20261029-q1-a3",
+              "text": "Bug bites",
+              "count": 4
+            },
+            {
+              "id": "20261029-q1-a4",
+              "text": "Sunburn",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "20261029-q2",
+          "text": "Name something you do with your thumb.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q2-a1",
+              "text": "Hitchhike",
+              "count": 37
+            },
+            {
+              "id": "20261029-q2-a2",
+              "text": "Suck it",
+              "count": 34
+            },
+            {
+              "id": "20261029-q2-a3",
+              "text": "Twiddle",
+              "count": 19
+            },
+            {
+              "id": "20261029-q2-a4",
+              "text": "Play guitar",
+              "count": 2
+            },
+            {
+              "id": "20261029-q2-a5",
+              "text": "Push thumbtacks",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "20261029-q3",
+          "text": "Name an occupation which has a reputation for charging enormous prices.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q3-a1",
+              "text": "Physician",
+              "count": 42
+            },
+            {
+              "id": "20261029-q3-a2",
+              "text": "Attorney",
+              "count": 39
+            },
+            {
+              "id": "20261029-q3-a3",
+              "text": "Plumber",
+              "count": 7
+            },
+            {
+              "id": "20261029-q3-a4",
+              "text": "Mechanic",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "20261029-q4",
+          "text": "Name something people do when they feel faint.",
+          "bonus": true,
+          "points": 2,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q4-a1",
+              "text": "Sit down",
+              "count": 42
+            },
+            {
+              "id": "20261029-q4-a2",
+              "text": "Head betw’n knees",
+              "count": 18
+            },
+            {
+              "id": "20261029-q4-a3",
+              "text": "Lie down",
+              "count": 11
+            },
+            {
+              "id": "20261029-q4-a4",
+              "text": "Breathe deeply",
+              "count": null
+            },
+            {
+              "id": "20261029-q4-a5",
+              "text": "Take a drink",
+              "count": 6
+            },
+            {
+              "id": "20261029-q4-a6",
+              "text": "Fall down",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20261029-r2",
+      "name": "Round 2",
+      "questions": [
+        {
+          "id": "20261029-q5",
+          "text": "Name an occasion when a husband should give his wife flowers.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q5-a1",
+              "text": "Anniversary",
+              "count": 58
+            },
+            {
+              "id": "20261029-q5-a2",
+              "text": "Birthday",
+              "count": 24
+            },
+            {
+              "id": "20261029-q5-a3",
+              "text": "Birth of child",
+              "count": 8
+            },
+            {
+              "id": "20261029-q5-a4",
+              "text": "Valentine’s Day",
+              "count": 6
+            },
+            {
+              "id": "20261029-q5-a5",
+              "text": "After a fight",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "20261029-q6",
+          "text": "Name something that makes your heart beat faster.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q6-a1",
+              "text": "Exercise",
+              "count": 36
+            },
+            {
+              "id": "20261029-q6-a2",
+              "text": "Fear/Scary movies",
+              "count": 29
+            },
+            {
+              "id": "20261029-q6-a3",
+              "text": "Making love",
+              "count": 15
+            },
+            {
+              "id": "20261029-q6-a4",
+              "text": "Spouse/Sweetheart",
+              "count": 4
+            },
+            {
+              "id": "20261029-q6-a5",
+              "text": "Roller coaster",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "20261029-q7",
+          "text": "Name a magazine on whose cover most women like to appear.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q7-a1",
+              "text": "Vogue",
+              "count": 30
+            },
+            {
+              "id": "20261029-q7-a2",
+              "text": "Cosmopolitan",
+              "count": 24
+            },
+            {
+              "id": "20261029-q7-a3",
+              "text": "Playboy",
+              "count": 10
+            },
+            {
+              "id": "20261029-q7-a4",
+              "text": "Glamour",
+              "count": 8
+            },
+            {
+              "id": "20261029-q7-a5",
+              "text": "People",
+              "count": 6
+            },
+            {
+              "id": "20261029-q7-a6",
+              "text": "Time",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "id": "20261029-q8",
+          "text": "Name someone husbands complain to about their wives.",
+          "bonus": true,
+          "points": 2,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q8-a1",
+              "text": "Friend",
+              "count": 38
+            },
+            {
+              "id": "20261029-q8-a2",
+              "text": "Coworker",
+              "count": 29
+            },
+            {
+              "id": "20261029-q8-a3",
+              "text": "Mother",
+              "count": 9
+            },
+            {
+              "id": "20261029-q8-a4",
+              "text": "Bartender",
+              "count": 6
+            },
+            {
+              "id": "20261029-q8-a5",
+              "text": "Mistress",
+              "count": 4
+            },
+            {
+              "id": "20261029-q8-a6",
+              "text": "Boss",
+              "count": 3
+            },
+            {
+              "id": "20261029-q8-a7",
+              "text": "Secretary",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20261029-r3",
+      "name": "Round 3",
+      "questions": [
+        {
+          "id": "20261029-q9",
+          "text": "Name a gift a little boy might give to his first little girlfriend.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q9-a1",
+              "text": "Candy/Lollipop",
+              "count": 34
+            },
+            {
+              "id": "20261029-q9-a2",
+              "text": "Flower",
+              "count": 18
+            },
+            {
+              "id": "20261029-q9-a3",
+              "text": "Ring",
+              "count": 14
+            },
+            {
+              "id": "20261029-q9-a4",
+              "text": "Frog",
+              "count": 10
+            },
+            {
+              "id": "20261029-q9-a5",
+              "text": "Necklace",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "20261029-q10",
+          "text": "Name a government agency you feel regularly and deliberately breaks the law.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q10-a1",
+              "text": "C.I.A.",
+              "count": 53
+            },
+            {
+              "id": "20261029-q10-a2",
+              "text": "F.B.I.",
+              "count": 16
+            },
+            {
+              "id": "20261029-q10-a3",
+              "text": "I.R.S.",
+              "count": 14
+            },
+            {
+              "id": "20261029-q10-a4",
+              "text": "Police dept.",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "id": "20261029-q11",
+          "text": "What are you usually doing at eleven o’clock at night?",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q11-a1",
+              "text": "Sleeping",
+              "count": 46
+            },
+            {
+              "id": "20261029-q11-a2",
+              "text": "Watching TV",
+              "count": 37
+            },
+            {
+              "id": "20261029-q11-a3",
+              "text": "Get ready for bed",
+              "count": 10
+            },
+            {
+              "id": "20261029-q11-a4",
+              "text": "Working",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "20261029-q12",
+          "text": "100 kids: If your mom gave up cooking and gave you money to eat out every night, what one food would you buy the most of?",
+          "bonus": true,
+          "points": 2,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q12-a1",
+              "text": "Pizza",
+              "count": 53
+            },
+            {
+              "id": "20261029-q12-a2",
+              "text": "Hamburgers",
+              "count": 17
+            },
+            {
+              "id": "20261029-q12-a3",
+              "text": "Chinese food",
+              "count": 6
+            },
+            {
+              "id": "20261029-q12-a4",
+              "text": "Spaghetti/Pasta",
+              "count": 4
+            },
+            {
+              "id": "20261029-q12-a5",
+              "text": "Ice cream",
+              "count": 3
+            },
+            {
+              "id": "20261029-q12-a6",
+              "text": "Ribs",
+              "count": 3
+            },
+            {
+              "id": "20261029-q12-a7",
+              "text": "Tacos",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20261029-r4",
+      "name": "Round 4",
+      "questions": [
+        {
+          "id": "20261029-q13",
+          "text": "Specifically, what is your favorite food?",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q13-a1",
+              "text": "Pizza",
+              "count": 22
+            },
+            {
+              "id": "20261029-q13-a2",
+              "text": "Steak",
+              "count": 21
+            },
+            {
+              "id": "20261029-q13-a3",
+              "text": "Chicken",
+              "count": 12
+            },
+            {
+              "id": "20261029-q13-a4",
+              "text": "Seafood",
+              "count": 11
+            },
+            {
+              "id": "20261029-q13-a5",
+              "text": "Spaghetti",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "id": "20261029-q14",
+          "text": "Name something you love to have named in your honor.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q14-a1",
+              "text": "Street",
+              "count": 22
+            },
+            {
+              "id": "20261029-q14-a2",
+              "text": "Child",
+              "count": 16
+            },
+            {
+              "id": "20261029-q14-a3",
+              "text": "School",
+              "count": 12
+            },
+            {
+              "id": "20261029-q14-a4",
+              "text": "Park/Playground",
+              "count": 6
+            },
+            {
+              "id": "20261029-q14-a5",
+              "text": "Scholarship",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "20261029-q15",
+          "text": "Name an occupation whose participants wear flashy outfits.",
+          "bonus": false,
+          "points": 1,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q15-a1",
+              "text": "Dancer/Showgirl",
+              "count": 38
+            },
+            {
+              "id": "20261029-q15-a2",
+              "text": "Singer/Musician",
+              "count": 17
+            },
+            {
+              "id": "20261029-q15-a3",
+              "text": "Circus acts/Clown",
+              "count": 14
+            },
+            {
+              "id": "20261029-q15-a4",
+              "text": "Person of the evening",
+              "count": 6
+            },
+            {
+              "id": "20261029-q15-a5",
+              "text": "Stripper",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "id": "20261029-q16",
+          "text": "100 men: Name a fib men tell about themselves at singles’ bars.",
+          "bonus": true,
+          "points": 2,
+          "timer": 270,
+          "answers": [
+            {
+              "id": "20261029-q16-a1",
+              "text": "Marital status",
+              "count": 26
+            },
+            {
+              "id": "20261029-q16-a2",
+              "text": "Financial status",
+              "count": 23
+            },
+            {
+              "id": "20261029-q16-a3",
+              "text": "Age",
+              "count": 15
+            },
+            {
+              "id": "20261029-q16-a4",
+              "text": "Occupation",
+              "count": 15
+            },
+            {
+              "id": "20261029-q16-a5",
+              "text": "Romantic history",
+              "count": 7
+            },
+            {
+              "id": "20261029-q16-a6",
+              "text": "Popularity",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

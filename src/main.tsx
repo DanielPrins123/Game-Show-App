@@ -9,6 +9,7 @@ import { sound, unlockAudio, scorePitch } from './audio';
 import './styles.css';
 import { Home } from './Home';
 import { TriviaApp } from './trivia/TriviaApp';
+import './feud-theme.css';
 function App(){const session=useSession();const [route,setRoute]=useState(location.hash||'#/home');const [now,setNow]=useState(Date.now());const [storageError,setStorageError]=useState(false);const played=useRef('');const warned=useRef('');const expired=useRef('');const ticked=useRef('');
   const display=route==='#/display'||route==='#/score-show';const gameplay=display||route==='#/presenter';
   useEffect(()=>{const interval=setInterval(()=>setNow(Date.now()),100);const hash=()=>setRoute(location.hash||'#/home');const storage=()=>setStorageError(true);window.addEventListener('hashchange',hash);window.addEventListener('storage-failed',storage);window.addEventListener('pointerdown',unlockAudio);window.addEventListener('keydown',unlockAudio);return()=>{clearInterval(interval);window.removeEventListener('hashchange',hash);window.removeEventListener('storage-failed',storage);window.removeEventListener('pointerdown',unlockAudio);window.removeEventListener('keydown',unlockAudio);};},[]);

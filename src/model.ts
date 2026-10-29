@@ -1,4 +1,4 @@
-export interface Answer { id: string; text: string; count: number }
+export interface Answer { id: string; text: string; count: number | null }
 export interface Question { id: string; text: string; bonus: boolean; points: number; timer?: number; answers: Answer[] }
 export interface Round { id: string; name: string; questions: Question[] }
 export interface Team { name: string; color: string }
@@ -17,7 +17,7 @@ export function validateGame(value: unknown): Game {
   id(g.id);
   for(const r of g.rounds){id(r.id); if(typeof r.name!=='string'||!r.name.trim()||!Array.isArray(r.questions)||!r.questions.length) throw new Error('Each round needs a name and questions.');
     for(const q of r.questions){id(q.id);if(typeof q.text!=='string'||!q.text.trim()||typeof q.bonus!=='boolean'||!integer(q.points,0,1000)||(q.timer!==undefined&&!integer(q.timer,1,3600))||!Array.isArray(q.answers)||!q.answers.length||q.answers.length>100) throw new Error('Each question needs text, 1–100 answers, valid points and timer.');
-      for(const a of q.answers){id(a.id);if(typeof a.text!=='string'||!a.text.trim()||!integer(a.count,0,100000)) throw new Error('Answers need text and a nonnegative whole survey count.');}
+      for(const a of q.answers){id(a.id);if(typeof a.text!=='string'||!a.text.trim()||(a.count!==null&&!integer(a.count,0,100000))) throw new Error('Answers need text and a nonnegative whole survey count.');}
     }
   }
   return structuredClone(g);

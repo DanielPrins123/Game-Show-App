@@ -92,3 +92,6 @@ npm run build
 ```
 
 Browser checks use Playwright with Microsoft Edge and an isolated profile. With the production server running on port 4173, run `node scripts/presenter-stack-test.mjs`. Optional PowerPoint integration tests use the `PPTX_SAMPLE_PATH` environment variable. Generated screenshots and result exports are stored locally under `qa/` and excluded from Git.
+
+The [October 29 Family Feud set](OCTOBER-29-SET.md) includes 16 written questions, ten new sourced final boards and two supplied spare finals. Select it from Choose game.
+

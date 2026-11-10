@@ -1,0 +1,800 @@
+{
+  "version": 1,
+  "type": "trivia",
+  "id": "trivia-2026-11-10",
+  "title": "11.10.2026 Trivia",
+  "fileName": "11.10.2026 Trivia.pptx",
+  "importedAt": "2026-11-10T12:00:00.000Z",
+  "cards": [
+    {
+      "id": "slide-1",
+      "kind": "round",
+      "title": "Round 1",
+      "round": "Round 1",
+      "prompt": "Passings\nMascots\nClothing Brands\nMovies",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        1
+      ],
+      "notes": "Round 1 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-2",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 1",
+      "prompt": "With many mourning his passing about 2 weeks ago at age 86, who played Prof. Charles Xavier in the X-Men series of films?",
+      "answers": [
+        "Patrick Stewart"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        2
+      ],
+      "notes": "Round 1 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-3",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 1",
+      "prompt": "What breakfast cereal's mascot is Toucan Sam?",
+      "answers": [
+        "Froot Loops"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        3
+      ],
+      "notes": "Round 1 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-4",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 1",
+      "prompt": "In 1940’s, Adolf Dassler created the German apparel company call Adidas; in the same decade, what company did his brother, Rudolph, create?",
+      "answers": [
+        "Puma"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        4
+      ],
+      "notes": "Round 1 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-5",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 1",
+      "prompt": "The nearly three-hour documentary “You Can See Everything” is one of the biggest nonfiction releases in decades. Who is the subject of the film?",
+      "answers": [
+        "Elizabeth Holmes"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        5
+      ],
+      "notes": "Round 1 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-6",
+      "kind": "question",
+      "title": "BONUS (5 answers, 2 each, 10 for all)",
+      "round": "Round 1",
+      "prompt": "Given the name of a song from a Disney film, name the film.\nHeigh Ho\nPart of Your World\nYou’re Welcome\nWhen You Wish Upon a Star\nBe Our Guest",
+      "answers": [
+        "Snow White and the Seven Dwarfs",
+        "The Little Mermaid",
+        "Moana",
+        "Pinocchio",
+        "Beauty and the Beast"
+      ],
+      "scoring": "5 answers, 2 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 300,
+      "sourceSlides": [
+        6,
+        7
+      ],
+      "notes": "Round 1 Bonus Question\nRound 1 Bonus Question",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-8",
+      "kind": "round",
+      "title": "Round 2",
+      "round": "Round 2",
+      "prompt": "Same Word, Different Meaning\nMovies\nRunning\nSports (Sort of)",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        8
+      ],
+      "notes": "Round 2 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-9",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 2",
+      "prompt": "Which of the seven deadly sins is also a collective noun for a group of bears?",
+      "answers": [
+        "Sloth"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        9
+      ],
+      "notes": "Round 2 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-10",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 2",
+      "prompt": "American chef Thomas Keller served as a technical and culinary adviser for what 2007 Pixar film?",
+      "answers": [
+        "Ratatouille"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        10
+      ],
+      "notes": "Round 2 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-11",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 2",
+      "prompt": "The oldest annual marathon in the world is held in what city?",
+      "answers": [
+        "Boston (1897)"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        11
+      ],
+      "notes": "Round 2 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-12",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 2",
+      "prompt": "The name for what part of a stadium is thought to come from the fading that occurs due to its location in the sun at sporting events.",
+      "answers": [
+        "Bleachers"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        12
+      ],
+      "notes": "Round 2 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-13",
+      "kind": "question",
+      "title": "BONUS (3 answers, 3 each, 10 for all)",
+      "round": "Round 2",
+      "prompt": "Other than Charles, name the three other children of Queen Elizabeth II and Prince Philip.",
+      "answers": [
+        "Anne",
+        "Andrew",
+        "Edward"
+      ],
+      "scoring": "3 answers, 3 each, 10 for all",
+      "maxPoints": 10,
+      "seconds": 240,
+      "sourceSlides": [
+        13,
+        14
+      ],
+      "notes": "Round 2 Bonus\nRound 2 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-15",
+      "kind": "round",
+      "title": "Round 3",
+      "round": "Round 3",
+      "prompt": "Signs\nSports\nWorld History\nMusic",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        15
+      ],
+      "notes": "Round 3 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-16",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 3",
+      "prompt": "Before fade resistant red paint became available, American stop signs were at one time what color?",
+      "answers": [
+        "Yellow"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        16
+      ],
+      "notes": "Round 3 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-17",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 3",
+      "prompt": "Jordan Love has the most QB passing yards for so far for the 2026 NFL season; who is currently in 2nd place?",
+      "answers": [
+        "Joe Burrow"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        17
+      ],
+      "notes": "Round 3 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-18",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 3",
+      "prompt": "At what time on the morning of Nov 11, 1918, did WWI officially end with the Armistice taking effect?",
+      "answers": [
+        "11AM"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        18
+      ],
+      "notes": "Round 3 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-19",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 3",
+      "prompt": "A tradition since 2000, what rock band's music is played as Virginia Tech's football team runs onto the field?",
+      "answers": [
+        "Metallica - FACEBOOK"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        19
+      ],
+      "notes": "Round 3 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-20",
+      "kind": "question",
+      "title": "BONUS (5 answers, 2 each)",
+      "round": "Round 3",
+      "prompt": "According to the US TV Database, name 5 of the eight highest rated syndicated TV shows as of July 2026, based on total number of viewers.",
+      "answers": [
+        "Jeopardy",
+        "Wheel of Fortune",
+        "Family Feud",
+        "Judge Judy",
+        "Weekend Adventure",
+        "Dateline",
+        "Inside Edition",
+        "Entertainment Tonight"
+      ],
+      "scoring": "5 answers, 2 each",
+      "maxPoints": 10,
+      "seconds": 300,
+      "sourceSlides": [
+        20,
+        21
+      ],
+      "notes": "Round 3 Bonus\nRound 3 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-22",
+      "kind": "round",
+      "title": "Round 4",
+      "round": "Round 4",
+      "prompt": "Current Events\nHistory\nGlobal Pop Culture\nTransportation",
+      "answers": [],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        22
+      ],
+      "notes": "Round 4 Categories",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-23",
+      "kind": "question",
+      "title": "Question 1",
+      "round": "Round 4",
+      "prompt": "On Oct 22nd, the New York City council passed a law with respect to banning what in & around Central Park?",
+      "answers": [
+        "Horse-Drawn Carriages"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        23
+      ],
+      "notes": "Round 4 Question 4",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-24",
+      "kind": "question",
+      "title": "Question 2",
+      "round": "Round 4",
+      "prompt": "In July 1945, Harry Truman, Winston Churchill, and Joseph Stalin met for what conference in a Berlin suburb?",
+      "answers": [
+        "Potsdam Conference"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        24
+      ],
+      "notes": "Round 4 Question 1",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-25",
+      "kind": "question",
+      "title": "Question 3",
+      "round": "Round 4",
+      "prompt": "Running from 1956-present, name the international song competition organized annually by the European Broadcasting Union?",
+      "answers": [
+        "Eurovision"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        25
+      ],
+      "notes": "Round 4 Question 3",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-26",
+      "kind": "question",
+      "title": "Question 4",
+      "round": "Round 4",
+      "prompt": "Blue Bird and Thomas Built are the two largest manufacturers of what specific type of transportation, seen daily on the roads of the US?",
+      "answers": [
+        "School Bus"
+      ],
+      "scoring": "",
+      "maxPoints": null,
+      "seconds": 180,
+      "sourceSlides": [
+        26
+      ],
+      "notes": "Round 4 Question 2",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    },
+    {
+      "id": "slide-27",
+      "kind": "question",
+      "title": "Final Bonus (10 answers, 3 each)",
+      "round": "Round 4",
+      "prompt": "According to Visual Capitalist, name 10 of the top 16 world cities to have the most billionaires?",
+      "answers": [
+        "Moscow",
+        "Hangzhou",
+        "New Delhi",
+        "Singapore",
+        "Taipei",
+        "Paris",
+        "São Paulo",
+        "Guangzhou",
+        "New York",
+        "Shenzhen",
+        "Shanghai",
+        "Beijing",
+        "London",
+        "Mumbai",
+        "Hong Kong",
+        "San Francisco"
+      ],
+      "scoring": "10 answers, 3 each",
+      "maxPoints": 30,
+      "seconds": 360,
+      "sourceSlides": [
+        27,
+        28
+      ],
+      "notes": "Round 4 Bonus\nRound 4 Bonus",
+      "issues": [],
+      "images": [],
+      "autoTime": true
+    }
+  ],
+  "source": [
+    {
+      "number": 1,
+      "paragraphs": [
+        "Passings",
+        "Mascots",
+        "Clothing Brands",
+        "Movies",
+        "Round 1 Categories"
+      ],
+      "notes": "Round 1 Categories"
+    },
+    {
+      "number": 2,
+      "paragraphs": [
+        "Question 1",
+        "Patrick Stewart",
+        "With many mourning his passing about 2 weeks ago at age 86, who played Prof. Charles Xavier in the X-Men series of films?"
+      ],
+      "notes": "Round 1 Question 1"
+    },
+    {
+      "number": 3,
+      "paragraphs": [
+        "Question 2",
+        "Froot Loops",
+        "What breakfast cereal's mascot is Toucan Sam?"
+      ],
+      "notes": "Round 1 Question 2"
+    },
+    {
+      "number": 4,
+      "paragraphs": [
+        "Question 3",
+        "Puma",
+        "In 1940’s, Adolf Dassler created the German apparel company call Adidas; in the same decade, what company did his brother, Rudolph, create?"
+      ],
+      "notes": "Round 1 Question 3"
+    },
+    {
+      "number": 5,
+      "paragraphs": [
+        "Question 4",
+        "Elizabeth Holmes",
+        "The nearly three-hour documentary “You Can See Everything” is one of the biggest nonfiction releases in decades. Who is the subject of the film?"
+      ],
+      "notes": "Round 1 Question 4"
+    },
+    {
+      "number": 6,
+      "paragraphs": [
+        "BONUS (5 answers, 2 each, 10 for all)",
+        "Given the name of a song from a Disney film, name the film.",
+        "Heigh Ho",
+        "Part of Your World",
+        "You’re Welcome",
+        "When You Wish Upon a Star",
+        "Be Our Guest"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 7,
+      "paragraphs": [
+        "BONUS",
+        "Snow White and the Seven Dwarfs",
+        "The Little Mermaid",
+        "Moana",
+        "Pinocchio",
+        "Beauty and the Beast"
+      ],
+      "notes": "Round 1 Bonus Question"
+    },
+    {
+      "number": 8,
+      "paragraphs": [
+        "Same Word, Different Meaning",
+        "Movies",
+        "Running",
+        "Sports (Sort of)",
+        "Round 2 Categories"
+      ],
+      "notes": "Round 2 Categories"
+    },
+    {
+      "number": 9,
+      "paragraphs": [
+        "Question 1",
+        "Sloth",
+        "Which of the seven deadly sins is also a collective noun for a group of bears?"
+      ],
+      "notes": "Round 2 Question 1"
+    },
+    {
+      "number": 10,
+      "paragraphs": [
+        "Question 2",
+        "Ratatouille",
+        "American chef Thomas Keller served as a technical and culinary adviser for what 2007 Pixar film?"
+      ],
+      "notes": "Round 2 Question 2"
+    },
+    {
+      "number": 11,
+      "paragraphs": [
+        "Question 3",
+        "Boston (1897)",
+        "The oldest annual marathon in the world is held in what city?"
+      ],
+      "notes": "Round 2 Question 4"
+    },
+    {
+      "number": 12,
+      "paragraphs": [
+        "Question 4",
+        "Bleachers",
+        "The name for what part of a stadium is thought to come from the fading that occurs due to its location in the sun at sporting events."
+      ],
+      "notes": "Round 2 Question 3"
+    },
+    {
+      "number": 13,
+      "paragraphs": [
+        "BONUS (3 answers, 3 each, 10 for all)",
+        "Other than Charles, name the three other children of Queen Elizabeth II and Prince Philip."
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 14,
+      "paragraphs": [
+        "Anne",
+        "Andrew",
+        "Edward"
+      ],
+      "notes": "Round 2 Bonus"
+    },
+    {
+      "number": 15,
+      "paragraphs": [
+        "Signs",
+        "Sports",
+        "World History",
+        "Music",
+        "Round 3 Categories"
+      ],
+      "notes": "Round 3 Categories"
+    },
+    {
+      "number": 16,
+      "paragraphs": [
+        "Question 1",
+        "Yellow",
+        "Before fade resistant red paint became available, American stop signs were at one time what color?"
+      ],
+      "notes": "Round 3 Question 1"
+    },
+    {
+      "number": 17,
+      "paragraphs": [
+        "Question 2",
+        "Joe Burrow",
+        "Jordan Love has the most QB passing yards for so far for the 2026 NFL season; who is currently in 2nd place?"
+      ],
+      "notes": "Round 3 Question 2"
+    },
+    {
+      "number": 18,
+      "paragraphs": [
+        "Question 3",
+        "11AM",
+        "At what time on the morning of Nov 11, 1918, did WWI officially end with the Armistice taking effect?"
+      ],
+      "notes": "Round 3 Question 3"
+    },
+    {
+      "number": 19,
+      "paragraphs": [
+        "Question 4",
+        "Metallica - FACEBOOK",
+        "A tradition since 2000, what rock band's music is played as Virginia Tech's football team runs onto the field?"
+      ],
+      "notes": "Round 3 Question 4"
+    },
+    {
+      "number": 20,
+      "paragraphs": [
+        "BONUS (5 answers, 2 each)",
+        "According to the US TV Database, name 5 of the eight highest rated syndicated TV shows as of July 2026, based on total number of viewers."
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 21,
+      "paragraphs": [
+        "Bonus",
+        "Jeopardy",
+        "Wheel of Fortune",
+        "Family Feud",
+        "Judge Judy",
+        "Weekend Adventure",
+        "Dateline",
+        "Inside Edition",
+        "Entertainment Tonight"
+      ],
+      "notes": "Round 3 Bonus"
+    },
+    {
+      "number": 22,
+      "paragraphs": [
+        "Current Events",
+        "History",
+        "Global Pop Culture",
+        "Transportation",
+        "Round 4 Categories"
+      ],
+      "notes": "Round 4 Categories"
+    },
+    {
+      "number": 23,
+      "paragraphs": [
+        "Question 1",
+        "Horse-Drawn Carriages",
+        "On Oct 22nd, the New York City council passed a law with respect to banning what in & around Central Park?"
+      ],
+      "notes": "Round 4 Question 4"
+    },
+    {
+      "number": 24,
+      "paragraphs": [
+        "Question 2",
+        "Potsdam Conference",
+        "In July 1945, Harry Truman, Winston Churchill, and Joseph Stalin met for what conference in a Berlin suburb?"
+      ],
+      "notes": "Round 4 Question 1"
+    },
+    {
+      "number": 25,
+      "paragraphs": [
+        "Question 3",
+        "Eurovision",
+        "Running from 1956-present, name the international song competition organized annually by the European Broadcasting Union?"
+      ],
+      "notes": "Round 4 Question 3"
+    },
+    {
+      "number": 26,
+      "paragraphs": [
+        "Question 4",
+        "School Bus",
+        "Blue Bird and Thomas Built are the two largest manufacturers of what specific type of transportation, seen daily on the roads of the US?"
+      ],
+      "notes": "Round 4 Question 2"
+    },
+    {
+      "number": 27,
+      "paragraphs": [
+        "Final Bonus (10 answers, 3 each)",
+        "According to Visual Capitalist, name 10 of the top 16 world cities to have the most billionaires?"
+      ],
+      "notes": "Round 4 Bonus"
+    },
+    {
+      "number": 28,
+      "paragraphs": [
+        "New York",
+        "Shenzhen",
+        "Shanghai",
+        "Beijing",
+        "London",
+        "Mumbai",
+        "Hong Kong",
+        "San Francisco",
+        "Moscow",
+        "Hangzhou",
+        "New Delhi",
+        "Singapore",
+        "Taipei",
+        "Paris",
+        "São Paulo",
+        "Guangzhou"
+      ],
+      "notes": "Round 4 Bonus"
+    }
+  ],
+  "warnings": []
+}
